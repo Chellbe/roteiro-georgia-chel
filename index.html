@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#241318">
+<title>Caderno de viagem · Geórgia</title>
+<style>
+:root{--paper:#e3e7e1;--paper2:#f8faf6;--ink:#241a1d;--night:#241318;--pom:#7d1f2d;--terra:#b8502d;--saff:#d9a12b;--slate:#38505f;--line:#c4cbc1;--muted:#66605f;--c:var(--pom);--serif:"Palatino Linotype",Palatino,"Book Antiqua","URW Palladio L",Georgia,serif}
+.th-w{--c:var(--pom)}.th-a{--c:var(--terra)}.th-b{--c:var(--slate)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom);background-color:var(--paper);
+ background-image:linear-gradient(45deg,rgba(56,80,95,.07) 1px,transparent 1px),linear-gradient(-45deg,rgba(56,80,95,.07) 1px,transparent 1px);background-size:38px 38px}
+h1,h2,h3,h4,.serif{font-family:var(--serif);font-weight:700}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:18px 16px 30px}
+.muted{color:var(--muted);font-size:14px}
+.geo{font-family:"Sylfaen","Noto Serif Georgian",var(--serif)}
+.bj{width:1em;height:1em;display:inline-block;vertical-align:-.12em}
+.band{height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M0 7L7 0l7 7-7 7zM14 7l7-7 7 7-7 7z' fill='none' stroke='%23d9a12b' stroke-width='1.2'/%3E%3C/svg%3E") repeat-x;background-color:var(--night)}
+/* nav */
+#nav{position:sticky;top:0;z-index:20;background:#1a0e12;display:flex;align-items:center;gap:6px;overflow-x:auto;padding:8px 10px;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav a{flex:0 0 auto;min-width:34px;height:34px;display:grid;place-items:center;padding:0 10px;border:1.5px solid #5d4a50;border-radius:99px;color:#eee6e0;text-decoration:none;font:700 14px var(--serif);position:relative}
+#nav a.nt{font:600 11px system-ui;letter-spacing:.1em;text-transform:uppercase}
+#nav a.ok{border-color:var(--saff);color:var(--saff)}
+#nav a.today::after{content:"";position:absolute;top:-2px;right:-2px;width:9px;height:9px;border-radius:50%;background:var(--terra)}
+#nav a.on{background:var(--paper2);color:var(--ink);border-color:var(--paper2)}
+/* capa */
+.hero{background:linear-gradient(170deg,#2a1520 0%,#4a1a28 65%,#6b2230 100%);color:#f3ebe4;position:relative;overflow:hidden;padding:34px 20px 96px}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:84px;background:
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 90' preserveAspectRatio='none'%3E%3Cpolygon points='0,90 0,52 30,38 55,50 100,18 140,48 185,26 230,54 285,14 330,44 370,30 400,42 400,90' fill='%2338505f' fill-opacity='.55'/%3E%3Cpolygon points='0,90 0,68 45,52 80,64 130,40 175,66 220,48 270,70 320,46 360,62 400,54 400,90' fill='%23241318'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+.hero .bgbj{position:absolute;right:-90px;top:-50px;width:360px;height:360px;color:var(--saff);opacity:.18;animation:spin 140s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.hero .bgbj{animation:none}}
+.hero .in{max-width:720px;margin:0 auto;position:relative;z-index:1}
+.kick{font-size:11.5px;letter-spacing:.22em;font-weight:700;color:var(--saff);text-transform:uppercase}
+.hero h1{font-size:clamp(56px,17vw,104px);line-height:.95;margin:10px 0 0;font-weight:400;letter-spacing:-.02em}
+.hero .geo{font-size:24px;color:var(--saff);letter-spacing:.1em;margin:4px 0 14px}
+.hero p{margin:0 0 18px;max-width:32em;color:#ecdfd6}
+.facts{display:flex;flex-wrap:wrap;border-top:1px solid #7a5560}
+.facts div{flex:1 1 30%;padding:10px 0 0 12px;border-right:1px solid #7a5560}
+.facts div:first-child{padding-left:0}.facts div:last-child{border:0}
+.facts small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--saff)}
+.facts b{font:700 17px var(--serif)}
+/* contagem */
+.cd{background:var(--pom);color:var(--paper2);outline:1px solid var(--saff);outline-offset:-8px;padding:26px 18px;margin:22px 0;text-align:center}
+.cdl{font:700 12px system-ui;letter-spacing:.2em;text-transform:uppercase;color:var(--saff)}
+.cdg{cursor:pointer;user-select:none;margin:6px 0}
+.cdg>b{display:block;font:700 clamp(84px,28vw,150px)/.95 var(--serif);color:var(--saff);letter-spacing:-.03em}
+.cdg>em{display:block;font:italic 22px var(--serif);color:var(--paper2);margin-top:-4px}
+.cdt{font:600 20px/1.2 ui-monospace,Menlo,Consolas,monospace;margin-top:8px}
+.cdt i{font:600 12px system-ui;color:#ecc8a8;margin:0 8px 0 2px;font-style:normal}
+.fun{display:block;width:100%;margin-top:14px;border:0;border-top:1px solid rgba(255,255,255,.25);background:none;padding:12px 4px 2px;font:italic 16px var(--serif);color:var(--paper2);cursor:pointer}
+.cdd{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-top:10px;font-size:13px;color:#ecc8a8}
+.cdd input{font:inherit;padding:5px 8px;border:0;background:var(--paper2);color:var(--ink);border-radius:0}
+.bit{position:fixed;font-size:24px;pointer-events:none;z-index:99;animation:pop 1.1s ease-out forwards}
+@keyframes pop{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy) + 90px)) scale(1);opacity:0}}
+/* numeros */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);border-top:4px double var(--ink);border-bottom:4px double var(--ink)}
+.stat{padding:14px 12px}
+.stat:nth-child(even){border-left:1px solid var(--line)}
+.stat:nth-child(n+3){border-top:1px solid var(--line)}
+.stat b{font:700 32px/1.1 var(--serif);display:block;color:var(--pom)}
+.stat span{font-size:12.5px;color:var(--muted)}
+@media(min-width:560px){.stats{grid-template-columns:repeat(4,1fr)}.stat:nth-child(n){border-left:1px solid var(--line);border-top:0}.stat:first-child{border-left:0}}
+/* secoes */
+.sec{display:flex;align-items:baseline;gap:12px;margin:38px 0 14px;padding-bottom:7px;border-bottom:1.5px solid var(--ink)}
+.sec small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700}
+.sec h3{margin:0;font-size:24px}
+.dm{display:inline-block;width:8px;height:8px;background:var(--saff);transform:rotate(45deg);margin-right:2px}
+/* anel */
+.ring{width:54px;height:54px;flex:0 0 auto;border-radius:50%;background:var(--paper2)}
+.ring.big{width:92px;height:92px}
+.ring .rb{fill:none;stroke:var(--line);stroke-width:3}
+.ring .rf{fill:none;stroke:var(--c);stroke-width:3;stroke-linecap:round;transition:stroke-dasharray .4s}
+.ring text{font:700 17px var(--serif);fill:var(--ink)}
+/* linha do tempo */
+.tl{border-left:2px solid var(--ink);margin:8px 0 0 27px}
+.chap{position:relative;display:flex;align-items:baseline;gap:10px;margin:0;padding:22px 0 6px 38px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
+.chap::before{content:"";position:absolute;left:-7px;top:30px;width:12px;height:12px;background:var(--c);transform:rotate(45deg)}
+.chap em{font:normal 15px "Sylfaen","Noto Serif Georgian",var(--serif);letter-spacing:.08em}
+.rw{position:relative;display:flex;align-items:center;gap:14px;padding:12px 4px 12px 40px;text-decoration:none}
+.rw .ring{position:absolute;left:-28px;top:50%;margin-top:-27px}
+.rw:hover .rt b{text-decoration:underline;text-decoration-color:var(--c)}
+.rw.today{background:linear-gradient(90deg,rgba(217,161,43,.28),transparent)}
+.rt{flex:1;min-width:0}
+.rt small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.rt b{display:block;font:700 18px/1.2 var(--serif)}
+.rt span{display:block;font-size:13.5px;color:var(--muted)}
+.rt i{display:block;font-style:normal;font-size:12.5px;font-weight:700;color:var(--c);margin-top:2px}
+.rth{width:44px;height:56px;object-fit:cover;border-radius:99px 99px 3px 3px;flex:0 0 auto}
+/* checklists */
+.chk{list-style:none;margin:6px 0 0;padding:0}
+.chk li{display:flex;align-items:flex-start;gap:6px;border-bottom:1px solid var(--line);padding:9px 0}
+.chk li:last-child{border:0}
+.chk label{flex:1;display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.chk input{position:absolute;opacity:0;pointer-events:none}
+.box{flex:0 0 26px;height:26px;position:relative}
+.box::before{content:"";position:absolute;inset:4px;transform:rotate(45deg);border:2px solid var(--c);background:var(--paper2);transition:.15s}
+.chk input:checked+.box::before{background:var(--c);box-shadow:inset 0 0 0 2.5px var(--paper2)}
+.chk input:checked~.tx{text-decoration:line-through;opacity:.5}
+.chk input:focus-visible+.box::before{outline:3px solid var(--saff)}
+.tx{padding-top:2px}
+.opt{font:700 10.5px system-ui;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--terra);color:var(--terra);padding:0 6px;font-style:normal;vertical-align:1px;margin-left:4px}
+.map{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--c);border:1.5px solid var(--c);padding:3px 8px;margin-top:2px;white-space:nowrap}
+.map:hover{background:var(--c);color:#fff}
+.prog{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--c);margin:6px 0 4px}
+.panel{background:var(--paper2);border:1.5px solid var(--ink);box-shadow:5px 5px 0 var(--line);padding:16px;margin:18px 0}
+.panel h3{margin:0 0 4px;font-size:20px}
+/* colecao */
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tags label{cursor:pointer}.tags input{position:absolute;opacity:0}
+.tags span{display:block;border:1.5px solid var(--ink);border-radius:99px;padding:6px 13px;font-size:13.5px;font-weight:600;background:var(--paper2);transition:.15s}
+.tags input:checked+span{background:var(--saff);box-shadow:2px 2px 0 var(--ink)}
+.tags input:focus-visible+span{outline:3px solid var(--terra)}
+/* glossario */
+.gl{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.gl div{padding:10px 8px 10px 0;border-bottom:1px solid var(--line)}
+.gl div:nth-child(even){padding-left:12px;border-left:1px solid var(--line)}
+.gl b{display:block;font-size:22px;color:var(--pom);font-family:"Sylfaen","Noto Serif Georgian",var(--serif)}
+.gl em{font-size:13px;color:var(--muted);display:block}
+.gl span{font-size:14px}
+/* plano b */
+.plan details{border-bottom:1px solid var(--ink)}
+.plan summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;padding:13px 2px;font:700 18px var(--serif)}
+.plan summary::-webkit-details-marker{display:none}
+.plan summary::before{content:"";width:9px;height:9px;background:var(--saff);transform:rotate(45deg);transition:.2s;flex:0 0 auto}
+.plan details[open] summary::before{background:var(--pom);transform:rotate(135deg)}
+.plan ul{margin:0 0 14px;padding-left:34px;font-size:14.5px}
+/* dia */
+.dhead{display:flex;gap:16px;align-items:center;margin:4px 0 8px}
+.dhead .kicker{font-size:11.5px;letter-spacing:.14em;font-weight:700;color:var(--c);text-transform:uppercase}
+.dhead h2{margin:3px 0;font-size:clamp(26px,7vw,34px);line-height:1.1}
+.dhead .sub{margin:0;color:var(--muted);font-size:14.5px}
+.intro{font:italic 18px/1.5 var(--serif);margin:14px 0;padding-left:14px;border-left:4px solid var(--c)}
+.tip{border:1px solid var(--c);background:rgba(217,161,43,.14);padding:11px 14px;margin:16px 0;font-size:14.5px}
+.tip b{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--c)}
+.word{background:var(--night);color:#f3ebe4;padding:16px 18px;margin:16px 0;position:relative;overflow:hidden}
+.word small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--saff);display:block}
+.word .g{font:700 34px/1.2 "Sylfaen","Noto Serif Georgian",var(--serif);color:var(--saff)}
+.word .bj{position:absolute;right:-20px;top:-20px;width:110px;height:110px;color:var(--saff);opacity:.2}
+.word span{font-size:15px}
+.arch{width:min(100%,270px);aspect-ratio:4/5;margin:14px auto 10px;border-radius:999px 999px 4px 4px;overflow:hidden;box-shadow:0 0 0 5px var(--paper2),0 0 0 7px var(--c);background:repeating-linear-gradient(45deg,#d9dfd6 0 10px,#e6ebe3 10px 20px)}
+.arch img{display:block;width:100%;height:100%;object-fit:cover}
+.arch .ph-empty{height:100%;display:grid;place-items:center;text-align:center;padding:40px 24px 20px;font-size:14px;color:var(--muted)}
+.cap{text-align:center;font:italic 19px/1.4 var(--serif);min-height:1.5em;margin:14px 6px 8px}
+.btn{font:700 12.5px system-ui;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper2);padding:10px 16px;cursor:pointer;margin:4px 4px 4px 0;text-decoration:none;display:inline-block;border-radius:0}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.amber{background:var(--saff);color:var(--ink)}
+.btn:active{transform:translate(2px,2px)}
+.moods{display:flex;gap:4px;flex-wrap:wrap;margin:6px 0 10px}
+.mood{font-size:23px;background:var(--paper2);border:1.5px solid var(--line);padding:2px 7px;cursor:pointer;border-radius:0}
+.mood.on{border-color:var(--ink);background:var(--saff)}
+textarea,.in-t{width:100%;font:inherit;border:1.5px solid var(--ink);padding:10px;background:#fff;color:var(--ink);border-radius:0}
+textarea{min-height:84px;resize:vertical}
+.cnt{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:8px;margin-top:22px}
+/* livro */
+.page{background:var(--paper2);border:1.5px solid var(--ink);outline:1px solid var(--line);outline-offset:-9px;padding:28px 22px;margin:18px 0;text-align:center;position:relative}
+.cover h1{font-size:clamp(40px,12vw,64px);margin:10px 0;font-weight:400;letter-spacing:-.01em;line-height:1}
+.cover .bjl{width:92px;height:92px;color:var(--pom);margin:6px auto}
+.cover .names{font:italic 20px var(--serif);color:var(--pom)}
+.pols{display:flex;justify-content:center;gap:12px;margin:18px 0 10px;flex-wrap:wrap}
+.pols .arch{width:28%;min-width:84px;margin:0;box-shadow:0 0 0 3px var(--paper2),0 0 0 4px var(--ink)}
+.pg-top{display:flex;justify-content:space-between;align-items:center;font:700 12px system-ui;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
+.pg-top .pm{font-size:24px}
+.pg-num{font:700 64px/1 var(--serif);color:var(--c);opacity:.18;margin-top:6px}
+.page h3{font-size:27px;margin:-10px 0 6px}
+.did{font-size:13px;color:var(--muted);margin:10px 0 0}
+.book:not(.incl) .page.empty{display:none}
+.edit{font-size:13px;color:var(--slate);display:inline-block;margin-top:8px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--paper2);padding:10px 18px;z-index:100;font-weight:600;box-shadow:4px 4px 0 var(--saff);max-width:90vw;text-align:center}
+footer{text-align:center;padding:24px 10px 44px;color:var(--pom)}
+footer .bj{width:38px;height:38px}
+footer b{font:italic 22px var(--serif);display:block;margin-top:4px}
+@media print{
+ @page{size:A4;margin:12mm}
+ body{background:#fff!important;padding:0}
+ #nav,.no-print,footer,.toast,.bit{display:none!important}
+ .wrap{max-width:none;padding:0}
+ .page{margin:0;break-after:page;page-break-after:always;min-height:262mm;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff}
+ .page:last-child{break-after:auto;page-break-after:auto}
+ .page .arch{width:90mm}
+ .pols .arch{width:45mm}
+ .page>*{width:100%}
+ .page .arch,.page .pols{width:auto}
+ .cap{font-size:22px}
+ .pg-num{font-size:90px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="bj" viewBox="-50 -50 100 100"><g fill="none" stroke="currentColor" stroke-linecap="round"><circle r="46" stroke-width="2"/><circle r="40.5" stroke-width=".8"/><g stroke-width="3.4"><path id="arm" d="M0 -9C20 -12 31 -26 15 -37"/><use href="#arm" transform="rotate(45)"/><use href="#arm" transform="rotate(90)"/><use href="#arm" transform="rotate(135)"/><use href="#arm" transform="rotate(180)"/><use href="#arm" transform="rotate(225)"/><use href="#arm" transform="rotate(270)"/><use href="#arm" transform="rotate(315)"/></g></g><circle r="5" fill="currentColor"/></symbol></svg>
+<nav id="nav" aria-label="Navegação"></nav>
+<main id="app"></main>
+<input type="file" id="imp" accept="application/json" hidden>
+<script>
+/* ===== DADOS DO ROTEIRO ===== */
+const BASES={Tbilisi:'თბილისი',Sighnaghi:'სიღნაღი',Kazbegi:'ყაზბეგი'};
+const DAYS=[
+{id:'d1',base:'Tbilisi',c:'w',title:'Acolhida em Tbilisi',sub:'Cidade Antiga, Ponte da Paz e Narikala',
+ intro:'Chegada sem pressa: manhã de descanso e uma tarde leve pelas ladeiras e sacadas de madeira da capital.',
+ tasks:[{t:'Descansar da viagem e fazer o check-in (manhã livre)'},{t:'Passeio leve pela Cidade Antiga (Old Tbilisi)',q:'Old Tbilisi'},{t:'Atravessar a futurista Ponte da Paz',q:'Bridge of Peace Tbilisi'},{t:'Subir de teleférico até a Fortaleza de Narikala para ver o pôr do sol',q:'Narikala Fortress Tbilisi'},{t:'Jantar no Shavi Lomi (Black Lion), num ambiente artístico e aconchegante',q:'Shavi Lomi Tbilisi'},{t:'Provar um khachapuri, o pão de queijo gigante',o:1}],
+ tip:'Vale reservar mesa no Shavi Lomi. As ladeiras são de pedra: tênis confortável!',w:['გამარჯობა','Gamarjoba','Olá!']},
+{id:'d2',base:'Tbilisi',c:'w',title:'Banho termal e marionetes',sub:'Abanotubani e Teatro Gabriadze',
+ intro:'Manhã de spa à moda georgiana e tarde passeando pela região da Torre do Relógio Torto.',
+ tasks:[{t:'Relaxar nos Banhos Sulfúricos de Abanotubani, em cabine privada (Chreli Abano ou No. 5)',q:'Abanotubani Sulfur Baths Tbilisi'},{t:'Pedir a massagem tradicional com esfoliação (Kisi)'},{t:'Foto na icônica Torre do Relógio Torto, ao lado do Teatro Gabriadze',q:'Gabriadze Theatre Tbilisi'},{t:'Café da tarde na região'},{t:'Assistir a um espetáculo no Teatro Gabriadze (confirme se há sessão)',o:1}],
+ tip:'Reserve a cabine com antecedência e leve chinelo e prendedor de cabelo. O cheirinho de enxofre faz parte.',w:['მადლობა','Madloba','Obrigada!']},
+{id:'d3',base:'Tbilisi',c:'w',title:'Caça aos tesouros',sub:'Mercado da Ponte Seca e Catedral Sameba',
+ intro:'Manhã garimpando relíquias soviéticas e tarde na maior catedral da cidade.',
+ tasks:[{t:'Manhã no Dry Bridge Market: joias de prata, porcelanas, tapetes, medalhas e câmeras analógicas',q:'Dry Bridge Market Tbilisi'},{t:'Escolher uma lembrança única (e pechinchar com um sorriso)'},{t:'Visitar a majestosa Catedral Sameba',q:'Holy Trinity Cathedral Tbilisi'}],
+ tip:'Leve dinheiro vivo em lari para o mercado. Em igrejas, as mulheres costumam cobrir cabeça e ombros: leve um lenço.',w:['რა ღირს?','Ra girs?','Quanto custa?']},
+{id:'d4',base:'Tbilisi',c:'w',title:'Mtskheta e a Crônica da Geórgia',sub:'Monumento, antiga capital e Mosteiro Jvari',
+ intro:'Dia de estrada curtinha com motorista: um monumento gigante, a antiga capital e a vista de dois rios.',
+ tasks:[{t:'Visitar o monumento Crônica da Geórgia (o “Stonehenge de Tbilisi”)',q:'Chronicles of Georgia monument Tbilisi'},{t:'Seguir até Mtskheta, a antiga capital (cerca de 25 min)',q:'Mtskheta Georgia'},{t:'Subir ao Mosteiro Jvari e ver o encontro dos dois rios',q:'Jvari Monastery Mtskheta'},{t:'Passear em Mtskheta e levar umas lembrancinhas'},{t:'Se sobrar tempo: Catedral Svetitskhoveli',q:'Svetitskhoveli Cathedral Mtskheta',o:1}],
+ tip:'Combine o motorista do dia (GoTrip Geórgia ou particular) e o horário de volta antes de sair.',w:['ლამაზია','Lamazia','Que lindo!']},
+{id:'d5',base:'Sighnaghi',c:'a',title:'Rumo a Sighnaghi, a Cidade do Amor',sub:'Estrada para Kakheti e muralhas ao entardecer',
+ intro:'Troca de base: Tbilisi fica para trás e entra a região do vinho, com vistas para o Vale do Alazani e o Cáucaso.',
+ tasks:[{t:'Check-out em Tbilisi e estrada para leste, rumo a Kakheti'},{t:'Check-in em Sighnaghi',q:'Sighnaghi Georgia'},{t:'Caminhar pelas muralhas da vila fortificada do século XVIII',q:'Sighnaghi city walls'},{t:'Jantar com vista para o vale e uma taça de vinho local'}],
+ tip:'A viagem leva cerca de 2 horas (confirme com o motorista). À noite esfria: leve um casaquinho.',w:['გაუმარჯოს','Gaumarjos','Saúde!']},
+{id:'d6',base:'Sighnaghi',c:'a',title:'Imersão vinícola',sub:'Qvevri, vinho laranja e mão na massa',
+ intro:'O dia mais saboroso da viagem: vinho feito em vasos de argila enterrados há 8.000 anos e aula de cozinha.',
+ tasks:[{t:'Visitar a Twin Wine Cellar (Napareuli) ou a Château Mukhrani / Shumi Winery',q:'Twin Wine Cellar Napareuli'},{t:'Aprender sobre o método tradicional Qvevri'},{t:'Degustar um vinho âmbar (laranja) e um Saperavi encorpado'},{t:'Workshop: fazer o próprio Khinkali'},{t:'Workshop: fazer Churchkhela, o doce de nozes e uva'},{t:'Brindar: Gaumarjos!'}],
+ tip:'Confirme a localização de cada vinícola antes de fechar a rota (Mukhrani fica mais perto de Tbilisi) e reserve o workshop com antecedência.',w:['გემრიელია','Gemrielia','Delicioso!']},
+{id:'d7',base:'Sighnaghi',c:'a',title:'Bodbe e volta a Tbilisi',sub:'Jardins de Santa Nino',
+ intro:'Despedida suave de Kakheti num mosteiro florido, antes de voltar à capital.',
+ tasks:[{t:'Check-out em Sighnaghi'},{t:'Visitar o Mosteiro de Bodbe e seus jardins cuidados pelas freiras',q:'Bodbe Monastery'},{t:'Ver o túmulo de Santa Nino, a evangelizadora da Geórgia'},{t:'Voltar a Tbilisi e fazer check-in'}],
+ tip:'Em mosteiros, as mulheres geralmente precisam de saia ou vestido longo e lenço. Muitas vezes há panos para emprestar.',w:['ბოდიში','Bodishi','Com licença / desculpa']},
+{id:'d8',base:'Kazbegi',c:'b',title:'Cáucaso: bate-volta a Kazbegi',sub:'Estrada Militar, Ananuri e Gergeti',
+ intro:'O dia dos cenários de cinema: águas turquesa, montanhas nevadas e uma igrejinha no alto do mundo.',
+ tasks:[{t:'Sair cedo de Tbilisi com motorista pela Estrada Militar da Geórgia'},{t:'Parar no reservatório turquesa de Ananuri',q:'Ananuri Fortress'},{t:'Chegar a Stepantsminda',q:'Stepantsminda Georgia'},{t:'Jipe 4x4 até a Igreja da Trindade de Gergeti',q:'Gergeti Trinity Church'},{t:'Foto com as montanhas colossais cobertas de neve'},{t:'Voltar a Tbilisi à noite'}],
+ tip:'Leve casaco, gorro e luvas: no alto faz frio e pode ter neblina. Combine o preço do jipe antes de subir.',w:['მთები','Mtebi','Montanhas']},
+{id:'d9',base:'Tbilisi',c:'w',title:'Mercado e alta gastronomia',sub:'Dezerter Bazaar e Café Litera',
+ intro:'Penúltimo dia: revisitar os favoritos, encher a sacola de sabores e jantar com pompa.',
+ tasks:[{t:'Revisitar os pontos favoritos de Tbilisi'},{t:'Dezerter Bazaar: temperos (sal de Svaneti) e queijos',q:'Dezerter Bazaar Tbilisi'},{t:'Comprar presentes e lembranças'},{t:'Jantar no Café Litera, no pátio da antiga União de Escritores',q:'Cafe Litera Tbilisi'}],
+ tip:'Confira as regras de bagagem e de entrada no Brasil para queijos e vinhos antes de comprar demais. Reserve mesa no Litera.',w:['კი / არა','Ki / Ara','Sim / Não']},
+{id:'d10',base:'Tbilisi',c:'w',title:'Despedida e relaxamento',sub:'Brunch no Stamba e Avenida Rustaveli',
+ intro:'Último dia, sem pressa. Os voos de volta costumam sair na madrugada de {next}.',
+ tasks:[{t:'Brunch tardio no Stamba, a antiga gráfica soviética',q:'Stamba Hotel Tbilisi'},{t:'Últimas compras na Avenida Rustaveli',q:'Rustaveli Avenue Tbilisi'},{t:'Arrumar as malas (conferir vinhos e frágeis!)'},{t:'Escolher a melhor foto da viagem e escrever a última frase'},{t:'Seguir para o aeroporto'}],
+ tip:'Deixe documentos, cartões de embarque e carregador de celular à mão. Boa viagem de volta!',w:['ნახვამდის','Nakhvamdis','Até a próxima!']}
+];
+const PRE=['Passaportes válidos e conferir as regras de entrada na Geórgia','Seguro-viagem contratado','Hospedagem reservada em Tbilisi e em Sighnaghi','Motorista ou GoTrip combinado (dias 4, 5, 6, 7 e 8)','Reservar cabine nos banhos, mesa no Shavi Lomi e no Café Litera','Workshop de Khinkali e Churchkhela reservado','Levar alguns lari em dinheiro e avisar o banco do cartão','Chip ou eSIM e mapas offline baixados','Casaco, gorro e luvas para Kazbegi; lenço e roupa longa para os mosteiros','Adaptador de tomada (a Geórgia usa 220 V) e bateria externa','Conferir regras de bagagem para vinhos e queijos na volta'];
+const BINGO=['🧀 Provar khachapuri','🥟 Comer khinkali','🍊 Provar vinho laranja','🍷 Tomar um Saperavi','🥂 Brindar “Gaumarjos!”','🍇 Comer churchkhela','💧 Beber água Borjomi','🏠 Fotografar uma sacada de madeira','❄️ Ver neve nas montanhas','🌅 Pôr do sol em Narikala','🗣️ Falar uma palavra em georgiano','🏺 Comprar algo no mercado de pulgas','🐱 Fazer amizade com um bichinho de rua','♨️ Sobreviver ao banho de enxofre'];
+const MOODS=['😍','🤩','😌','🥰','😋','🥶','😴','🍷'];
+/* ===== ESTADO ===== */
+const LS='georgia-caderno-v1';
+let S={start:'2027-04-12',names:'Rachel & mamãe',title:'Nossa Geórgia',incl:false,done:{},pre:{},bingo:{},notes:{},mood:{}};
+try{Object.assign(S,JSON.parse(localStorage.getItem(LS)||'{}'))}catch(e){}
+let PH={},idbOk=true,funIdx=0,saveT;
+const save=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){toast('Não consegui salvar neste modo do navegador')}};
+const idb={db:null,
+ open(){return new Promise((ok,no)=>{const r=indexedDB.open('georgia-caderno',1);r.onupgradeneeded=()=>r.result.createObjectStore('p');r.onsuccess=()=>{this.db=r.result;ok()};r.onerror=()=>no(r.error)})},
+ st(m){return this.db.transaction('p',m).objectStore('p')},req(r){return new Promise((ok,no)=>{r.onsuccess=()=>ok();r.onerror=()=>no(r.error)})},
+ set(k,v){return this.req(this.st('readwrite').put(v,k))},
+ del(k){return this.req(this.st('readwrite').delete(k))},
+ clear(){return this.req(this.st('readwrite').clear())},
+ all(){return new Promise(ok=>{const o={};const r=this.st('readonly').openCursor();r.onsuccess=()=>{const c=r.result;if(c){o[c.key]=c.value;c.continue()}else ok(o)};r.onerror=()=>ok(o)})}};
+/* ===== UTIL ===== */
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+const mapUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+const parseStart=()=>{const[y,m,d]=S.start.split('-').map(Number);return new Date(y,m-1,d)};
+const dayDate=i=>{const s=parseStart();return new Date(s.getFullYear(),s.getMonth(),s.getDate()+i)};
+const fLong=d=>d.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
+const fShort=d=>d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'});
+const fWd=d=>d.toLocaleDateString('pt-BR',{weekday:'short'}).replace('.','');
+const fMonthYear=d=>d.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+const req=d=>d.tasks.map((t,i)=>[t,i]).filter(([t])=>!t.o);
+const dayProg=d=>{const r=req(d);const n=r.filter(([t,i])=>S.done[d.id+'-'+i]).length;return{n,total:r.length,all:n===r.length}};
+const totals=()=>DAYS.reduce((a,d)=>{const p=dayProg(d);a.n+=p.n;a.total+=p.total;return a},{n:0,total:0});
+const pcText=d=>{const p=dayProg(d);return p.all?'Dia completo':p.n+' de '+p.total+' feitos'};
+const todayIdx=()=>{const n=new Date(),s=parseStart();if(n<s||n>=dayDate(DAYS.length))return -1;return Math.floor((n-s)/864e5)};
+let tT;function toast(m){let t=$('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(tT);tT=setTimeout(()=>t.style.display='none',2600)}
+function burst(x,y,em=['🍇','🍷','🧀','🥟','⛰️','☀️','🥂']){for(let i=0;i<16;i++){const s=document.createElement('span');s.className='bit';s.textContent=em[i%em.length];const a=Math.random()*6.28,r=60+Math.random()*100;s.style.cssText=`left:${x}px;top:${y}px;--dx:${Math.cos(a)*r}px;--dy:${Math.sin(a)*r-70}px`;document.body.appendChild(s);setTimeout(()=>s.remove(),1200)}}
+const bj=(cls='bj')=>`<svg class="${cls}"><use href="#bj"/></svg>`;
+const fix=s=>s.replace('{next}',fShort(dayDate(DAYS.length)));
+const sec=(k,t)=>`<div class="sec"><i class="dm"></i><small>${k}</small><h3>${t}</h3></div>`;
+function ring(id,txt,cls=''){const d=DAYS.find(x=>x.id===id),p=dayProg(d),pc=p.total?p.n/p.total:0;return `<svg class="ring ${cls} th-${d.c}" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" class="rb"/><circle cx="22" cy="22" r="18" class="rf" data-ring="${id}" transform="rotate(-90 22 22)" stroke-dasharray="${(pc*113.1).toFixed(1)} 113.1"/><text x="22" y="22" text-anchor="middle" dominant-baseline="central">${txt}</text></svg>`}
+/* ===== VIEWS ===== */
+const preN=()=>PRE.filter((p,i)=>S.pre[i]).length;
+function vHome(){
+ const t=totals(),s=parseStart(),e=dayDate(DAYS.length-1);let last='';
+ const route=DAYS.map((d,i)=>{const dt=dayDate(i);let h='';if(d.base!==last){last=d.base;h=`<h4 class="chap th-${d.c}"><span>${d.base}</span><em>${BASES[d.base]}</em></h4>`}
+  return h+`<a class="rw th-${d.c}${i===todayIdx()?' today':''}" href="#${d.id}">${ring(d.id,i+1)}<div class="rt"><small>${esc(fWd(dt))} · ${fShort(dt)}</small><b>${d.title}</b><span>${d.sub}</span><i data-pc="${d.id}">${pcText(d)}</i></div>${PH[d.id]?`<img class="rth" src="${PH[d.id]}" alt="">`:''}</a>`}).join('');
+ return `<section class="hero">${bj('bgbj')}<div class="in"><div class="kick">Caderno de viagem · ${esc(fMonthYear(s))}</div><h1>Geórgia</h1><div class="geo">საქართველო</div><p>Banhos termais, vinho de 8.000 anos, montanhas nevadas e muito khachapuri.</p>
+ <div class="facts"><div><small>Quando</small><b>${fShort(s)} a ${fShort(e)}</b></div><div><small>Duração</small><b>${DAYS.length} dias</b></div><div><small>Bases</small><b>3</b></div></div></div></section><div class="band"></div>
+ <div class="wrap"><section class="cd" id="cd"><div class="cdl" id="cdL"></div>
+ <div class="cdg" id="cdG" data-act="burst"><b id="cdD">0</b><em>dias</em><div class="cdt"><span id="cdH">00</span><i>h</i><span id="cdM">00</span><i>min</i><span id="cdS">00</span><i>s</i></div></div>
+ <button class="fun" id="cdF" data-act="fun"></button>
+ <div class="cdd"><span>Dia 1 do roteiro</span><input type="date" id="startIn" value="${S.start}"></div><div class="cdd" id="cdGo"></div></section>
+ <div class="stats"><div class="stat"><b id="statD">–</b><span id="statDl">dias até a partida</span></div><div class="stat"><b>${DAYS.length}</b><span>dias de roteiro</span></div><div class="stat"><b>3</b><span>Tbilisi, Sighnaghi e Kazbegi</span></div><div class="stat"><b id="ovrPct">${t.total?Math.round(t.n/t.total*100):0}%</b><span id="ovrTxt">${t.n} de ${t.total} atividades</span></div></div>${sec('Dia a dia','A trilha')}<div class="tl">${route}</div>
+ ${sec('Checklist','Antes de partir')}
+ <div class="panel"><div class="prog" id="preTxt">${preN()} de ${PRE.length}</div><ul class="chk">${PRE.map((p,i)=>`<li><label><input type="checkbox" data-grp="pre" data-k="${i}" ${S.pre[i]?'checked':''}><span class="box"></span><span class="tx">${esc(p)}</span></label></li>`).join('')}</ul></div>${sec('Para colecionar','Sabores e momentos')}
+ <span class="muted">Marque conforme for acontecendo. Vale tudo!</span><div class="tags">${BINGO.map((b,i)=>`<label><input type="checkbox" data-grp="bingo" data-k="${i}" ${S.bingo[i]?'checked':''}><span>${b}</span></label>`).join('')}</div>
+ ${sec('Glossário','Palavras em georgiano')}
+ <div class="gl">${DAYS.map(d=>`<div><b>${d.w[0]}</b><em>${d.w[1]}</em><span>${d.w[2]}</span></div>`).join('')}</div>
+ ${sec('Sem pressa','Plano B')}
+ <div class="plan"><details><summary>Se chover</summary><ul><li>Museu Nacional da Geórgia</li><li>Banho termal extra</li><li>Café na Avenida Rustaveli</li></ul></details><details><summary>Se cansar</summary><ul><li>Café com vista na Cidade Antiga</li><li>Passeio no Rike Park</li><li>Tarde livre no hotel</li></ul></details><details><summary>Se sobrar tempo</summary><ul><li>Taça de vinho num bar de Tbilisi</li><li>Mais uma volta no Dry Bridge</li><li>Sobremesa georgiana</li></ul></details></div>
+ <p class="muted" style="margin-top:14px">As sugestões são opcionais. Confirme horários, aberturas, reservas e valores antes de ir.</p></div>
+ <footer>${bj()}<b>გაუმარჯოს! Gaumarjos!</b></footer>`}
+
+function diaryCard(d){
+ const n=S.notes[d.id]||'';
+ return `<div class="panel diary" id="dcard"><h3>Diário do dia</h3><div class="arch">${PH[d.id]?`<img src="${PH[d.id]}" alt="Foto do dia">`:'<div class="ph-empty">Ainda sem foto.<br>Toque em “Foto do dia”.</div>'}</div><p class="cap" id="cap">${esc(n)||'…'}</p>
+ <div style="text-align:center"><button class="btn" data-act="pick">${PH[d.id]?'Trocar foto':'Foto do dia'}</button>${PH[d.id]?'<button class="btn ghost" data-act="rmphoto">Remover</button>':''}</div>
+ <input type="file" id="file" accept="image/*" hidden data-day="${d.id}">
+ <p class="muted" style="margin:12px 0 2px">Como foi o dia?</p><div class="moods">${MOODS.map(m=>`<button class="mood ${S.mood[d.id]===m?'on':''}" data-act="mood" data-v="${m}" data-day="${d.id}">${m}</button>`).join('')}</div>
+ <textarea id="note" data-day="${d.id}" maxlength="220" placeholder="Uma frase para lembrar deste dia…">${esc(n)}</textarea><div class="cnt"><span id="cnt">${n.length}/220</span><span id="saved"></span></div></div>`}
+
+function vDay(d){
+ const i=DAYS.indexOf(d),dt=dayDate(i),p=dayProg(d),pr=DAYS[i-1],nx=DAYS[i+1];
+ return `<div class="wrap th-${d.c}">
+ <header class="dhead">${ring(d.id,i+1,'big')}<div><div class="kicker">Dia ${i+1} de ${DAYS.length} · ${esc(cap(fLong(dt)))}</div><h2>${d.title}</h2><p class="sub">${d.sub} · <b>${d.base}</b> <span class="geo">${BASES[d.base]}</span></p></div></header>
+ <div class="prog" id="dtxt">${p.n} de ${p.total} feitos</div><p class="intro">${esc(fix(d.intro))}</p>
+ <div class="panel" style="border-color:var(--c)"><h3>O que fazer hoje</h3><ul class="chk">${d.tasks.map((t,k)=>`<li><label><input type="checkbox" data-grp="done" data-k="${d.id}-${k}" ${S.done[d.id+'-'+k]?'checked':''}><span class="box"></span><span class="tx">${esc(t.t)}${t.o?'<em class="opt">opcional</em>':''}</span></label>${t.q?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(t.q)}">Mapa ↗</a>`:''}</li>`).join('')}</ul></div>
+ <div class="tip"><b>Dica</b>${esc(d.tip)}</div>
+ <div class="word">${bj()}<small>Palavra do dia</small><div class="g">${d.w[0]}</div><span><b>${d.w[1]}</b> · ${d.w[2]}</span></div>${diaryCard(d)}
+ <div class="pn">${pr?`<a class="btn ghost" href="#${pr.id}">← Dia ${i}</a>`:'<a class="btn ghost" href="#home">← Início</a>'}${nx?`<a class="btn" href="#${nx.id}">Dia ${i+2} →</a>`:'<a class="btn amber" href="#diary">Ver o livro →</a>'}</div></div>`}
+
+function vDiary(){
+ const pics=DAYS.filter(d=>PH[d.id]).slice(0,3);
+ const nPh=Object.keys(PH).filter(k=>DAYS.some(d=>d.id===k)).length;
+ const nDone=DAYS.reduce((a,d)=>a+d.tasks.filter((t,k)=>S.done[d.id+'-'+k]).length,0);
+ return `<div class="wrap"><div class="panel no-print"><h3>Livro da viagem</h3><p class="muted">Fotos e frases viram um livrinho: capa, uma página por dia e página final. Ajuste e toque em imprimir (ou salve em PDF, em A4).</p>
+ <label class="muted">Título do livro</label><input class="in-t" id="titleIn" value="${esc(S.title)}" maxlength="40"><label class="muted" style="display:block;margin-top:8px">Nomes na capa</label><input class="in-t" id="namesIn" value="${esc(S.names)}" maxlength="50">
+ <label style="display:flex;gap:8px;margin:12px 0;align-items:center;cursor:pointer"><input type="checkbox" id="inclIn" ${S.incl?'checked':''}> Incluir dias sem foto/frase (para completar à mão)</label>
+ <button class="btn" data-act="print">Imprimir / PDF</button><button class="btn ghost" data-act="export">Backup</button><button class="btn ghost" data-act="import">Restaurar</button>
+ <p class="muted" style="margin-top:8px">Cada celular guarda o próprio diário. Use Backup e Restaurar para juntar tudo num aparelho só (a restauração completa o que estiver vazio).</p>
+ <p style="margin:6px 0 0"><button class="btn ghost" style="font-size:11px;padding:6px 12px" data-act="wipe">Apagar dados deste aparelho</button></p></div>
+ <div class="book${S.incl?' incl':''}" id="book">
+ <section class="page cover"><div class="kick" style="color:var(--terra)">Caderno de viagem · ${esc(fMonthYear(parseStart()))}</div>${bj('bj bjl')}<h1 class="bk-title">${esc(S.title)}</h1><div class="geo" style="color:var(--pom);font-size:22px;letter-spacing:.1em">საქართველო</div><div class="band" style="margin:16px 0;background-color:transparent"></div><div class="pols">${pics.map(d=>`<div class="arch"><img src="${PH[d.id]}" alt=""></div>`).join('')}</div><div class="names bk-names">${esc(S.names)}</div><div class="muted">${fShort(dayDate(0))} a ${fShort(dayDate(DAYS.length-1))} · ${dayDate(0).getFullYear()}</div></section>
+ ${DAYS.map((d,i)=>{const n=(S.notes[d.id]||'').trim(),has=PH[d.id]||n,did=d.tasks.filter((t,k)=>S.done[d.id+'-'+k]).map(t=>t.t.split(/[:,(]/)[0].trim());
+  return `<section class="page th-${d.c}${has?'':' empty'}"><div class="pg-top" style="width:100%"><span>Dia ${i+1} · ${d.base}</span><span>${fShort(dayDate(i))}</span><span class="pm">${S.mood[d.id]||''}</span></div><div class="pg-num">${String(i+1).padStart(2,'0')}</div><h3>${d.title}</h3><div class="arch">${PH[d.id]?`<img src="${PH[d.id]}" alt="">`:'<div class="ph-empty">cole uma foto aqui</div>'}</div><p class="cap">${esc(n)||'&nbsp;'}</p>${did.length?`<p class="did">Fizemos: ${esc(did.join(' · '))}</p>`:''}<a class="edit no-print" href="#${d.id}">editar este dia</a></section>`}).join('')}
+ <section class="page cover">${bj('bj bjl')}<h3 class="bk-title" style="margin-top:10px">${esc(S.title)}</h3><p class="serif" style="font-size:20px;color:var(--pom);margin:4px 0">გაუმარჯოს! Gaumarjos!</p><p class="muted">${nPh} fotos · ${nDone} atividades vividas · ${DAYS.length} dias</p><p class="bk-names serif" style="font-size:18px">${esc(S.names)}</p></section>
+ </div></div>`}
+
+/* ===== RENDER / NAV ===== */
+const app=$('#app');
+function buildNav(){
+ const h=(location.hash||'#home').slice(1),ti=todayIdx();
+ $('#nav').innerHTML=`<a href="#home" data-d="home" class="nt">Início</a>`+DAYS.map((d,i)=>`<a href="#${d.id}" data-d="${d.id}" title="${esc(fLong(dayDate(i)))}" class="${dayProg(d).all?'ok ':''}${i===ti?'today':''}">${i+1}</a>`).join('')+`<a href="#diary" data-d="diary" class="nt">Livro</a>`;
+ markNav(h)}
+function markNav(h){document.querySelectorAll('#nav a').forEach(a=>{const on=a.dataset.d===h;a.classList.toggle('on',on);if(on)a.scrollIntoView({inline:'center',block:'nearest'})})}
+function render(){
+ const h=(location.hash||'#home').slice(1),d=DAYS.find(x=>x.id===h);app.innerHTML=h==='diary'?vDiary():d?vDay(d):vHome();
+ window.scrollTo(0,0);markNav(DAYS.some(x=>x.id===h)||h==='diary'?h:'home');updateCountdown()}
+window.addEventListener('hashchange',render);
+function refreshBits(){
+ DAYS.forEach(d=>{const a=$('#nav [data-d="'+d.id+'"]');if(a)a.classList.toggle('ok',dayProg(d).all);const e=$('[data-pc="'+d.id+'"]');if(e)e.textContent=pcText(d)});
+ document.querySelectorAll('[data-ring]').forEach(c=>{const d=DAYS.find(x=>x.id===c.dataset.ring),p=dayProg(d);c.setAttribute('stroke-dasharray',(p.total?p.n/p.total*113.1:0).toFixed(1)+' 113.1')});
+ const t=totals(),o=$('#ovrTxt');if(o){o.textContent=t.n+' de '+t.total+' atividades';$('#ovrPct').textContent=(t.total?Math.round(t.n/t.total*100):0)+'%'}
+ const cur=DAYS.find(d=>location.hash==='#'+d.id);if(cur){const p=dayProg(cur);$('#dtxt').textContent=p.n+' de '+p.total+' feitos'}
+ const pb=$('#preTxt');if(pb)pb.textContent=preN()+' de '+PRE.length}
+/* ===== CONTAGEM REGRESSIVA ===== */
+function updateCountdown(){
+ const L=$('#cdL');if(!L)return;
+ const now=new Date(),s=parseStart(),end=dayDate(DAYS.length),diff=s-now,G=$('#cdG'),F=$('#cdF'),GO=$('#cdGo');
+ if(diff>0){
+  const days=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),sec=Math.floor(diff%6e4/1e3);
+  L.textContent='Faltam para a Geórgia';G.style.display='';
+  $('#cdD').textContent=days;$('#cdH').textContent=String(h).padStart(2,'0');$('#cdM').textContent=String(m).padStart(2,'0');$('#cdS').textContent=String(sec).padStart(2,'0');
+  const n=days||1,fun=[`≈ ${n} cafés da manhã até a partida`,`${n} noites de sono até o dia 1`,`≈ ${(days/7).toFixed(1).replace('.',',')} semanas de espera`,`${n} taças de Saperavi, se for uma por dia. Lá vai ter mais!`,`${n} dias até o primeiro khachapuri`,`${n} dias para decidir o que levar (e o que NÃO levar)`];
+  F.style.display='';F.textContent=fun[funIdx%fun.length]+'  · toque para mudar';
+  GO.innerHTML='';const sd=$('#statD');if(sd){sd.textContent=days;$('#statDl').textContent='dias até a partida'}}else if(now<end){
+  const i=Math.min(DAYS.length-1,Math.floor((now-s)/864e5)),d=DAYS[i];
+  L.textContent=`Estamos na Geórgia! Hoje é o dia ${i+1} de ${DAYS.length}`;G.style.display='none';F.style.display='';F.textContent=`Hoje: ${d.title}`;
+  GO.innerHTML=`<a class="btn amber" href="#${d.id}">Abrir o dia de hoje →</a>`;const sd=$('#statD');if(sd){sd.textContent=i+1;$('#statDl').textContent='dia da viagem'}}else{
+  L.textContent='Viagem concluída! Que memórias lindas';G.style.display='none';F.style.display='none';
+  GO.innerHTML='<a class="btn amber" href="#diary">Montar o livro da viagem →</a>';const sd=$('#statD');if(sd){sd.textContent='✓';$('#statDl').textContent='viagem realizada'}
+ }}
+setInterval(updateCountdown,1000);
+/* ===== FOTO ===== */
+function resize(file,max=1200,q=.78){return new Promise((ok,no)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{let w=im.naturalWidth,h=im.naturalHeight;const k=Math.min(1,max/Math.max(w,h));w=Math.round(w*k);h=Math.round(h*k);const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,0,0,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/jpeg',q))};im.onerror=()=>no(new Error('img'));im.src=u})}
+async function onFile(inp){
+ const f=inp.files[0];if(!f)return;const id=inp.dataset.day,d=DAYS.find(x=>x.id===id);
+ try{toast('Processando a foto…');PH[id]=await resize(f);
+  if(idbOk){try{await idb.set(id,PH[id])}catch(e){idbOk=false}}
+  if(!idbOk)toast('Foto na tela, mas este modo do navegador não guarda fotos. Abra o caderno por um link.');else toast('Foto salva');
+  $('#dcard').outerHTML=diaryCard(d)}catch(e){toast('Não consegui ler essa foto')}}
+/* ===== BACKUP ===== */
+function exportBackup(){const b=new Blob([JSON.stringify({v:1,S,PH})],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='georgia-diario-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),3000);toast('Backup gerado')}
+async function importBackup(file){try{const j=JSON.parse(await file.text()),o=j.S||{};
+  ['done','pre','bingo'].forEach(g=>{for(const k in(o[g]||{}))if(o[g][k])S[g][k]=true});
+  for(const k in(o.notes||{}))if(!(S.notes[k]||'').trim())S.notes[k]=o.notes[k];
+  for(const k in(o.mood||{}))if(!S.mood[k])S.mood[k]=o.mood[k];
+  for(const k in(j.PH||{}))if(!PH[k]){PH[k]=j.PH[k];if(idbOk)try{await idb.set(k,PH[k])}catch(e){}}
+  save();buildNav();render();toast('Backup restaurado')}catch(e){toast('Arquivo de backup inválido')}}
+/* ===== EVENTOS ===== */
+app.addEventListener('click',async e=>{
+ const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act;
+ if(a==='fun'){funIdx++;updateCountdown();burst(e.clientX,e.clientY)}
+ else if(a==='burst'){burst(e.clientX,e.clientY);funIdx++;updateCountdown()}
+ else if(a==='pick')$('#file').click();
+ else if(a==='rmphoto'){const id=$('#file').dataset.day,d=DAYS.find(x=>x.id===id);delete PH[id];if(idbOk)try{await idb.del(id)}catch(_){}$('#dcard').outerHTML=diaryCard(d);toast('Foto removida')}
+ else if(a==='mood'){const id=b.dataset.day,v=b.dataset.v;S.mood[id]=S.mood[id]===v?'':v;save();b.parentNode.querySelectorAll('.mood').forEach(x=>x.classList.toggle('on',x.dataset.v===S.mood[id]))}
+ else if(a==='print')window.print();
+ else if(a==='export')exportBackup();
+ else if(a==='import')$('#imp').click();
+ else if(a==='wipe'){if(confirm('Apagar TODAS as marcações, frases e fotos deste aparelho? Isso não pode ser desfeito.')){localStorage.removeItem(LS);if(idbOk)try{await idb.clear()}catch(_){}location.hash='home';location.reload()}}
+});
+app.addEventListener('change',e=>{
+ const t=e.target;
+ if(t.id==='file')return onFile(t);
+ if(t.id==='startIn'){if(t.value){S.start=t.value;save();buildNav();render()}return}
+ if(t.id==='inclIn'){S.incl=t.checked;save();$('#book').classList.toggle('incl',S.incl);return}
+ if(t.dataset.grp){
+  const g=t.dataset.grp,k=t.dataset.k,day=g==='done'?DAYS.find(d=>d.id===k.split('-')[0]):null,was=day&&dayProg(day).all;
+  if(t.checked)S[g][k]=true;else delete S[g][k];save();refreshBits();if(day&&!was&&dayProg(day).all){const r=t.getBoundingClientRect();burst(r.left+13,r.top+13);toast('Dia completo! Gaumarjos!')}}});
+app.addEventListener('input',e=>{
+ const t=e.target;
+ if(t.id==='note'){const id=t.dataset.day;S.notes[id]=t.value;$('#cnt').textContent=t.value.length+'/220';$('#cap').textContent=t.value||'…';$('#saved').textContent='salvando…';clearTimeout(saveT);saveT=setTimeout(()=>{save();$('#saved').textContent='salvo ✓'},400)}
+ else if(t.id==='titleIn'){S.title=t.value;save();document.querySelectorAll('.bk-title').forEach(x=>x.textContent=S.title)}
+ else if(t.id==='namesIn'){S.names=t.value;save();document.querySelectorAll('.bk-names').forEach(x=>x.textContent=S.names)}});
+$('#imp').addEventListener('change',e=>{if(e.target.files[0])importBackup(e.target.files[0]);e.target.value=''});
+/* ===== INÍCIO ===== */
+(async()=>{try{await idb.open();PH=await idb.all()}catch(e){idbOk=false}
+ buildNav();
+ if(!location.hash){const i=todayIdx();if(i>=0){location.hash=DAYS[i].id;return}}
+ render()})();
+</script>
+</body>
+</html>
