@@ -211,7 +211,7 @@ body{background:#fff!important;padding:0}
 <main id="app"></main>
 <input type="file" id="imp" accept="application/json" hidden>
 <script>
-/* ===== DADOS DO ROTEIRO ===== /
+/* ===== DADOS DO ROTEIRO ===== */
 const BASES={Tbilisi:'თბილისი',Sighnaghi:'სიღნაღი',Kazbegi:'ყაზბეგი'};
 const HN='Sibéria Hotel';
 const HQ='Siberia Hotel Tbilisi';
@@ -361,7 +361,7 @@ w:['მშვიდობით','Mshvidobit','Adeus / vá em paz']}
 const PRE=['Passaportes dos quatro válidos e conferir as regras de entrada na Geórgia','Seguro-viagem contratado para os quatro','Voos Lisboa → Munique → Tbilisi: saída em 11/04 às 14h55 (hora de Lisboa) e chegada em 12/04 às 03h55 (hora da Geórgia). Denise embarca em Lisboa; Rachel, Cadu e Douglas chegam do Brasil. Check-in online dos quatro e documentos à mão','Sibéria Hotel: reservar para quatro pessoas (11 a 15/04 e 17 a 22/04), em dois quartos ou um quarto para quatro; cancelar a reserva antiga do Family Hotel Kolorit, se ainda existir','Avisar o hotel do horário de chegada (pouso às 03h55 de 12/04) e combinar como entrar de madrugada','Escolher e reservar a hospedagem de Sighnaghi (15 a 17/04), para quatro pessoas','Traslado do aeroporto (12/04, 03h55) e de volta ao aeroporto (22/04, saída por volta de 01h00) combinados, para quatro pessoas e bagagem','Motorista ou GoTrip combinado (14/04, 15/04, 17/04 e 19/04), com van para quatro passageiros e bagagem','Reservar cabines nos banhos (para quatro, provavelmente duas), mesa no Shavi Lomi e no Café Litera (para quatro)','Aula de khinkali e churchkhela (13h do dia 16/04) e degustação na Pheasant’s Tears reservadas, para quatro','Levar alguns lari em dinheiro e avisar o banco do cartão','Chip ou eSIM e mapas offline baixados','Casaco, gorro e luvas para Kazbegi; lenço e roupa longa para os mosteiros e catedrais','Adaptador de tomada (a Geórgia usa 220 V) e bateria externa','Conferir regras de bagagem para vinhos, queijos e joias na volta','Voos Tbilisi → Munique → Lisboa: check-in feito e etiquetas das malas de porão até Lisboa conferidas (pouso 07h15, saída 20h20)','Bagagem de mão pronta para o guarda-volumes de Munique (até 8 kg e 35 × 50 × 20 cm cada), com documentos, remédios e eletrônicos numa bolsa pequena','Conferir se o ETIAS ou outra autorização é exigida na entrada na área Schengen, na data da viagem','Salas VIP: salvar os QR codes (Santander e C6) no celular, levar o Diners físico, conferir o Priority Pass do Douglas no app dele e confirmar se o Ambaar Club aceita a entrada na ida, com o voo seguinte internacional','Combinar o encontro em Lisboa com Denise antes do voo para Munique; Rachel, Cadu e Douglas chegam de Viracopos'];
 const BINGO=['🧀 Provar khachapuri','🥟 Comer khinkali','🍊 Provar vinho laranja','🍷 Tomar um Saperavi','🥂 Brindar “Gaumarjos!”','🍇 Comer churchkhela','💧 Beber água Borjomi','🏠 Fotografar uma sacada de madeira','❄️ Ver neve nas montanhas','🌅 Pôr do sol em Narikala','🗣️ Falar uma palavra em georgiano','🏺 Comprar algo no mercado de pulgas','🐱 Fazer amizade com um bichinho de rua','♨️ Sobreviver ao banho de enxofre'];
 const MOODS=['😍','🤩','😌','🥰','😋','🥶','😴','🍷'];
-/* ===== GUIA DE LUGARES ===== /
+/* ===== GUIA DE LUGARES ===== */
 const GUIA=[
 {t:'Livros em georgiano',s:'Peçam “ქართული წიგნი” (kartuli tsigni), livro em georgiano. As duas primeiras ficam na Avenida Rustaveli e cabem no dia 21/04.',items:[
 {t:'Biblusi, na Galleria Tbilisi',d:'Rede de livrarias e a opção mais direta para livros em georgiano. Fica no 3º andar do shopping, na Avenida Rustaveli.',a:'Av. Rustaveli 2/4 (Galleria Tbilisi), 3º andar',h:'10h às 22h',p:'+995 577 048 899',q:'Biblusi Galleria Tbilisi'},
@@ -377,7 +377,7 @@ const GUIA=[
 {t:'Board Games Corner',d:'Loja de jogos de tabuleiro.',a:'14 Giorgi Mirotadze St',h:'11h às 20h',p:'591 23 33 11',q:'Board Games Corner Tbilisi Mirotadze'}]}
 ];
 const GUIA_TIP='Liguem ou escrevam antes para confirmar o estoque e o horário: lojas pequenas mudam de horário sem aviso. Nas cartas Pokémon, confiram o idioma (inglês, japonês) e desconfiem de cartas avulsas muito baratas. Livros infantis ilustrados são uma boa lembrança mesmo sem ler georgiano. Lembrem do peso de livros e mangás na bagagem de volta.';
-/* ===== ESCALA EM MUNIQUE ===== /
+/* ===== ESCALA EM MUNIQUE ===== */
 const MUN={
 stats:[['07h15','pouso em Munique, hora local'],['20h20','voo para Lisboa'],['13h05','de escala, no total'],['€ 10','por mala de mão no guarda-volumes, até 24 h']],
 intro:'Treze horas de escala dão para conhecer o centro de Munique com calma. As malas de porão seguem direto para Lisboa, então vocês quatro só precisam deixar a bagagem de mão no guarda-volumes e ir de trem até a cidade.',
@@ -408,7 +408,7 @@ alt:[
 ],
 note:'Guarda-volumes, preços, bilhete e tempos de S-Bahn vêm de pesquisa na web (site do aeroporto, MVV e MVG). Os passeios do centro e os horários do Glockenspiel e do mercado vêm de conhecimento geral: confirmem antes.'
 };
-/* ===== SALAS VIP ===== /
+/* ===== SALAS VIP ===== */
 const CARDS=[
 {id:'u1',n:'Santander Unique nº 1 (Visa)',tot:2,m:'o uso no Galeão é opcional'},
 {id:'u2',n:'Santander Unique nº 2 (Visa)',tot:2},
@@ -439,7 +439,7 @@ tips:[
 ],
 note:'Horários, localização e permanência vêm de pesquisa na web (Priority Pass, TAV, Plaza Premium, aeroporto de Lisboa e Mastercard). Os cartões e as cotas vêm das informações de vocês: 2 cartões Visa Unique do Santander (2 acessos cada), 1 Bradesco Diners (4 acessos, mais entradas gratuitas em salas Bradesco e parceiras), 1 C6 Carbon (4 acessos) e o Priority Pass do Douglas (4 acessos).'
 };
-/* ===== ESTADO ===== /
+/* ===== ESTADO ===== */
 const LS='georgia-caderno-v1';
 let S={start:'2027-04-12',v:5,names:'Rachel, Cadu, Denise e Douglas',title:'Nossa Geórgia',incl:false,done:{},pre:{},bingo:{},notes:{},mood:{}};
 try{Object.assign(S,JSON.parse(localStorage.getItem(LS)||'{}'))}catch(e){}
@@ -456,15 +456,15 @@ set(k,v){return this.req(this.st('readwrite').put(v,k))},
 del(k){return this.req(this.st('readwrite').delete(k))},
 clear(){return this.req(this.st('readwrite').clear())},
 all(){return new Promise(ok=>{const o={};const r=this.st('readonly').openCursor();r.onsuccess=()=>{const c=r.result;if(c){o[c.key]=c.value;c.continue()}else ok(o)};r.onerror=()=>ok(o)})}};
-/* ===== UTIL ===== /
+/* ===== UTIL ===== */
 const $=(s,r=document)=>r.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
 const mapUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
 const parseStart=()=>{const[y,m,d]=S.start.split('-').map(Number);return new Date(y,m-1,d)};
-/* embarque: 14h55 em Lisboa (UTC+1 em abril), no dia anterior à chegada /
+/* embarque: 14h55 em Lisboa (UTC+1 em abril), no dia anterior à chegada */
 const dep=()=>{const[y,m,d]=S.start.split('-').map(Number);return new Date(Date.UTC(y,m-1,d-1,13,55))};
-/* chegada: 03h55 na Geórgia (UTC+4) /
+/* chegada: 03h55 na Geórgia (UTC+4) */
 const arrival=()=>{const[y,m,d]=S.start.split('-').map(Number);return new Date(Date.UTC(y,m-1,d,-1,55))};
 const dayDate=i=>{const s=parseStart();return new Date(s.getFullYear(),s.getMonth(),s.getDate()+i)};
 const fLong=d=>d.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
@@ -487,7 +487,7 @@ const placeLi=(pre,t,k)=>`<li><label><input type="checkbox" data-grp="done" data
 const vipLi=(t,k)=>`<li><label><input type="checkbox" data-grp="done" data-k="vip-${k}" ${S.done['vip-'+k]?'checked':''}><span class="box"></span><span class="tx"><span class="tt">${esc(t.t)}${t.o?' <em class="opt">opcional</em>':''}</span><span class="dsc">${esc(t.s)}</span><span class="dsc"><b>Sala:</b> ${esc(t.l)}</span><span class="dsc"><b>Cartão:</b> ${esc(t.c)}</span><span class="dsc"><b>Acessos:</b> ${esc(t.u)}</span><span class="dsc"><b>Onde e quando:</b> ${esc(t.w)}</span>${t.n?`<span class="dsc"><b>Atenção:</b> ${esc(t.n)}</span>`:''}</span></label>${t.q?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(t.q)}">Mapa ↗</a>`:''}</li>`;
 const vipPlan=id=>VIP.stages.reduce((a,s)=>a+((s.use&&s.use[id])||0),0);
 const vipUsed=id=>VIP.stages.reduce((a,s,k)=>a+(S.done['vip-'+k]?((s.use&&s.use[id])||0):0),0);
-/* ===== VIEWS ===== /
+/* ===== VIEWS ===== */
 const preN=()=>PRE.filter((p,i)=>S.pre[i]).length;
 function vHome(){
 const t=totals(),s=parseStart(),e=dayDate(DAYS.length-1);let last='';
@@ -583,7 +583,7 @@ ${DAYS.map((d,i)=>{const n=(S.notes[d.id]||'').trim(),has=PH[d.id]||n,did=d.task
 return `<section class="page th-${d.c}${has?'':' empty'}"><div class="pg-top" style="width:100%"><span>Dia ${i+1} · ${d.base}</span><span>${fShort(dayDate(i))}</span><span class="pm">${S.mood[d.id]||''}</span></div><div class="pg-num">${String(i+1).padStart(2,'0')}</div><h3>${d.title}</h3><div class="arch">${PH[d.id]?`<img src="${PH[d.id]}" alt="">`:'<div class="ph-empty">cole uma foto aqui</div>'}</div><p class="cap">${esc(n)||'&nbsp;'}</p>${did.length?`<p class="did">Fizemos: ${esc(did.join(' · '))}</p>`:''}<a class="edit no-print" href="#${d.id}">editar este dia</a></section>`}).join('')}
 <section class="page cover">${bj('bj bjl')}<h3 class="bk-title" style="margin-top:10px">${esc(S.title)}</h3><p class="serif" style="font-size:20px;color:var(--pom);margin:4px 0">გაუმარჯოს! Gaumarjos!</p><p class="muted">${nPh} fotos · ${nDone} atividades vividas · ${DAYS.length} dias</p><p class="bk-names serif" style="font-size:18px">${esc(S.names)}</p></section>
 </div></div>`}
-/* ===== RENDER / NAV ===== /
+/* ===== RENDER / NAV ===== */
 const app=$('#app');
 const EXTRA=['diary','guia','munique','vip'];
 function buildNav(){
@@ -604,7 +604,7 @@ const cur=DAYS.find(d=>location.hash==='#'+d.id);if(cur){const p=dayProg(cur);$(
 const xp=$('#xprog');if(xp)xp.textContent=cnt(xp.dataset.p)+' de '+xp.dataset.n+' '+xp.dataset.s;
 document.querySelectorAll('[data-vu]').forEach(e=>{e.textContent=vipUsed(e.dataset.vu)});
 const pb=$('#preTxt');if(pb)pb.textContent=preN()+' de '+PRE.length}
-/* ===== CONTAGEM REGRESSIVA ===== /
+/* ===== CONTAGEM REGRESSIVA ===== */
 function updateCountdown(){
 const L=$('#cdL');if(!L)return;
 const now=new Date(),s=parseStart(),end=dayDate(DAYS.length),dp=dep(),ar=arrival();
@@ -643,7 +643,7 @@ GO.innerHTML='<a class="btn amber" href="#diary">Montar o livro da viagem →</a
 if(sd){sd.textContent='✓';sl.textContent='viagem realizada'}
 }}
 setInterval(updateCountdown,1000);
-/* ===== FOTO ===== /
+/* ===== FOTO ===== */
 function resize(file,max=1200,q=.78){return new Promise((ok,no)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{let w=im.naturalWidth,h=im.naturalHeight;const k=Math.min(1,max/Math.max(w,h));w=Math.round(wk);h=Math.round(hk);const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,0,0,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/jpeg',q))};im.onerror=()=>no(new Error('img'));im.src=u})}
 async function onFile(inp){
 const f=inp.files[0];if(!f)return;const id=inp.dataset.day,d=DAYS.find(x=>x.id===id);
@@ -651,7 +651,7 @@ try{toast('Processando a foto…');PH[id]=await resize(f);
 if(idbOk){try{await idb.set(id,PH[id])}catch(e){idbOk=false}}
 if(!idbOk)toast('Foto na tela, mas este modo do navegador não guarda fotos. Abra o caderno por um link.');else toast('Foto salva');
 $('#dcard').outerHTML=diaryCard(d)}catch(e){toast('Não consegui ler essa foto')}}
-/* ===== BACKUP ===== /
+/* ===== BACKUP ===== */
 function exportBackup(){const b=new Blob([JSON.stringify({v:1,S,PH})],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='georgia-diario-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),3000);toast('Backup gerado')}
 async function importBackup(file){try{const j=JSON.parse(await file.text()),o=j.S||{};
 ['done','pre','bingo'].forEach(g=>{for(const k in(o[g]||{}))if(o[g][k])S[g][k]=true});
@@ -659,7 +659,7 @@ for(const k in(o.notes||{}))if(!(S.notes[k]||'').trim())S.notes[k]=o.notes[k];
 for(const k in(o.mood||{}))if(!S.mood[k])S.mood[k]=o.mood[k];
 for(const k in(j.PH||{}))if(!PH[k]){PH[k]=j.PH[k];if(idbOk)try{await idb.set(k,PH[k])}catch(e){}}
 save();buildNav();render();toast('Backup restaurado')}catch(e){toast('Arquivo de backup inválido')}}
-/* ===== EVENTOS ===== /
+/* ===== EVENTOS ===== */
 app.addEventListener('click',async e=>{
 const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act;
 if(a==='fun'){funIdx++;updateCountdown();burst(e.clientX,e.clientY)}
@@ -688,7 +688,7 @@ if(t.id==='note'){const id=t.dataset.day;S.notes[id]=t.value;$('#cnt').textConte
 else if(t.id==='titleIn'){S.title=t.value;save();document.querySelectorAll('.bk-title').forEach(x=>x.textContent=S.title)}
 else if(t.id==='namesIn'){S.names=t.value;save();document.querySelectorAll('.bk-names').forEach(x=>x.textContent=S.names)}});
 $('#imp').addEventListener('change',e=>{if(e.target.files[0])importBackup(e.target.files[0]);e.target.value=''});
-/* ===== INÍCIO ===== /
+/* ===== INÍCIO ===== */
 (async()=>{try{await idb.open();PH=await idb.all()}catch(e){idbOk=false}
 buildNav();
 if(!location.hash){const i=todayIdx();if(i>=0){location.hash=DAYS[i].id;return}}
