@@ -8,7 +8,7 @@
 <style>
 :root{--paper:#e3e7e1;--paper2:#f8faf6;--ink:#241a1d;--night:#241318;--pom:#7d1f2d;--terra:#b8502d;--saff:#d9a12b;--slate:#38505f;--line:#c4cbc1;--muted:#66605f;--c:var(--pom);--serif:"Palatino Linotype",Palatino,"Book Antiqua","URW Palladio L",Georgia,serif}
 .th-w{--c:var(--pom)}.th-a{--c:var(--terra)}.th-b{--c:var(--slate)}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom);background-color:var(--paper);background-image:linear-gradient(45deg,rgba(56,80,95,.07) 1px,transparent 1px),linear-gradient(-45deg,rgba(56,80,95,.07) 1px,transparent 1px);background-size:38px 38px}
 h1,h2,h3,h4,.serif{font-family:var(--serif);font-weight:700}
@@ -18,7 +18,7 @@ a{color:inherit}
 .geo{font-family:"Sylfaen","Noto Serif Georgian",var(--serif)}
 .bj{width:1em;height:1em;display:inline-block;vertical-align:-.12em}
 .band{height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cpath d='M0 7L7 0l7 7-7 7zM14 7l7-7 7 7-7 7z' fill='none' stroke='%23d9a12b' stroke-width='1.2'/%3E%3C/svg%3E") repeat-x;background-color:var(--night)}
-/* nav */
+/* nav /
 #nav{position:sticky;top:0;z-index:20;background:#1a0e12;display:flex;align-items:center;gap:6px;overflow-x:auto;padding:8px 10px;scrollbar-width:none}
 #nav::-webkit-scrollbar{display:none}
 #nav a{flex:0 0 auto;min-width:34px;height:34px;display:grid;place-items:center;padding:0 10px;border:1.5px solid #5d4a50;border-radius:99px;color:#eee6e0;text-decoration:none;font:700 14px var(--serif);position:relative}
@@ -26,7 +26,7 @@ a{color:inherit}
 #nav a.ok{border-color:var(--saff);color:var(--saff)}
 #nav a.today::after{content:"";position:absolute;top:-2px;right:-2px;width:9px;height:9px;border-radius:50%;background:var(--terra)}
 #nav a.on{background:var(--paper2);color:var(--ink);border-color:var(--paper2)}
-/* capa */
+/* capa /
 .hero{background:linear-gradient(170deg,#2a1520 0%,#4a1a28 65%,#6b2230 100%);color:#f3ebe4;position:relative;overflow:hidden;padding:34px 20px 96px}
 .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:84px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 90' preserveAspectRatio='none'%3E%3Cpolygon points='0,90 0,52 30,38 55,50 100,18 140,48 185,26 230,54 285,14 330,44 370,30 400,42 400,90' fill='%2338505f' fill-opacity='.55'/%3E%3Cpolygon points='0,90 0,68 45,52 80,64 130,40 175,66 220,48 270,70 320,46 360,62 400,54 400,90' fill='%23241318'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
 .hero .bgbj{position:absolute;right:-90px;top:-50px;width:360px;height:360px;color:var(--saff);opacity:.18;animation:spin 140s linear infinite}
@@ -42,7 +42,7 @@ a{color:inherit}
 .facts div:first-child{padding-left:0}.facts div:last-child{border:0}
 .facts small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--saff)}
 .facts b{font:700 17px var(--serif)}
-/* contagem */
+/* contagem /
 .cd{background:var(--pom);color:var(--paper2);outline:1px solid var(--saff);outline-offset:-8px;padding:26px 18px;margin:22px 0;text-align:center}
 .cdl{font:700 12px system-ui;letter-spacing:.2em;text-transform:uppercase;color:var(--saff)}
 .cdg{cursor:pointer;user-select:none;margin:6px 0}
@@ -55,7 +55,7 @@ a{color:inherit}
 .cdd input{font:inherit;padding:5px 8px;border:0;background:var(--paper2);color:var(--ink);border-radius:0}
 .bit{position:fixed;font-size:24px;pointer-events:none;z-index:99;animation:pop 1.1s ease-out forwards}
 @keyframes pop{from{transform:translate(-50%,-50%) scale(.4);opacity:1}to{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy) + 90px)) scale(1);opacity:0}}
-/* numeros */
+/* numeros /
 .stats{display:grid;grid-template-columns:repeat(2,1fr);border-top:4px double var(--ink);border-bottom:4px double var(--ink)}
 .stat{padding:14px 12px}
 .stat:nth-child(even){border-left:1px solid var(--line)}
@@ -63,18 +63,18 @@ a{color:inherit}
 .stat b{font:700 32px/1.1 var(--serif);display:block;color:var(--pom)}
 .stat span{font-size:12.5px;color:var(--muted)}
 @media(min-width:560px){.stats{grid-template-columns:repeat(4,1fr)}.stat:nth-child(n){border-left:1px solid var(--line);border-top:0}.stat:first-child{border-left:0}}
-/* secoes */
+/* secoes /
 .sec{display:flex;align-items:baseline;gap:12px;margin:38px 0 14px;padding-bottom:7px;border-bottom:1.5px solid var(--ink)}
 .sec small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700}
 .sec h3{margin:0;font-size:24px}
 .dm{display:inline-block;width:8px;height:8px;background:var(--saff);transform:rotate(45deg);margin-right:2px}
-/* anel */
+/* anel /
 .ring{width:54px;height:54px;flex:0 0 auto;border-radius:50%;background:var(--paper2)}
 .ring.big{width:92px;height:92px}
 .ring .rb{fill:none;stroke:var(--line);stroke-width:3}
 .ring .rf{fill:none;stroke:var(--c);stroke-width:3;stroke-linecap:round;transition:stroke-dasharray .4s}
 .ring text{font:700 17px var(--serif);fill:var(--ink)}
-/* linha do tempo */
+/* linha do tempo /
 .tl{border-left:2px solid var(--ink);margin:8px 0 0 27px}
 .chap{position:relative;display:flex;align-items:baseline;gap:10px;margin:0;padding:22px 0 6px 38px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
 .chap::before{content:"";position:absolute;left:-7px;top:30px;width:12px;height:12px;background:var(--c);transform:rotate(45deg)}
@@ -89,12 +89,12 @@ a{color:inherit}
 .rt span{display:block;font-size:13.5px;color:var(--muted)}
 .rt i{display:block;font-style:normal;font-size:12.5px;font-weight:700;color:var(--c);margin-top:2px}
 .rth{width:44px;height:56px;object-fit:cover;border-radius:99px 99px 3px 3px;flex:0 0 auto}
-/* links dos guias */
+/* links dos guias /
 .lk{display:block;text-decoration:none;padding:14px 4px;border-bottom:1px solid var(--line)}
 .lk b{display:block;font:700 19px/1.2 var(--serif);color:var(--pom)}
 .lk span{font-size:13.5px;color:var(--muted)}
 .lk:hover b{text-decoration:underline}
-/* checklists */
+/* checklists /
 .chk{list-style:none;margin:6px 0 0;padding:0}
 .chk li{display:flex;align-items:flex-start;gap:6px;border-bottom:1px solid var(--line);padding:9px 0}
 .chk li:last-child{border:0}
@@ -117,27 +117,27 @@ a{color:inherit}
 .panel h3{margin:0 0 4px;font-size:20px}
 .alt{margin:6px 0 0;padding-left:20px;font-size:14.5px}
 .alt li{margin-bottom:8px}
-/* colecao */
+/* colecao /
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .tags label{cursor:pointer}.tags input{position:absolute;opacity:0}
 .tags span{display:block;border:1.5px solid var(--ink);border-radius:99px;padding:6px 13px;font-size:13.5px;font-weight:600;background:var(--paper2);transition:.15s}
 .tags input:checked+span{background:var(--saff);box-shadow:2px 2px 0 var(--ink)}
 .tags input:focus-visible+span{outline:3px solid var(--terra)}
-/* glossario */
+/* glossario /
 .gl{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
 .gl div{padding:10px 8px 10px 0;border-bottom:1px solid var(--line)}
 .gl div:nth-child(even){padding-left:12px;border-left:1px solid var(--line)}
 .gl b{display:block;font-size:22px;color:var(--pom);font-family:"Sylfaen","Noto Serif Georgian",var(--serif)}
 .gl em{font-size:13px;color:var(--muted);display:block}
 .gl span{font-size:14px}
-/* plano b */
+/* plano b /
 .plan details{border-bottom:1px solid var(--ink)}
 .plan summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;padding:13px 2px;font:700 18px var(--serif)}
 .plan summary::-webkit-details-marker{display:none}
 .plan summary::before{content:"";width:9px;height:9px;background:var(--saff);transform:rotate(45deg);transition:.2s;flex:0 0 auto}
 .plan details[open] summary::before{background:var(--pom);transform:rotate(135deg)}
 .plan ul{margin:0 0 14px;padding-left:34px;font-size:14.5px}
-/* dia */
+/* dia /
 .dhead{display:flex;gap:16px;align-items:center;margin:4px 0 8px}
 .dhead .kicker{font-size:11.5px;letter-spacing:.14em;font-weight:700;color:var(--c);text-transform:uppercase}
 .dhead h2{margin:3px 0;font-size:clamp(26px,7vw,34px);line-height:1.1}
@@ -171,7 +171,7 @@ textarea,.in-t{width:100%;font:inherit;border:1.5px solid var(--ink);padding:10p
 textarea{min-height:84px;resize:vertical}
 .cnt{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
 .pn{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:22px}
-/* livro */
+/* livro /
 .page{background:var(--paper2);border:1.5px solid var(--ink);outline:1px solid var(--line);outline-offset:-9px;padding:28px 22px;margin:18px 0;text-align:center;position:relative}
 .cover h1{font-size:clamp(40px,12vw,64px);margin:10px 0;font-weight:400;letter-spacing:-.01em;line-height:1}
 .cover .bjl{width:92px;height:92px;color:var(--pom);margin:6px auto}
@@ -190,18 +190,18 @@ footer{text-align:center;padding:24px 10px 44px;color:var(--pom)}
 footer .bj{width:38px;height:38px}
 footer b{font:italic 22px var(--serif);display:block;margin-top:4px}
 @media print{
- @page{size:A4;margin:12mm}
- body{background:#fff!important;padding:0}
- #nav,.no-print,footer,.toast,.bit{display:none!important}
- .wrap{max-width:none;padding:0}
- .page{margin:0;break-after:page;page-break-after:always;min-height:262mm;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff}
- .page:last-child{break-after:auto;page-break-after:auto}
- .page .arch{width:90mm}
- .pols .arch{width:45mm}
- .page>*{width:100%}
- .page .arch,.page .pols{width:auto}
- .cap{font-size:22px}
- .pg-num{font-size:90px}
+@page{size:A4;margin:12mm}
+body{background:#fff!important;padding:0}
+#nav,.no-print,footer,.toast,.bit{display:none!important}
+.wrap{max-width:none;padding:0}
+.page{margin:0;break-after:page;page-break-after:always;min-height:262mm;display:flex;flex-direction:column;justify-content:center;align-items:center;background:#fff}
+.page:last-child{break-after:auto;page-break-after:auto}
+.page .arch{width:90mm}
+.pols .arch{width:45mm}
+.page>{width:100%}
+.page .arch,.page .pols{width:auto}
+.cap{font-size:22px}
+.pg-num{font-size:90px}
 }
 </style>
 </head>
@@ -211,256 +211,260 @@ footer b{font:italic 22px var(--serif);display:block;margin-top:4px}
 <main id="app"></main>
 <input type="file" id="imp" accept="application/json" hidden>
 <script>
-/* ===== DADOS DO ROTEIRO ===== */
+/* ===== DADOS DO ROTEIRO ===== /
 const BASES={Tbilisi:'თბილისი',Sighnaghi:'სიღნაღი',Kazbegi:'ყაზბეგი'};
-const HN='Family Hotel Kolorit Old Tbilisi';
-const HT=HN+' · 11/04 a 16/04';
-const HT2=HN+' · 18/04 a 22/04';
+const HN='Sibéria Hotel';
+const HQ='Siberia Hotel Tbilisi';
+const HT=HN+' · 11/04 a 15/04';
+const HT2=HN+' · 17/04 a 22/04';
 const DAYS=[
-{id:'d1',base:'Tbilisi',c:'w',title:'Chegada e acolhida em Tbilisi',sub:'Ponte da Paz, Fortaleza de Narikala e Mãe da Geórgia',hotel:HT+' · chegada às 03h55 de 12/04 (quarto reservado desde 11/04)',hq:1,
- hl:['Ponte da Paz','Fortaleza de Narikala','Estátua Mãe da Geórgia','Jantar no Shavi Lomi'],
- intro:'O voo pousa às 03h55, então a manhã é de descanso de verdade. À tarde, um programa leve: a Ponte da Paz, o pôr do sol na Fortaleza de Narikala, a Mãe da Geórgia ali pertinho e um bom jantar. A Cidade Antiga com calma fica para o dia 15/04.',
- tasks:[
-  {t:'03h55 · Pousar no Aeroporto Internacional de Tbilisi (voo vindo de Munique)',d:'Imigração, bagagens e, se der, chip ou eSIM.',q:'Tbilisi International Airport'},
-  {t:'Seguir para o hotel',d:'Traslado combinado antes ou carro por aplicativo. Para três pessoas com malas, confirmem se o carro comporta todos.',q:HN+' Tbilisi'},
-  {t:'Fazer o check-in e dormir',d:'O quarto já está reservado desde 11/04.'},
-  {t:'Descansar a manhã inteira'},
-  {t:'Almoço leve e simples por perto'},
-  {t:'Ponte da Paz (Bridge of Peace)',d:'Ponte de pedestres de vidro e aço sobre o rio Mtkvari, moderna e iluminada, que liga a Cidade Antiga ao Rike Park.',q:'Bridge of Peace Tbilisi'},
-  {t:'Fortaleza de Narikala, ao pôr do sol',d:'Fortaleza antiga no alto de uma colina, sobre a Cidade Antiga. Dá para subir de teleférico a partir do Rike Park. A vista da cidade é ótima.',q:'Narikala Fortress Tbilisi'},
-  {t:'Estátua Mãe da Geórgia (Kartlis Deda), cerca de 20 min',d:'Estátua símbolo da cidade, no alto da colina atrás de Narikala, de frente para Tbilisi. Segura uma taça de vinho para receber os amigos e uma espada para os inimigos. A vista é ampla.',q:'Mother of Georgia Kartlis Deda Tbilisi'},
-  {t:'Jantar no restaurante Shavi Lomi (Black Lion)',d:'Cozinha georgiana num ambiente artístico e aconchegante. Vale reservar mesa para três.',q:'Shavi Lomi Tbilisi'},
-  {t:'Provar um khachapuri',d:'Pão recheado de queijo, o prato mais famoso da Geórgia.',o:1}],
- tip:'A reserva do hotel começa em 11/04, então o quarto já estará pronto quando vocês chegarem. Avisem o hotel de que o voo pousa às 03h55 e que vocês chegam de madrugada, para a recepção ou o responsável já esperar por vocês. Combinem o traslado na véspera, para ter alguém esperando no aeroporto. A Geórgia está 7 horas à frente de Brasília, então o corpo vai estranhar: hidratem-se e durmam sem culpa. Se o cansaço bater, fiquem só com o pôr do sol e o jantar. A Mãe da Geórgia fica na colina, perto da fortaleza: dá para fazer as duas na mesma subida. As ladeiras são de pedra: tênis confortável!',
- w:['გამარჯობა','Gamarjoba','Olá!']},
-{id:'d2',base:'Tbilisi',c:'w',title:'Banho termal, Meidan e marionetes',sub:'Banhos de Abanotubani, Meidan Bazaar, cascata e Torre do Relógio Torto',hotel:HT,hq:1,
- hl:['Banhos sulfúricos de Abanotubani','Meidan Bazaar','Cascata de Leghvtakhevi','Torre do Relógio Torto'],
- intro:'Manhã de spa à moda georgiana, uma voltinha no mercado subterrâneo ao lado dos banhos, a cascata escondida do bairro e a tarde passeando pela região da Torre do Relógio Torto.',
- tasks:[
-  {t:'Banhos sulfúricos de Abanotubani, em cabine privada',d:'Bairro dos banhos termais de água sulfurosa, com fachadas de tijolo e cúpulas. Cabines privadas, como as do Chreli Abano ou do No. 5.',q:'Abanotubani Sulfur Baths Tbilisi'},
-  {t:'Massagem tradicional com esfoliação (Kisi)',d:'Oferecida nos banhos. Perguntem ao reservar a cabine.'},
-  {t:'Meidan Bazaar (cerca de 1 h)',d:'Mercado subterrâneo sob a Praça Vakhtang Gorgasali, a poucos passos dos banhos: lembrancinhas e petiscos.',q:'Meidan Bazaar Tbilisi'},
-  {t:'Cascata de Leghvtakhevi, cerca de 20 min',d:'Cachoeira escondida entre as casas do bairro dos banhos, num pequeno cânion, com uma passarela junto à água. Há alguns degraus e o piso fica molhado: tênis com boa aderência.',q:'Leghvtakhevi Waterfall Tbilisi'},
-  {t:'Torre do Relógio Torto (Gabriadze Clock Tower)',d:'Torre torta e cheia de detalhes, ao lado do Teatro de Marionetes Gabriadze. Ótimo lugar para fotos.',q:'Gabriadze Theatre Tbilisi'},
-  {t:'Café da tarde na região'},
-  {t:'Espetáculo no Teatro de Marionetes Gabriadze',d:'Confirmem se há sessão e comprem o ingresso antes.',q:'Gabriadze Theatre Tbilisi',o:1}],
- tip:'Reservem a cabine com antecedência e levem chinelo e prendedor de cabelo. Como agora são três, perguntem se a cabine comporta os três ou se precisam de duas. O cheirinho de enxofre faz parte. O Meidan costuma abrir todos os dias, das 10h às 22h (confirmem no local), e fica perto dos banhos: dá para ir logo depois, sem pressa. A cascata fica no mesmo bairro: é um passeio curto, mas com degraus e piso molhado, então vão no ritmo que for confortável.',
- w:['მადლობა','Madloba','Obrigada!']},
+{id:'d1',base:'Tbilisi',c:'w',title:'Chegada e acolhida em Tbilisi',sub:'Ponte da Paz, Fortaleza de Narikala e Mãe da Geórgia',hotel:HT+' · chegada às 03h55 de 12/04 (quarto a reservar desde 11/04)',hq:1,
+hl:['Ponte da Paz','Fortaleza de Narikala','Estátua Mãe da Geórgia','Jantar no Shavi Lomi'],
+intro:'O voo pousa às 03h55, então a manhã é de descanso de verdade. À tarde, um programa leve: a Ponte da Paz, o pôr do sol na Fortaleza de Narikala, a Mãe da Geórgia ali pertinho e um bom jantar. A Cidade Antiga com calma fica para o dia 19/04.',
+tasks:[
+{t:'03h55 · Pousar no Aeroporto Internacional de Tbilisi (voo vindo de Munique)',d:'Imigração, bagagens e, se der, chip ou eSIM.',q:'Tbilisi International Airport'},
+{t:'Seguir para o hotel',d:'Traslado combinado antes ou carro por aplicativo. Para quatro pessoas com malas, confirmem se o carro comporta todos: pode ser preciso uma van ou dois carros.',q:HQ},
+{t:'Fazer o check-in e dormir',d:'O quarto precisa estar reservado desde 11/04, para o check-in valer logo ao chegar.'},
+{t:'Descansar a manhã inteira'},
+{t:'Almoço leve e simples por perto'},
+{t:'Ponte da Paz (Bridge of Peace)',d:'Ponte de pedestres de vidro e aço sobre o rio Mtkvari, moderna e iluminada, que liga a Cidade Antiga ao Rike Park.',q:'Bridge of Peace Tbilisi'},
+{t:'Fortaleza de Narikala, ao pôr do sol',d:'Fortaleza antiga no alto de uma colina, sobre a Cidade Antiga. Dá para subir de teleférico a partir do Rike Park. A vista da cidade é ótima.',q:'Narikala Fortress Tbilisi'},
+{t:'Estátua Mãe da Geórgia (Kartlis Deda), cerca de 20 min',d:'Estátua símbolo da cidade, no alto da colina atrás de Narikala, de frente para Tbilisi. Segura uma taça de vinho para receber os amigos e uma espada para os inimigos. A vista é ampla.',q:'Mother of Georgia Kartlis Deda Tbilisi'},
+{t:'Jantar no restaurante Shavi Lomi (Black Lion)',d:'Cozinha georgiana num ambiente artístico e aconchegante. Vale reservar mesa para quatro.',q:'Shavi Lomi Tbilisi'},
+{t:'Provar um khachapuri',d:'Pão recheado de queijo, o prato mais famoso da Geórgia.',o:1}],
+tip:'A reserva do hotel precisa começar em 11/04, para o quarto já estar pronto quando vocês chegarem. Avisem o hotel de que o voo pousa às 03h55 e que vocês chegam de madrugada, para a recepção ou o responsável já esperar por vocês. Combinem o traslado na véspera, para ter alguém esperando no aeroporto. A Geórgia está 7 horas à frente de Brasília, então o corpo vai estranhar: hidratem-se e durmam sem culpa. Se o cansaço bater, fiquem só com o pôr do sol e o jantar. A Mãe da Geórgia fica na colina, perto da fortaleza: dá para fazer as duas na mesma subida. As ladeiras são de pedra: tênis confortável!',
+w:['გამარჯობა','Gamarjoba','Olá!']},
+{id:'d2',base:'Tbilisi',c:'w',title:'Banho termal, Meidan e cascata',sub:'Banhos de Abanotubani, Meidan Bazaar, cascata e Torre do Relógio Torto',hotel:HT,hq:1,
+hl:['Banhos sulfúricos de Abanotubani','Meidan Bazaar','Cascata de Leghvtakhevi','Torre do Relógio Torto'],
+intro:'Manhã de spa à moda georgiana, uma voltinha no mercado subterrâneo ao lado dos banhos, a cascata escondida do bairro e uma parada na Torre do Relógio Torto.',
+tasks:[
+{t:'Banhos sulfúricos de Abanotubani, em cabine privada',d:'Bairro dos banhos termais de água sulfurosa, com fachadas de tijolo e cúpulas. Cabines privadas, como as do Chreli Abano ou do No. 5. Com quatro pessoas, talvez sejam precisas duas cabines.',q:'Abanotubani Sulfur Baths Tbilisi'},
+{t:'Massagem tradicional com esfoliação (Kisi)',d:'Oferecida nos banhos. Perguntem ao reservar a cabine.'},
+{t:'Meidan Bazaar (cerca de 1 h)',d:'Mercado subterrâneo sob a Praça Vakhtang Gorgasali, a poucos passos dos banhos: lembrancinhas e petiscos.',q:'Meidan Bazaar Tbilisi'},
+{t:'Cascata de Leghvtakhevi, cerca de 20 min',d:'Cachoeira escondida entre as casas do bairro dos banhos, num pequeno cânion, com uma passarela junto à água. Há alguns degraus e o piso fica molhado: tênis com boa aderência.',q:'Leghvtakhevi Waterfall Tbilisi'},
+{t:'Torre do Relógio Torto (Gabriadze Clock Tower)',d:'Torre torta e cheia de detalhes, na Cidade Antiga. Ótimo lugar para fotos.',q:'Gabriadze Clock Tower Tbilisi'},
+{t:'Café da tarde na região'}],
+tip:'Reservem as cabines com antecedência (para quatro pessoas, provavelmente duas) e levem chinelo e prendedor de cabelo. O cheirinho de enxofre faz parte. O Meidan costuma abrir todos os dias, das 10h às 22h (confirmem no local), e fica perto dos banhos: dá para ir logo depois, sem pressa. A cascata fica no mesmo bairro: é um passeio curto, mas com degraus e piso molhado, então vão no ritmo que for confortável.',
+w:['მადლობა','Madloba','Obrigada!']},
 {id:'d3',base:'Kazbegi',c:'b',title:'Cáucaso: bate-volta a Kazbegi',sub:'Ananuri, neve em Gudauri, Passo Jvari e Igreja de Gergeti',hotel:HT,hq:1,
- hl:['Fortaleza de Ananuri','Neve em Gudauri','Monumento da Amizade','Igreja de Gergeti'],
- intro:'O dia dos cenários de cinema: águas turquesa, neve de verdade, montanhas colossais e uma igrejinha no alto do mundo. Saída bem cedo e volta no fim da tarde.',
- tasks:[
-  {t:'7h30 · Sair de Tbilisi com motorista privado',d:'Vocês seguem pela Estrada Militar da Geórgia, a estrada histórica que sobe de Tbilisi para as montanhas do Cáucaso. A estrada em si já é um passeio.'},
-  {t:'8h45 · Fortaleza de Ananuri e o lago Zhinvali',d:'Complexo fortificado medieval com igrejas, à beira de um lago turquesa. Parada de 25 a 30 min.',q:'Ananuri Fortress'},
-  {t:'10h00 · Estação de esqui de Gudauri: gôndola e neve',d:'Subir de gôndola até o alto da montanha para caminhar na neve, brincar e tirar fotos, até cerca de 12h. Não precisa saber esquiar.',q:'Gudauri Ski Resort'},
-  {t:'12h15 · Monumento da Amizade Rússia–Geórgia, perto do Passo Jvari (2.379 m)',d:'Mirante com um grande mosaico e vista do desfiladeiro. O Passo Jvari é o ponto mais alto da estrada: vocês passam por ele de carro. Parada de 15 a 20 min.',q:'Gudauri Friendship Monument'},
-  {t:'13h15 · Almoço em Stepantsminda (Kazbegi)',d:'Vila aos pés do Monte Kazbek. Almoço rápido (cerca de 45 min) num restaurante com vista. O Rooms Hotel Kazbegi foi citado no seu roteiro.',q:'Stepantsminda Georgia'},
-  {t:'14h15 · Igreja da Trindade de Gergeti (Tsminda Sameba)',d:'Igreja do século XIV a 2.170 m de altitude, com o Monte Kazbek ao fundo. Sobem de jipe 4x4, saindo da praça de Stepantsminda. Fiquem de 45 min a 1 h lá em cima.',q:'Gergeti Trinity Church'},
-  {t:'Foto com as montanhas cobertas de neve ao fundo'},
-  {t:'16h30 · Voltar a Tbilisi pela Estrada Militar',d:'Chegada ao hotel por volta de 19h30.'}],
- tip:'Reservem um carro privado pelo GoTrip para três passageiros: o motorista espera com calma em cada parada, sem a correria de excursão em grupo. Os horários são estimativas, confirmem com ele. Em Gudauri, dá para alugar botas impermeáveis perto da base (cerca de 15 a 25 GEL por pessoa, confirmem no local). Levem casaco, gorro e luvas e combinem o preço do jipe antes de subir, para os três. Na véspera, perguntem ao motorista sobre a estrada do Passo Jvari, as gôndolas e o acesso a Gergeti. Plano B: se a estrada ou a neve falharem, troquem este dia (14/04) com o dia seguinte, 15/04 (Mtskheta). A temporada de neve em Gudauri costuma ir até meados de abril, então vale manter este dia no dia 14.',
- w:['მთები','Mtebi','Montanhas']},
-{id:'d4',base:'Tbilisi',c:'w',title:'Mtskheta e a Crônica da Geórgia',sub:'Crônica da Geórgia, Mosteiro Jvari, Catedral Svetitskhoveli e Cidade Antiga',hotel:HT,hq:1,
- hl:['Crônica da Geórgia','Mosteiro Jvari','Mtskheta e Catedral Svetitskhoveli','Rua Shardeni e Cidade Antiga'],
- intro:'Dia de estrada curtinha com motorista: um monumento gigante, a antiga capital, a catedral mais importante de Mtskheta e a vista de dois rios. No fim da tarde, de volta a Tbilisi, um passeio sem pressa pela Cidade Antiga.',
- tasks:[
-  {t:'Monumento Crônica da Geórgia (o “Stonehenge de Tbilisi”)',d:'Conjunto de pilares gigantes esculpidos com cenas da história da Geórgia, no alto de uma colina. A vista da região é ampla.',q:'Chronicles of Georgia monument Tbilisi'},
-  {t:'Mosteiro Jvari, em Mtskheta (século VI)',d:'Igreja de pedra no alto de uma colina, com vista para o encontro dos rios Mtkvari e Aragvi, de cores diferentes. Fica a cerca de 25 min de Tbilisi.',q:'Jvari Monastery Mtskheta'},
-  {t:'Centro histórico de Mtskheta, a antiga capital',d:'Ruas de pedestres com lojinhas e cafés, no coração da antiga capital. Patrimônio da UNESCO. Boa parada para lembrancinhas.',q:'Mtskheta Georgia'},
-  {t:'Catedral Svetitskhoveli, em Mtskheta (século XI)',d:'A catedral mais importante de Mtskheta, no centro histórico, também parte do Patrimônio da UNESCO. Reservem cerca de 30 min. As mulheres costumam cobrir a cabeça e os ombros: levem um lenço.',q:'Svetitskhoveli Cathedral Mtskheta'},
-  {t:'Cidade Antiga de Tbilisi, no fim da tarde',d:'Passeiem pela Rua Shardeni (rua de pedestres com cafés), pela Catedral de Sioni e pela Basílica de Anchiskhati. Há sacadas de madeira, pátios e cafés.',q:'Old Tbilisi'}],
- tip:'Combinem o motorista do dia (GoTrip Geórgia ou particular) e o horário de volta antes de sair. A Catedral Svetitskhoveli faz parte do dia: o tempo de 30 min é uma estimativa, e o motorista pode ajudar com o estacionamento. A Cidade Antiga ficou para o fim da tarde deste dia porque o dia 12/04 é de recuperação e o dia 16/04 é de viagem para Sighnaghi. Se voltarem tarde ou cansados, façam só uma volta curta e jantem por perto.',
- w:['ლამაზია','Lamazia','Que lindo!']},
-{id:'d5',base:'Sighnaghi',c:'a',title:'Rumo a Sighnaghi, a Cidade do Amor',sub:'Mosteiro de Bodbe e muralhas de Sighnaghi',hotel:'Check-out em Tbilisi (reserva até 16/04) · Sighnaghi de 16/04 a 18/04: hotel ainda a reservar',
- hl:['Mosteiro de Bodbe','Muralhas de Sighnaghi','Vale do Alazani'],
- intro:'Troca de base: Tbilisi fica para trás e entra a região do vinho. Depois do almoço, o Mosteiro de Bodbe e seus jardins, e o fim de tarde nas muralhas, com vistas para o Vale do Alazani e o Cáucaso.',
- tasks:[
-  {t:'9h00 · Check-out em Tbilisi e estrada para leste, rumo a Kakheti',d:'Cerca de 2 h de viagem até a região do vinho.'},
-  {t:'Chegada a Sighnaghi: deixar as malas ou fazer check-in, e almoçar',d:'Vila fortificada do século XVIII, no alto de uma colina, com ruas de pedra e casas de sacadas.',q:'Sighnaghi Georgia'},
-  {t:'14h30 · Mosteiro de Bodbe (Convento de Santa Nino)',d:'Convento com jardins muito bem cuidados pelas freiras e o túmulo de Santa Nino, que levou o cristianismo à Geórgia. Fica a cerca de 2 km da vila. A visita leva de 1 h a 1h30.',q:'Bodbe Monastery'},
-  {t:'Fim da tarde: muralhas de Sighnaghi',d:'A muralha com torres que cerca a vila, com vista do Vale do Alazani e das montanhas do Cáucaso ao fundo.',q:'Sighnaghi city walls'},
-  {t:'Jantar com vista para o vale e uma taça de vinho local'}],
- tip:'O hotel de Sighnaghi (16 a 18/04) ainda não está reservado: como a vila é pequena, vale reservar logo, para três pessoas. A viagem leva cerca de 2 horas (confirmem com o motorista). Bodbe fica a cerca de 2 km da vila, uns 5 minutos de carro ou táxi: combinem com o motorista para ele esperar. Confirmem o horário de visitação. Em mosteiros, as mulheres geralmente precisam de saia ou vestido longo e lenço (muitas vezes há panos para emprestar). À noite esfria: levem um casaquinho. Se o dia atrasar, o Bodbe pode ir para a manhã do dia 17/04.',
- w:['გაუმარჯოს','Gaumarjos','Saúde!']},
-{id:'d6',base:'Sighnaghi',c:'a',title:'Imersão vinícola',sub:'Aula de khinkali e churchkhela e degustação na Pheasant’s Tears',hotel:'Sighnaghi · 16/04 a 18/04 · hotel ainda a reservar',
- hl:['Aula de khinkali e churchkhela','Pheasant’s Tears (vinícola)','Vinho qvevri'],
- intro:'O dia mais saboroso da viagem, todo a pé dentro de Sighnaghi: aula de cozinha georgiana, vinho feito em vasos de argila enterrados e um brinde ao pôr do sol.',
- tasks:[
-  {t:'Manhã livre em Sighnaghi',d:'Café da manhã reforçado (a aula é às 13h) e passeio pelas ruas e pelas muralhas. Se o Bodbe atrasou no dia 16, vão agora.'},
-  {t:'13h · Aula de khinkali e churchkhela',d:'Khinkali é o bolinho georgiano de carne com caldo dentro. Churchkhela é o doce de nozes coberto por uma calda de uva. Local, duração e reserva ainda a confirmar.'},
-  {t:'15h30 · Degustação de vinhos qvevri na Pheasant’s Tears',d:'Vinícola e restaurante dentro de Sighnaghi (18 Baratashvili St), onde o vinho é feito em qvevri, vasos de argila enterrados. Peçam um vinho âmbar (laranja) e um Saperavi, tinto encorpado, e perguntem como funciona o qvevri. Confirmem o horário na reserva.',q:'Pheasant\'s Tears Sighnaghi'},
-  {t:'17h30 · Pôr do sol nas muralhas de Sighnaghi',d:'Caminhada curta, com vista do vale.',q:'Sighnaghi city walls'},
-  {t:'Brindar: Gaumarjos!'},
-  {t:'Jantar na Pheasant’s Tears',d:'Segundo o site da casa, a cozinha fecha às 22h. Reservem junto com a degustação.',q:'Pheasant\'s Tears Sighnaghi',o:1}],
- tip:'Reservem a aula e a degustação já, para três pessoas. Perguntem se a aula inclui comida (nesse caso o jantar pode mudar de horário) e se a degustação inclui explicação sobre o qvevri. Se a aula for fora da Pheasant’s Tears, a vila é pequena e deve dar para ir a pé, mas confirmem. Os horários do dia são estimativas.',
- w:['გემრიელია','Gemrielia','Delicioso!']},
-{id:'d7',base:'Sighnaghi',c:'a',title:'Volta a Tbilisi e Dry Bridge',sub:'Dry Bridge Market, o mercado de pulgas da Ponte Seca (1ª volta)',hotel:'Check-out em Sighnaghi · Check-in no '+HN+' (18/04 a 22/04)',hq:1,
- hl:['Dry Bridge Market'],
- intro:'Domingo: saída cedinho de Sighnaghi para chegar a Tbilisi antes do almoço e passar a tarde no mercado de pulgas, que no fim de semana costuma estar mais cheio.',
- tasks:[
-  {t:'9h00 · Café da manhã e check-out em Sighnaghi'},
-  {t:'9h15 · Estrada de volta a Tbilisi',d:'Cerca de 2 h.'},
-  {t:'11h30 · Chegar ao hotel: deixar as malas ou fazer check-in',q:HN+' Tbilisi'},
-  {t:'12h15 · Almoço leve perto do mercado'},
-  {t:'13h15 às 17h · Dry Bridge Market (Mercado da Ponte Seca), primeira volta',d:'Feira de antiguidades ao ar livre, ao redor da Ponte Seca, com barracas de joias de prata, porcelana soviética, tapetes, medalhas e câmeras analógicas. Hoje é só para olhar, fotografar e achar as peças favoritas (cerca de 3h45).',q:'Dry Bridge Market Tbilisi'}],
- tip:'Fotografem as barraquinhas de que gostaram, para reencontrá-las na segunda-feira. Os guias indicam o fim de semana, entre 11h30 e 15h, como a melhor janela do mercado, e o horário costuma ir até 17h ou 18h: confiram no local. Os horários do dia são estimativas. Se estiverem cansados, uma passada de 2 h já basta.',
- w:['ბოდიში','Bodishi','Com licença / desculpa']},
+hl:['Fortaleza de Ananuri','Neve em Gudauri','Monumento da Amizade','Igreja de Gergeti'],
+intro:'O dia dos cenários de cinema: águas turquesa, neve de verdade, montanhas colossais e uma igrejinha no alto do mundo. Saída bem cedo e volta no fim da tarde.',
+tasks:[
+{t:'7h30 · Sair de Tbilisi com motorista privado',d:'Vocês seguem pela Estrada Militar da Geórgia, a estrada histórica que sobe de Tbilisi para as montanhas do Cáucaso. A estrada em si já é um passeio.'},
+{t:'8h45 · Fortaleza de Ananuri e o lago Zhinvali',d:'Complexo fortificado medieval com igrejas, à beira de um lago turquesa. Parada de 25 a 30 min.',q:'Ananuri Fortress'},
+{t:'10h00 · Estação de esqui de Gudauri: gôndola e neve',d:'Subir de gôndola até o alto da montanha para caminhar na neve, brincar e tirar fotos, até cerca de 12h. Não precisa saber esquiar.',q:'Gudauri Ski Resort'},
+{t:'12h15 · Monumento da Amizade Rússia–Geórgia, perto do Passo Jvari (2.379 m)',d:'Mirante com um grande mosaico e vista do desfiladeiro. O Passo Jvari é o ponto mais alto da estrada: vocês passam por ele de carro. Parada de 15 a 20 min.',q:'Gudauri Friendship Monument'},
+{t:'13h15 · Almoço em Stepantsminda (Kazbegi)',d:'Vila aos pés do Monte Kazbek. Almoço rápido (cerca de 45 min) num restaurante com vista. O Rooms Hotel Kazbegi foi citado no roteiro original.',q:'Stepantsminda Georgia'},
+{t:'14h15 · Igreja da Trindade de Gergeti (Tsminda Sameba)',d:'Igreja do século XIV a 2.170 m de altitude, com o Monte Kazbek ao fundo. Sobem de jipe 4x4, saindo da praça de Stepantsminda: confirmem se o jipe comporta os quatro ou se serão dois. Fiquem de 45 min a 1 h lá em cima.',q:'Gergeti Trinity Church'},
+{t:'Foto com as montanhas cobertas de neve ao fundo'},
+{t:'16h30 · Voltar a Tbilisi pela Estrada Militar',d:'Chegada ao hotel por volta de 19h30.'}],
+tip:'Reservem um carro privado pelo GoTrip para quatro passageiros, de preferência uma van: o motorista espera com calma em cada parada, sem a correria de excursão em grupo. Os horários são estimativas, confirmem com ele. Em Gudauri, dá para alugar botas impermeáveis perto da base (cerca de 15 a 25 GEL por pessoa, confirmem no local). Levem casaco, gorro e luvas e combinem o preço do jipe antes de subir, para os quatro. Na véspera, perguntem ao motorista sobre a estrada do Passo Jvari, as gôndolas e o acesso a Gergeti. Plano B: se a previsão ou a estrada falharem no dia 14/04, troquem este dia com o dia dos banhos (13/04, terça), olhando a previsão na véspera. O dia 13 vem logo depois do voo da madrugada, então seria puxado. A temporada de neve em Gudauri costuma ir até meados de abril (as fontes estimam cerca de 18/04), então não deixem o Kazbegi para depois disso.',
+w:['მთები','Mtebi','Montanhas']},
+{id:'d5',base:'Sighnaghi',c:'a',title:'Rumo a Sighnaghi, a Cidade do Amor',sub:'Mosteiro de Bodbe e muralhas de Sighnaghi',hotel:'Check-out em Tbilisi (reserva até 15/04) · Sighnaghi de 15/04 a 17/04: hospedagem ainda a escolher',
+hl:['Mosteiro de Bodbe','Muralhas de Sighnaghi','Vale do Alazani'],
+intro:'Troca de base: Tbilisi fica para trás e entra a região do vinho. Depois do almoço, o Mosteiro de Bodbe e seus jardins, e o fim de tarde nas muralhas, com vistas para o Vale do Alazani e o Cáucaso. É um dia tranquilo, de chegada.',
+tasks:[
+{t:'9h00 · Check-out em Tbilisi e estrada para leste, rumo a Kakheti',d:'Cerca de 2 h de viagem até a região do vinho.'},
+{t:'Chegada a Sighnaghi: deixar as malas ou fazer check-in, e almoçar',d:'Vila fortificada do século XVIII, no alto de uma colina, com ruas de pedra e casas de sacadas.',q:'Sighnaghi Georgia'},
+{t:'14h30 · Mosteiro de Bodbe (Convento de Santa Nino)',d:'Convento com jardins muito bem cuidados pelas freiras e o túmulo de Santa Nino, que levou o cristianismo à Geórgia. Fica a cerca de 2 km da vila. A visita leva de 1 h a 1h30.',q:'Bodbe Monastery'},
+{t:'Fim da tarde: muralhas de Sighnaghi',d:'A muralha com torres que cerca a vila, com vista do Vale do Alazani e das montanhas do Cáucaso ao fundo.',q:'Sighnaghi city walls'},
+{t:'Jantar com vista para o vale e uma taça de vinho local'}],
+tip:'A hospedagem de Sighnaghi (15 a 17/04) ainda não foi escolhida: como a vila é pequena, vale reservar logo, para quatro pessoas. A viagem leva cerca de 2 horas (confirmem com o motorista, que precisa de carro para quatro e bagagem). Bodbe fica a cerca de 2 km da vila, uns 5 minutos de carro ou táxi: combinem com o motorista para ele esperar. Confirmem o horário de visitação. Em mosteiros, as mulheres geralmente precisam de saia ou vestido longo e lenço (muitas vezes há panos para emprestar). À noite esfria: levem um casaquinho. Se o dia atrasar, o Bodbe pode ir para a manhã do dia 16/04.',
+w:['გაუმარჯოს','Gaumarjos','Saúde!']},
+{id:'d6',base:'Sighnaghi',c:'a',title:'Imersão vinícola',sub:'Aula de khinkali e churchkhela e degustação na Pheasant’s Tears',hotel:'Sighnaghi · 15/04 a 17/04 · hospedagem ainda a escolher',
+hl:['Aula de khinkali e churchkhela','Pheasant’s Tears (vinícola)','Vinho qvevri'],
+intro:'O dia mais saboroso da viagem, todo a pé dentro de Sighnaghi: aula de cozinha georgiana, vinho feito em vasos de argila enterrados e um brinde ao pôr do sol.',
+tasks:[
+{t:'Manhã livre em Sighnaghi',d:'Café da manhã reforçado (a aula é às 13h) e passeio pelas ruas e pelas muralhas. Se o Bodbe atrasou no dia 15/04, vão agora.'},
+{t:'13h · Aula de khinkali e churchkhela',d:'Khinkali é o bolinho georgiano de carne com caldo dentro. Churchkhela é o doce de nozes coberto por uma calda de uva. Local, duração e reserva ainda a confirmar, para quatro pessoas.'},
+{t:'15h30 · Degustação de vinhos qvevri na Pheasant’s Tears',d:'Vinícola e restaurante dentro de Sighnaghi (18 Baratashvili St), onde o vinho é feito em qvevri, vasos de argila enterrados. Peçam um vinho âmbar (laranja) e um Saperavi, tinto encorpado, e perguntem como funciona o qvevri. Confirmem o horário na reserva.',q:"Pheasant's Tears Sighnaghi"},
+{t:'17h30 · Pôr do sol nas muralhas de Sighnaghi',d:'Caminhada curta, com vista do vale.',q:'Sighnaghi city walls'},
+{t:'Brindar: Gaumarjos!'},
+{t:'Jantar na Pheasant’s Tears',d:'Segundo o site da casa, a cozinha fecha às 22h. Reservem junto com a degustação.',q:"Pheasant's Tears Sighnaghi",o:1}],
+tip:'Reservem a aula e a degustação já, para quatro pessoas. Com a nova ordem, este dia passou a cair numa sexta-feira (16/04): confirmem que a aula das 13h existe nesse dia. Perguntem se a aula inclui comida (nesse caso o jantar pode mudar de horário) e se a degustação inclui explicação sobre o qvevri. Se a aula for fora da Pheasant’s Tears, a vila é pequena e deve dar para ir a pé, mas confirmem. Os horários do dia são estimativas.',
+w:['გემრიელია','Gemrielia','Delicioso!']},
+{id:'d7',base:'Sighnaghi',c:'a',title:'Volta a Tbilisi e Dry Bridge',sub:'Dry Bridge Market, o mercado de pulgas da Ponte Seca (1ª volta)',hotel:'Check-out em Sighnaghi · Check-in no '+HN+' (17/04 a 22/04)',hq:1,
+hl:['Dry Bridge Market'],
+intro:'Sábado: saída cedinho de Sighnaghi para chegar a Tbilisi antes do almoço e passar a tarde no mercado de pulgas. Segundo os guias, o fim de semana é a melhor hora, com mais barracas.',
+tasks:[
+{t:'9h00 · Café da manhã e check-out em Sighnaghi'},
+{t:'9h15 · Estrada de volta a Tbilisi',d:'Cerca de 2 h.'},
+{t:'11h30 · Chegar ao hotel: deixar as malas ou fazer check-in',q:HQ},
+{t:'12h15 · Almoço leve perto do mercado'},
+{t:'13h15 às 17h · Dry Bridge Market (Mercado da Ponte Seca), primeira volta',d:'Feira de antiguidades ao ar livre, ao redor da Ponte Seca, com barracas de joias de prata, porcelana soviética, tapetes, medalhas e câmeras analógicas. Hoje é só para olhar, fotografar e achar as peças favoritas (cerca de 3h45).',q:'Dry Bridge Market Tbilisi'}],
+tip:'Fotografem as barraquinhas de que gostaram, para reencontrá-las no domingo. Os guias indicam o fim de semana, entre 11h30 e 15h, como a melhor janela do mercado, e o horário costuma ir até 17h ou 18h: confiram no local. Os horários do dia são estimativas. Se estiverem cansados da estrada, uma passada de 2 h já basta.',
+w:['ბოდიში','Bodishi','Com licença / desculpa']},
 {id:'d8',base:'Tbilisi',c:'w',title:'Caça aos tesouros',sub:'Dry Bridge (2ª volta), Antique Bazaar, Fabrika e Catedral Sameba',hotel:HT2,hq:1,
- hl:['Dry Bridge Market','Antique Bazaar','Fabrika','Catedral Sameba'],
- intro:'Segunda-feira, sem pressa: voltar às peças que vocês viram no domingo, pechinchar com um sorriso, olhar o Antique Bazaar, passear na Fabrika e fechar a tarde na catedral.',
- tasks:[
-  {t:'Café da manhã tranquilo'},
-  {t:'Dry Bridge Market, segunda volta',d:'Voltem às barraquinhas favoritas do domingo e pechinchem: joias de prata, porcelanas soviéticas, tapetes, medalhas e câmeras analógicas.',q:'Dry Bridge Market Tbilisi'},
-  {t:'Almoço leve por perto'},
-  {t:'Antique Bazaar (2 Dimitri Uznadze St)',d:'Conjunto de lojinhas de antiguidades, com muita cerâmica e porcelana da era soviética, perto do Dry Bridge. Confirmem o horário no local.',q:'2 Dimitri Uznadze St, Tbilisi, Georgia'},
-  {t:'Fabrika (8 Egnate Ninoshvili St), cerca de 1h30',d:'Antiga fábrica de costura da era soviética, hoje um polo criativo: pátio com cafés e bares, lojinhas de design e artesanato e ateliês. As lojas costumam abrir das 11h às 21h, e o pátio fica aberto o dia todo (cada lugar tem o seu horário). Fica a uns 3 a 10 min a pé do metrô Marjanishvili.',q:'8 Egnate Ninoshvili St, Tbilisi, Georgia'},
-  {t:'Escolher uma lembrança única'},
-  {t:'Catedral Sameba (Santíssima Trindade), no fim da tarde',d:'A grande catedral ortodoxa de Tbilisi, no alto de uma colina. As mulheres costumam cobrir cabeça e ombros: levem um lenço.',q:'Holy Trinity Cathedral Tbilisi'}],
- tip:'Levem dinheiro vivo em lari e uma sacola. Na segunda-feira o mercado pode ter menos barracas que no fim de semana (é uma dedução, não confirmei). Por isso a primeira volta foi no domingo. Antiguidades e peças muito antigas podem ter regras para sair do país: perguntem ao vendedor. O Antique Bazaar e a Fabrika ficam na região de Marjanishvili/Chugureti, mas a distância entre eles e o Dry Bridge não foi confirmada: vejam no mapa do celular. Se o dia ficar pesado, a Catedral Sameba pode ir para a manhã do dia 20/04.',
- w:['რა ღირს?','Ra girs?','Quanto custa?']},
+hl:['Dry Bridge Market','Antique Bazaar','Fabrika','Catedral Sameba'],
+intro:'Domingo, sem pressa: voltar às peças que vocês viram no sábado, pechinchar com um sorriso, olhar o Antique Bazaar, passear na Fabrika e fechar a tarde na catedral.',
+tasks:[
+{t:'Café da manhã tranquilo'},
+{t:'Dry Bridge Market, segunda volta',d:'Voltem às barraquinhas favoritas do sábado e pechinchem: joias de prata, porcelanas soviéticas, tapetes, medalhas e câmeras analógicas.',q:'Dry Bridge Market Tbilisi'},
+{t:'Almoço leve por perto'},
+{t:'Antique Bazaar (2 Dimitri Uznadze St), até as 18h',d:'Conjunto de lojinhas de antiguidades, com muita cerâmica e porcelana da era soviética, perto do Dry Bridge. Segundo uma listagem (Madloba, atualizada em set/2026), abre aos domingos das 10h às 18h e fecha às segundas. Cheguem com folga, antes das 17h.',q:'2 Dimitri Uznadze St, Tbilisi, Georgia'},
+{t:'Fabrika (8 Egnate Ninoshvili St), cerca de 1h30',d:'Antiga fábrica de costura da era soviética, hoje um polo criativo: pátio com cafés e bares, lojinhas de design e artesanato e ateliês. As lojas costumam abrir das 11h às 21h, e o pátio fica aberto o dia todo (cada lugar tem o seu horário). Fica a uns 3 a 10 min a pé do metrô Marjanishvili.',q:'8 Egnate Ninoshvili St, Tbilisi, Georgia'},
+{t:'Escolher uma lembrança única'},
+{t:'Catedral Sameba (Santíssima Trindade), no fim da tarde',d:'A grande catedral ortodoxa de Tbilisi, no alto de uma colina. Aos domingos de manhã costuma haver missa, por isso ficou para o fim da tarde. As mulheres costumam cobrir cabeça e ombros: levem um lenço.',q:'Holy Trinity Cathedral Tbilisi'}],
+tip:'Levem dinheiro vivo em lari e uma sacola. Sábado e domingo são os melhores dias para o Dry Bridge, segundo os guias. O Antique Bazaar fecha às segundas, então o domingo é o dia certo para ele; a busca não trouxe o horário de terça, caso precisem de uma segunda chance. Antiguidades e peças muito antigas podem ter regras para sair do país: perguntem ao vendedor. O Antique Bazaar e a Fabrika ficam na região de Marjanishvili/Chugureti, mas a distância entre eles e o Dry Bridge não foi confirmada: vejam no mapa do celular. Se o dia ficar pesado, a Catedral Sameba pode ir para a manhã do dia 20/04.',
+w:['რა ღირს?','Ra girs?','Quanto custa?']},
+{id:'d4',base:'Tbilisi',c:'w',title:'Mtskheta e a Crônica da Geórgia',sub:'Crônica da Geórgia, Mosteiro Jvari, Catedral Svetitskhoveli e Cidade Antiga',hotel:HT2,hq:1,
+hl:['Crônica da Geórgia','Mosteiro Jvari','Mtskheta e Catedral Svetitskhoveli','Rua Shardeni e Cidade Antiga'],
+intro:'Segunda-feira de estrada curtinha com motorista: um monumento gigante, a antiga capital, a catedral mais importante de Mtskheta e a vista de dois rios. No fim da tarde, de volta a Tbilisi, um passeio sem pressa pela Cidade Antiga.',
+tasks:[
+{t:'Monumento Crônica da Geórgia (o “Stonehenge de Tbilisi”)',d:'Conjunto de pilares gigantes esculpidos com cenas da história da Geórgia, no alto de uma colina. A vista da região é ampla.',q:'Chronicles of Georgia monument Tbilisi'},
+{t:'Mosteiro Jvari, em Mtskheta (século VI)',d:'Igreja de pedra no alto de uma colina, com vista para o encontro dos rios Mtkvari e Aragvi, de cores diferentes. Fica a cerca de 25 min de Tbilisi.',q:'Jvari Monastery Mtskheta'},
+{t:'Centro histórico de Mtskheta, a antiga capital',d:'Ruas de pedestres com lojinhas e cafés, no coração da antiga capital. Patrimônio da UNESCO. Boa parada para lembrancinhas.',q:'Mtskheta Georgia'},
+{t:'Catedral Svetitskhoveli, em Mtskheta (século XI)',d:'A catedral mais importante de Mtskheta, no centro histórico, também parte do Patrimônio da UNESCO. Reservem cerca de 30 min. As mulheres costumam cobrir a cabeça e os ombros: levem um lenço.',q:'Svetitskhoveli Cathedral Mtskheta'},
+{t:'Cidade Antiga de Tbilisi, no fim da tarde',d:'Passeiem pela Rua Shardeni (rua de pedestres com cafés), pela Catedral de Sioni e pela Basílica de Anchiskhati. Há sacadas de madeira, pátios e cafés.',q:'Old Tbilisi'}],
+tip:'Combinem o motorista do dia (GoTrip Geórgia ou particular), com carro para quatro, e o horário de volta antes de sair. O tempo de 30 min na Svetitskhoveli é uma estimativa, e o motorista pode ajudar com o estacionamento. A Cidade Antiga ficou para o fim da tarde, depois do passeio. Se voltarem tarde ou cansados, façam só uma volta curta e jantem por perto.',
+w:['ლამაზია','Lamazia','Que lindo!']},
 {id:'d9',base:'Tbilisi',c:'w',title:'Mercados e alta gastronomia',sub:'Dezerter Bazaar, Gold Market e Café Litera',hotel:HT2,hq:1,
- hl:['Dezerter Bazaar','Gold Market','Jantar no Café Litera'],
- intro:'Penúltimo dia: revisitar os favoritos, encher a sacola de sabores, passar no mercado de joias e jantar com pompa.',
- tasks:[
-  {t:'Revisitar os pontos favoritos de Tbilisi',d:'Voltem ao que mais gostaram, por exemplo a Cidade Antiga, a Fortaleza de Narikala ou o Rike Park.'},
-  {t:'Dezerter Bazaar (mercado central de alimentos), de manhã',d:'Grande mercado perto da estação central: temperos (como o sal de Svaneti), queijos, frutas secas e churchkhela.',q:'Dezerter Bazaar Tbilisi'},
-  {t:'Depois das 11h · Gold Market (ოქროს ბირჟა)',d:'Mercado de joias de ouro e prata no complexo da estação central, na Praça Sadguris, perto do Dezerter.',q:'Gold Market Tbilisi Station Square'},
-  {t:'Comprar presentes e lembranças'},
-  {t:'Jantar no Café Litera',d:'No pátio da antiga Casa dos Escritores da Geórgia, num ambiente aristocrático. Reservem mesa para três.',q:'Cafe Litera Tbilisi'},
-  {t:'Uma última voltinha no Dry Bridge, se sobrar vontade',q:'Dry Bridge Market Tbilisi',o:1}],
- tip:'O Gold Market fica na Praça Sadguris (Station Square), junto à estação. Segundo o site dele, abre de segunda a sábado, das 11h às 20h; terça-feira está dentro. Se não acharem a entrada, perguntem por “Gold Market” ou “ოქროს ბირჟა”. Peçam nota fiscal nas joias e confiram as regras de bagagem e de entrada no país de destino da volta para joias, queijos e vinhos antes de comprar demais.',
- w:['კი / არა','Ki / Ara','Sim / Não']},
+hl:['Dezerter Bazaar','Gold Market','Jantar no Café Litera'],
+intro:'Penúltimo dia: revisitar os favoritos, encher a sacola de sabores, passar no mercado de joias e jantar com pompa.',
+tasks:[
+{t:'Revisitar os pontos favoritos de Tbilisi',d:'Voltem ao que mais gostaram, por exemplo a Cidade Antiga, a Fortaleza de Narikala ou o Rike Park.'},
+{t:'Dezerter Bazaar (mercado central de alimentos), de manhã',d:'Grande mercado perto da estação central: temperos (como o sal de Svaneti), queijos, frutas secas e churchkhela.',q:'Dezerter Bazaar Tbilisi'},
+{t:'Depois das 11h · Gold Market (ოქროს ბირჟა)',d:'Mercado de joias de ouro e prata no complexo da estação central, na Praça Sadguris, perto do Dezerter.',q:'Gold Market Tbilisi Station Square'},
+{t:'Comprar presentes e lembranças'},
+{t:'Jantar no Café Litera',d:'No pátio da antiga Casa dos Escritores da Geórgia, num ambiente aristocrático. Reservem mesa para quatro.',q:'Cafe Litera Tbilisi'},
+{t:'Uma última voltinha no Dry Bridge, se sobrar vontade',q:'Dry Bridge Market Tbilisi',o:1}],
+tip:'O Gold Market fica na Praça Sadguris (Station Square), junto à estação. Segundo o site dele, abre de segunda a sábado, das 11h às 20h; terça-feira está dentro. Se não acharem a entrada, perguntem por “Gold Market” ou “ოქროს ბირჟა”. Peçam nota fiscal nas joias e confiram as regras de bagagem e de entrada no país de destino da volta para joias, queijos e vinhos antes de comprar demais.',
+w:['კი / არა','Ki / Ara','Sim / Não']},
 {id:'d10',base:'Tbilisi',c:'w',title:'Despedida e relaxamento',sub:'Brunch no Stamba Hotel, livrarias e Avenida Rustaveli',hotel:HT2,hq:1,
- hl:['Stamba Hotel','Livrarias da Rustaveli','Avenida Rustaveli'],
- intro:'Último dia inteiro, sem pressa. O voo de volta sai às 05h de {next}, então a saída para o aeroporto será de madrugada.',
- tasks:[
-  {t:'Brunch tardio no Stamba Hotel',d:'Antiga gráfica soviética transformada em hotel moderno, com restaurante e cafés no mesmo prédio.',q:'Stamba Hotel Tbilisi'},
-  {t:'Livrarias da Avenida Rustaveli: Biblusi e Prospero’s Books',d:'A Biblusi fica no 3º andar da Galleria Tbilisi e é a opção mais direta para livros em georgiano. A Prospero’s fica no nº 34 e tem café. Detalhes no Guia de lugares.',q:'Biblusi Galleria Tbilisi'},
-  {t:'Últimas compras na Avenida Rustaveli',d:'A avenida principal de Tbilisi, com lojas, cafés e prédios históricos.',q:'Rustaveli Avenue Tbilisi'},
-  {t:'Lojas de mangá e cartas Pokémon (Mikiri)',d:'Loja de mangá, quadrinhos e cartas Pokémon, aberta das 12h às 20h, segundo o site. Confirmem o estoque antes. Veja o Guia de lugares.',q:'Mikiri Manga Comics TCG Tbilisi',o:1},
-  {t:'Descansar um pouco à tarde (a saída é de madrugada)'},
-  {t:'Arrumar as malas (conferir vinhos e frágeis!)'},
-  {t:'Escolher a melhor foto da viagem e escrever uma frase de despedida'},
-  {t:'Confirmar o traslado para o aeroporto, com saída por volta de 01h00'}],
- tip:'Deixem documentos, cartões de embarque e carregador de celular à mão. Como a saída é de madrugada, o quarto fica com vocês até a hora de ir, então aproveitem para descansar à tarde. Confirmem o traslado com o hotel ou o motorista. Para livros em georgiano, o Guia de lugares traz endereços e horários das livrarias e das lojas de mangá e Pokémon. Se comprarem muitos livros, lembrem do peso na bagagem.',
- w:['ნახვამდის','Nakhvamdis','Até a próxima!']},
+hl:['Stamba Hotel','Livrarias da Rustaveli','Avenida Rustaveli'],
+intro:'Último dia inteiro, sem pressa. O voo de volta sai às 05h de {next}, então a saída para o aeroporto será de madrugada.',
+tasks:[
+{t:'Brunch tardio no Stamba Hotel',d:'Antiga gráfica soviética transformada em hotel moderno, com restaurante e cafés no mesmo prédio.',q:'Stamba Hotel Tbilisi'},
+{t:'Livrarias da Avenida Rustaveli: Biblusi e Prospero’s Books',d:'A Biblusi fica no 3º andar da Galleria Tbilisi e é a opção mais direta para livros em georgiano. A Prospero’s fica no nº 34 e tem café. Detalhes no Guia de lugares.',q:'Biblusi Galleria Tbilisi'},
+{t:'Últimas compras na Avenida Rustaveli',d:'A avenida principal de Tbilisi, com lojas, cafés e prédios históricos.',q:'Rustaveli Avenue Tbilisi'},
+{t:'Lojas de mangá e cartas Pokémon (Mikiri)',d:'Loja de mangá, quadrinhos e cartas Pokémon, aberta das 12h às 20h, segundo o site. Confirmem o estoque antes. Veja o Guia de lugares.',q:'Mikiri Manga Comics TCG Tbilisi',o:1},
+{t:'Descansar um pouco à tarde (a saída é de madrugada)'},
+{t:'Arrumar as malas (conferir vinhos e frágeis!)'},
+{t:'Escolher a melhor foto da viagem e escrever uma frase de despedida'},
+{t:'Confirmar o traslado para o aeroporto, com saída por volta de 01h00'}],
+tip:'Deixem documentos, cartões de embarque e carregador de celular à mão. Como a saída é de madrugada, o quarto fica com vocês até a hora de ir, então aproveitem para descansar à tarde. Confirmem o traslado com o hotel ou o motorista: são quatro pessoas com malas. Para livros em georgiano, o Guia de lugares traz endereços e horários das livrarias e das lojas de mangá e Pokémon. Se comprarem muitos livros, lembrem do peso na bagagem.',
+w:['ნახვამდის','Nakhvamdis','Até a próxima!']},
 {id:'d11',base:'Tbilisi',c:'w',title:'Última foto e voo de volta',sub:'Madrugada de despedida e voo para Munique',hotel:HT2+' · saída na madrugada',hq:1,
- hl:['Foto em frente ao hotel','Aeroporto de Tbilisi','Voo para Munique'],
- intro:'A viagem termina na madrugada: uma última foto em frente ao hotel e rumo ao aeroporto. O voo sai às 05h00 e pousa em Munique às 07h15, hora local, onde há uma escala longa até o voo das 20h20 para Lisboa.',
- tasks:[
-  {t:'Última foto dos três em frente ao hotel'},
-  {t:'Check-out e conferência do quarto',d:'Passaportes, carregadores e lembranças.'},
-  {t:'Por volta de 01h00 · Sair do hotel rumo ao aeroporto',d:'Traslado combinado na véspera.'},
-  {t:'Chegar ao Aeroporto Internacional de Tbilisi cerca de 3 h antes do voo',d:'Para despachar as malas e passar pela imigração. Depois, a Primeclass Lounge (seção Salas VIP).',q:'Tbilisi International Airport'},
-  {t:'05h00 · Voo Tbilisi → Munique',d:'Pouso previsto às 07h15, hora local de Munique. A Alemanha fica 2 h atrás da Geórgia.'},
-  {t:'Escala em Munique (seção própria)',d:'Bagagem de mão no guarda-volumes, passeio fácil e volta ao aeroporto para o voo das 20h20. Veja a seção Escala em Munique, no menu.',o:1},
-  {t:'Escrever a última frase do diário durante a viagem',o:1}],
- tip:'O voo sai às 05h00 de 22/04, ou seja, na madrugada entre 21 e 22. Os horários de saída do hotel e de chegada ao aeroporto são estimativas: confirmem a antecedência exigida pela companhia aérea e o tempo de trajeto com o motorista. Confirmem também se as malas de porão foram etiquetadas até Lisboa. A sala VIP de Tbilisi está na seção Salas VIP. Deixem a foto de despedida pronta e o celular carregado.',
- w:['მშვიდობით','Mshvidobit','Adeus / vá em paz']}
+hl:['Foto em frente ao hotel','Aeroporto de Tbilisi','Voo para Munique'],
+intro:'A viagem termina na madrugada: uma última foto em frente ao hotel e rumo ao aeroporto. O voo sai às 05h00 e pousa em Munique às 07h15, hora local, onde há uma escala longa até o voo das 20h20 para Lisboa.',
+tasks:[
+{t:'Última foto dos quatro em frente ao hotel'},
+{t:'Check-out e conferência do quarto',d:'Passaportes, carregadores e lembranças.'},
+{t:'Por volta de 01h00 · Sair do hotel rumo ao aeroporto',d:'Traslado combinado na véspera, para quatro pessoas e bagagem.'},
+{t:'Chegar ao Aeroporto Internacional de Tbilisi cerca de 3 h antes do voo',d:'Para despachar as malas e passar pela imigração. Depois, a Primeclass Lounge (aba VIP).',q:'Tbilisi International Airport'},
+{t:'05h00 · Voo Tbilisi → Munique',d:'Pouso previsto às 07h15, hora local de Munique. A Alemanha fica 2 h atrás da Geórgia.'},
+{t:'Escala em Munique (seção própria)',d:'Bagagem de mão no guarda-volumes, passeio fácil e volta ao aeroporto para o voo das 20h20. Veja a seção Escala em Munique, no menu.',o:1},
+{t:'Escrever a última frase do diário durante a viagem',o:1}],
+tip:'O voo sai às 05h00 de 22/04, ou seja, na madrugada entre 21 e 22. Os horários de saída do hotel e de chegada ao aeroporto são estimativas: confirmem a antecedência exigida pela companhia aérea e o tempo de trajeto com o motorista. Confirmem também se as malas de porão foram etiquetadas até Lisboa. A sala VIP de Tbilisi está na aba VIP. Deixem a foto de despedida pronta e o celular carregado.',
+w:['მშვიდობით','Mshvidobit','Adeus / vá em paz']}
 ];
-const PRE=['Passaportes dos três válidos e conferir as regras de entrada na Geórgia','Seguro-viagem contratado para os três','Voos Lisboa → Munique → Tbilisi: saída em 11/04 às 14h55 (hora de Lisboa) e chegada em 12/04 às 03h55 (hora da Geórgia). Sua mãe embarca em Lisboa: check-in online e documentos à mão','Family Hotel Kolorit Old Tbilisi confirmado (11 a 16/04 e 18 a 22/04) e reserva para três pessoas, em quarto triplo ou dois quartos','Avisar o hotel do horário de chegada (pouso às 03h55 de 12/04) e combinar como entrar de madrugada','Reservar o hotel de Sighnaghi (16 a 18/04), para três pessoas','Traslado do aeroporto (12/04, 03h55) e de volta ao aeroporto (22/04, saída por volta de 01h00) combinados, para três pessoas e bagagem','Motorista ou GoTrip combinado (de 14 a 18/04), com carro para três passageiros','Reservar cabine nos banhos (para três), mesa no Shavi Lomi e no Café Litera','Aula de khinkali e churchkhela (13h do dia 17/04) e degustação na Pheasant’s Tears reservadas, para três','Levar alguns lari em dinheiro e avisar o banco do cartão','Chip ou eSIM e mapas offline baixados','Casaco, gorro e luvas para Kazbegi; lenço e roupa longa para os mosteiros e catedrais','Adaptador de tomada (a Geórgia usa 220 V) e bateria externa','Conferir regras de bagagem para vinhos, queijos e joias na volta','Voos Tbilisi → Munique → Lisboa: check-in feito e etiquetas das malas de porão até Lisboa conferidas (pouso 07h15, saída 20h20)','Bagagem de mão pronta para o guarda-volumes de Munique (até 8 kg e 35 × 50 × 20 cm cada), com documentos, remédios e eletrônicos numa bolsa pequena','Conferir se o ETIAS ou outra autorização é exigida na entrada na área Schengen, na data da viagem','Salas VIP: salvar os QR codes (Santander e C6) no celular, levar o Diners físico e confirmar se o Ambaar Club aceita a entrada na ida, com o voo seguinte internacional','Combinar com sua mãe o encontro em Lisboa antes do voo para Munique (você e seu esposo chegam de Viracopos e ela vem de casa)'];
+const PRE=['Passaportes dos quatro válidos e conferir as regras de entrada na Geórgia','Seguro-viagem contratado para os quatro','Voos Lisboa → Munique → Tbilisi: saída em 11/04 às 14h55 (hora de Lisboa) e chegada em 12/04 às 03h55 (hora da Geórgia). Denise embarca em Lisboa; Rachel, Cadu e Douglas chegam do Brasil. Check-in online dos quatro e documentos à mão','Sibéria Hotel: reservar para quatro pessoas (11 a 15/04 e 17 a 22/04), em dois quartos ou um quarto para quatro; cancelar a reserva antiga do Family Hotel Kolorit, se ainda existir','Avisar o hotel do horário de chegada (pouso às 03h55 de 12/04) e combinar como entrar de madrugada','Escolher e reservar a hospedagem de Sighnaghi (15 a 17/04), para quatro pessoas','Traslado do aeroporto (12/04, 03h55) e de volta ao aeroporto (22/04, saída por volta de 01h00) combinados, para quatro pessoas e bagagem','Motorista ou GoTrip combinado (14/04, 15/04, 17/04 e 19/04), com van para quatro passageiros e bagagem','Reservar cabines nos banhos (para quatro, provavelmente duas), mesa no Shavi Lomi e no Café Litera (para quatro)','Aula de khinkali e churchkhela (13h do dia 16/04) e degustação na Pheasant’s Tears reservadas, para quatro','Levar alguns lari em dinheiro e avisar o banco do cartão','Chip ou eSIM e mapas offline baixados','Casaco, gorro e luvas para Kazbegi; lenço e roupa longa para os mosteiros e catedrais','Adaptador de tomada (a Geórgia usa 220 V) e bateria externa','Conferir regras de bagagem para vinhos, queijos e joias na volta','Voos Tbilisi → Munique → Lisboa: check-in feito e etiquetas das malas de porão até Lisboa conferidas (pouso 07h15, saída 20h20)','Bagagem de mão pronta para o guarda-volumes de Munique (até 8 kg e 35 × 50 × 20 cm cada), com documentos, remédios e eletrônicos numa bolsa pequena','Conferir se o ETIAS ou outra autorização é exigida na entrada na área Schengen, na data da viagem','Salas VIP: salvar os QR codes (Santander e C6) no celular, levar o Diners físico, conferir o Priority Pass do Douglas no app dele e confirmar se o Ambaar Club aceita a entrada na ida, com o voo seguinte internacional','Combinar o encontro em Lisboa com Denise antes do voo para Munique; Rachel, Cadu e Douglas chegam de Viracopos'];
 const BINGO=['🧀 Provar khachapuri','🥟 Comer khinkali','🍊 Provar vinho laranja','🍷 Tomar um Saperavi','🥂 Brindar “Gaumarjos!”','🍇 Comer churchkhela','💧 Beber água Borjomi','🏠 Fotografar uma sacada de madeira','❄️ Ver neve nas montanhas','🌅 Pôr do sol em Narikala','🗣️ Falar uma palavra em georgiano','🏺 Comprar algo no mercado de pulgas','🐱 Fazer amizade com um bichinho de rua','♨️ Sobreviver ao banho de enxofre'];
 const MOODS=['😍','🤩','😌','🥰','😋','🥶','😴','🍷'];
-/* ===== GUIA DE LUGARES ===== */
+/* ===== GUIA DE LUGARES ===== /
 const GUIA=[
 {t:'Livros em georgiano',s:'Peçam “ქართული წიგნი” (kartuli tsigni), livro em georgiano. As duas primeiras ficam na Avenida Rustaveli e cabem no dia 21/04.',items:[
- {t:'Biblusi, na Galleria Tbilisi',d:'Rede de livrarias e a opção mais direta para livros em georgiano. Fica no 3º andar do shopping, na Avenida Rustaveli.',a:'Av. Rustaveli 2/4 (Galleria Tbilisi), 3º andar',h:'10h às 22h',p:'+995 577 048 899',q:'Biblusi Galleria Tbilisi'},
- {t:'Prospero’s Books & Caliban’s Coffee House',d:'Livraria clássica da Rustaveli, com café. Forte em livros em inglês e em literatura georgiana traduzida; tem menos livros em georgiano.',a:'34 Shota Rustaveli Ave',h:'cerca de 9h30 às 20h30 (outra fonte diz 10h às 21h)',q:'Prospero\'s Books Tbilisi'},
- {t:'Itaka Books',d:'Livraria independente, citada como boa opção, com livros locais e internacionais. Perguntem pela seção em georgiano.',a:'5 Sh. Nishnianidze St',h:'não encontrei o horário: confirmem',p:'+995 555 24 69 11',q:'Itaka Books Tbilisi'}]},
+{t:'Biblusi, na Galleria Tbilisi',d:'Rede de livrarias e a opção mais direta para livros em georgiano. Fica no 3º andar do shopping, na Avenida Rustaveli.',a:'Av. Rustaveli 2/4 (Galleria Tbilisi), 3º andar',h:'10h às 22h',p:'+995 577 048 899',q:'Biblusi Galleria Tbilisi'},
+{t:'Prospero’s Books & Caliban’s Coffee House',d:'Livraria clássica da Rustaveli, com café. Forte em livros em inglês e em literatura georgiana traduzida; tem menos livros em georgiano.',a:'34 Shota Rustaveli Ave',h:'cerca de 9h30 às 20h30 (outra fonte diz 10h às 21h)',q:"Prospero's Books Tbilisi"},
+{t:'Itaka Books',d:'Livraria independente, citada como boa opção, com livros locais e internacionais. Perguntem pela seção em georgiano.',a:'5 Sh. Nishnianidze St',h:'não encontrei o horário: confirmem',p:'+995 555 24 69 11',q:'Itaka Books Tbilisi'}]},
 {t:'Mangás e quadrinhos',s:'A Mikiri é a melhor candidata, porque também vende cartas Pokémon. Peçam “მანგა” (manga). O AnimeShopingi.ge é só online e não entra na lista.',items:[
- {t:'Mikiri (mangá, quadrinhos e Pokémon TCG)',d:'Loja especializada em mangá, quadrinhos e cartas Pokémon, segundo o site dela.',a:'7 Vakhtang Chabukiani St',h:'todos os dias, 12h às 20h',p:'+995 595 00 24 48',q:'Mikiri Manga Comics TCG Tbilisi'},
- {t:'Parsek 1, Comics & Coffee',d:'Loja de quadrinhos e mangás, com café.',a:'19 Vakhtang Orbeliani St (endereço de um diretório; o site da loja não o mostrou, conferiram no mapa)',h:'não encontrei o horário: confirmem',q:'Parsek 1 Comics Coffee Tbilisi'},
- {t:'Japanico (loja de anime)',d:'Loja de anime. Perguntem se têm mangás.',a:'124 Tengiz Sheshelidze St, perto do metrô Akhmeteli Theatre',q:'Japanico Tbilisi'}]},
+{t:'Mikiri (mangá, quadrinhos e Pokémon TCG)',d:'Loja especializada em mangá, quadrinhos e cartas Pokémon, segundo o site dela.',a:'7 Vakhtang Chabukiani St',h:'todos os dias, 12h às 20h',p:'+995 595 00 24 48',q:'Mikiri Manga Comics TCG Tbilisi'},
+{t:'Parsek 1, Comics & Coffee',d:'Loja de quadrinhos e mangás, com café.',a:'19 Vakhtang Orbeliani St (endereço de um diretório; o site da loja não o mostrou, conferiram no mapa)',h:'não encontrei o horário: confirmem',q:'Parsek 1 Comics Coffee Tbilisi'},
+{t:'Japanico (loja de anime)',d:'Loja de anime. Perguntem se têm mangás.',a:'124 Tengiz Sheshelidze St, perto do metrô Akhmeteli Theatre',q:'Japanico Tbilisi'}]},
 {t:'Cartas Pokémon e lojas geek',s:'A Mikiri, da lista acima, também vende cartas Pokémon. A Pixel TCG é só online, sem loja física, e por isso não entra na lista. Confirmem o estoque, o idioma das cartas e se o lacre está intacto antes de comprar.',items:[
- {t:'BlueTabla',d:'Loja geral com uma seção Pokémon no site. Confirmem se há cartas (TCG) na loja, e não só brinquedos.',a:'140 Tsereteli Ave',h:'todos os dias, 10h às 18h',p:'032 242 0842',q:'BlueTabla 140 Tsereteli Ave Tbilisi'},
- {t:'Tortuga (jogos de tabuleiro)',d:'Loja de jogos de tabuleiro.',a:'3 Vekua St (Bazari Orbeliani), 2º andar',q:'Tortuga board game store Tbilisi'},
- {t:'Board Games Corner',d:'Loja de jogos de tabuleiro.',a:'14 Giorgi Mirotadze St',h:'11h às 20h',p:'591 23 33 11',q:'Board Games Corner Tbilisi Mirotadze'}]}
+{t:'BlueTabla',d:'Loja geral com uma seção Pokémon no site. Confirmem se há cartas (TCG) na loja, e não só brinquedos.',a:'140 Tsereteli Ave',h:'todos os dias, 10h às 18h',p:'032 242 0842',q:'BlueTabla 140 Tsereteli Ave Tbilisi'},
+{t:'Tortuga (jogos de tabuleiro)',d:'Loja de jogos de tabuleiro.',a:'3 Vekua St (Bazari Orbeliani), 2º andar',q:'Tortuga board game store Tbilisi'},
+{t:'Board Games Corner',d:'Loja de jogos de tabuleiro.',a:'14 Giorgi Mirotadze St',h:'11h às 20h',p:'591 23 33 11',q:'Board Games Corner Tbilisi Mirotadze'}]}
 ];
 const GUIA_TIP='Liguem ou escrevam antes para confirmar o estoque e o horário: lojas pequenas mudam de horário sem aviso. Nas cartas Pokémon, confiram o idioma (inglês, japonês) e desconfiem de cartas avulsas muito baratas. Livros infantis ilustrados são uma boa lembrança mesmo sem ler georgiano. Lembrem do peso de livros e mangás na bagagem de volta.';
-/* ===== ESCALA EM MUNIQUE ===== */
+/* ===== ESCALA EM MUNIQUE ===== /
 const MUN={
- stats:[['07h15','pouso em Munique, hora local'],['20h20','voo para Lisboa'],['13h05','de escala, no total'],['€ 10','por mala de mão no guarda-volumes, até 24 h']],
- intro:'Treze horas de escala dão para conhecer o centro de Munique com calma. As malas de porão seguem direto para Lisboa, então vocês três só precisam deixar a bagagem de mão no guarda-volumes e ir de trem até a cidade.',
- tasks:[
-  {t:'07h15 · Pouso em Munique',d:'Hora local. A Alemanha fica 2 h atrás da Geórgia: acertem o relógio.',q:'Munich Airport'},
-  {t:'Controle de passaportes (entrada na área Schengen)',d:'Reservem de 30 a 60 min, uma estimativa minha. Como as malas de porão vão até Lisboa, não precisam esperar esteira de bagagem. Confirmem em Tbilisi se foram etiquetadas até Lisboa.'},
-  {t:'Deixar a bagagem de mão no guarda-volumes (Left luggage / Gepäckaufbewahrung)',d:'Terminal 2, entre os portões G e H, nível 03 (Ebene 03), na área pública, antes da segurança. Há outro posto no Munich Airport Center (MAC), nível 03. Preço por item: € 6 até 5 h e € 10 até 24 h (bagagem de mão até 8 kg e 35 × 50 × 20 cm); malas maiores, até 20 kg, € 8 até 5 h e € 12 até 24 h. Para as três malas de mão ficando mais de 5 h, são 3 × € 10 = € 30 (conta minha). O site lista dois horários, 5h às 23h30 e 6h às 22h, um para cada posto: os dois cobrem a escala. Guardem o comprovante.',q:'Munich Airport Terminal 2 Left Luggage'},
-  {t:'8h45 · S-Bahn S1 ou S8 até Marienplatz (cerca de 35 a 45 min)',d:'As duas linhas saem do aeroporto, passam a cada cerca de 10 min no conjunto e chegam ao centro. Bilhete sugerido: Airport-City-Day-Ticket (zonas M a 5), € 17,50 individual, segundo o MVG; para três, 3 × € 17,50 = € 52,50 (conta minha). Há versão para grupo de até 5 pessoas, mas não achei o preço: comparem na máquina. Vale até as 6h do dia seguinte no S-Bahn, metrô, ônibus e bonde. Comprem no app MVGO ou nas máquinas.',q:'Marienplatz Munich'},
-  {t:'Marienplatz e Neues Rathaus (Prefeitura Nova)',d:'A praça central de Munique. O relógio com figuras (Glockenspiel) costuma tocar às 11h e às 12h, e às 17h de março a outubro: confirmem os horários.',q:'Marienplatz Munich'},
-  {t:'Viktualienmarkt (mercado de alimentos ao ar livre)',d:'A poucos minutos a pé da praça: queijos, frutas, flores e barraquinhas de comida para o almoço. Costuma fechar aos domingos; 22/04 é quinta-feira.',q:'Viktualienmarkt Munich'},
-  {t:'Frauenkirche e Peterskirche (igrejas)',d:'Duas igrejas históricas a poucos minutos da praça. A Peterskirche tem uma torre com vista da cidade, que se sobe por escada.',q:'Frauenkirche Munich',o:1},
-  {t:'Hofbräuhaus (cervejaria histórica)',d:'Cerca de 5 a 10 min a pé da praça, boa para almoçar ou tomar uma cerveja bávara.',q:'Hofbräuhaus Munich',o:1},
-  {t:'15h30 · Voltar para a estação e pegar o S-Bahn S1 ou S8 para o aeroporto',d:'Cerca de 35 a 45 min de viagem. O limite para sair do centro, com folga, é 16h30 (estimativa minha).',q:'Munich Airport'},
-  {t:'Retirar a bagagem de mão no guarda-volumes',d:'Levem o comprovante e confirmem o horário em que o posto fecha.',q:'Munich Airport Terminal 2 Left Luggage'},
-  {t:'Segurança, portão e jantar no aeroporto',d:'Cheguem ao portão com folga e confirmem o horário de embarque no cartão.'},
-  {t:'20h20 · Voo Munique → Lisboa'}
- ],
- tips:[
-  ['Malas de porão','Elas devem seguir direto de Tbilisi para Lisboa. Confirmem no check-in se foram etiquetadas até Lisboa (código LIS). Se os voos forem bilhetes separados, é provável que não sigam sozinhas: perguntem na companhia aérea.'],
-  ['Líquidos e vinhos','Pelo que sei, líquidos comprados no free shop de Tbilisi podem ser retidos na segurança de Munique se vocês saírem do aeroporto e voltarem. O mais seguro é levar vinhos e queijos moles nas malas de porão.'],
-  ['Documentos e entrada','O voo de Tbilisi entra na área Schengen em Munique, então há controle de passaportes. Confiram se o ETIAS é exigido na data da viagem (não conferi o status atual).'],
-  ['Regra prática de tempo','A busca sugere ter de 4 a 5 horas livres para justificar ir ao centro e 6 h ou mais para ir com calma. Descontando imigração e volta, vocês teriam cerca de 6 h na cidade (estimativa minha). Se o voo atrasar ou a imigração demorar, troquem o centro por uma das opções abaixo.'],
-  ['Depois de Lisboa','Sua mãe termina a viagem em Lisboa. Você e seu esposo seguem para o Rio: veja a etapa 7 na seção Salas VIP.']
- ],
- alt:[
-  'Freising: cidade a cerca de 10 a 12 min de S-Bahn (S1) do aeroporto, segundo o Rome2rio. Tem um centro histórico pequeno e a colina da catedral (Domberg). Boa opção para quem quer menos deslocamento.',
-  'Ficar no aeroporto: o parque de visitantes (Besucherpark), com aviões expostos, e a cervejaria Airbräu ficam no complexo. Confiram horários e distâncias no site do aeroporto.'
- ],
- note:'Guarda-volumes, preços, bilhete e tempos de S-Bahn vêm de pesquisa na web (site do aeroporto, MVV e MVG). Os passeios do centro e os horários do Glockenspiel e do mercado vêm de conhecimento geral: confirmem antes.'
+stats:[['07h15','pouso em Munique, hora local'],['20h20','voo para Lisboa'],['13h05','de escala, no total'],['€ 10','por mala de mão no guarda-volumes, até 24 h']],
+intro:'Treze horas de escala dão para conhecer o centro de Munique com calma. As malas de porão seguem direto para Lisboa, então vocês quatro só precisam deixar a bagagem de mão no guarda-volumes e ir de trem até a cidade.',
+tasks:[
+{t:'07h15 · Pouso em Munique',d:'Hora local. A Alemanha fica 2 h atrás da Geórgia: acertem o relógio.',q:'Munich Airport'},
+{t:'Controle de passaportes (entrada na área Schengen)',d:'Reservem de 30 a 60 min, uma estimativa minha. Como as malas de porão vão até Lisboa, não precisam esperar esteira de bagagem. Confirmem em Tbilisi se foram etiquetadas até Lisboa.'},
+{t:'Deixar a bagagem de mão no guarda-volumes (Left luggage / Gepäckaufbewahrung)',d:'Terminal 2, entre os portões G e H, nível 03 (Ebene 03), na área pública, antes da segurança. Há outro posto no Munich Airport Center (MAC), nível 03. Preço por item: € 6 até 5 h e € 10 até 24 h (bagagem de mão até 8 kg e 35 × 50 × 20 cm); malas maiores, até 20 kg, € 8 até 5 h e € 12 até 24 h. Para as quatro malas de mão ficando mais de 5 h, são 4 × € 10 = € 40 (conta minha). O site lista dois horários, 5h às 23h30 e 6h às 22h, um para cada posto: os dois cobrem a escala. Guardem o comprovante.',q:'Munich Airport Terminal 2 Left Luggage'},
+{t:'8h45 · S-Bahn S1 ou S8 até Marienplatz (cerca de 35 a 45 min)',d:'As duas linhas saem do aeroporto, passam a cada cerca de 10 min no conjunto e chegam ao centro. Bilhete sugerido: Airport-City-Day-Ticket (zonas M a 5), € 17,50 individual, segundo o MVG; para quatro, 4 × € 17,50 = € 70 (conta minha). Há versão para grupo de até 5 pessoas, mas não achei o preço: comparem na máquina. Vale até as 6h do dia seguinte no S-Bahn, metrô, ônibus e bonde. Comprem no app MVGO ou nas máquinas.',q:'Marienplatz Munich'},
+{t:'Marienplatz e Neues Rathaus (Prefeitura Nova)',d:'A praça central de Munique. O relógio com figuras (Glockenspiel) costuma tocar às 11h e às 12h, e às 17h de março a outubro: confirmem os horários.',q:'Marienplatz Munich'},
+{t:'Viktualienmarkt (mercado de alimentos ao ar livre)',d:'A poucos minutos a pé da praça: queijos, frutas, flores e barraquinhas de comida para o almoço. Costuma fechar aos domingos; 22/04 é quinta-feira.',q:'Viktualienmarkt Munich'},
+{t:'Frauenkirche e Peterskirche (igrejas)',d:'Duas igrejas históricas a poucos minutos da praça. A Peterskirche tem uma torre com vista da cidade, que se sobe por escada.',q:'Frauenkirche Munich',o:1},
+{t:'Hofbräuhaus (cervejaria histórica)',d:'Cerca de 5 a 10 min a pé da praça, boa para almoçar ou tomar uma cerveja bávara.',q:'Hofbräuhaus Munich',o:1},
+{t:'15h30 · Voltar para a estação e pegar o S-Bahn S1 ou S8 para o aeroporto',d:'Cerca de 35 a 45 min de viagem. O limite para sair do centro, com folga, é 16h30 (estimativa minha).',q:'Munich Airport'},
+{t:'Retirar a bagagem de mão no guarda-volumes',d:'Levem o comprovante e confirmem o horário em que o posto fecha.',q:'Munich Airport Terminal 2 Left Luggage'},
+{t:'Segurança, portão e jantar no aeroporto',d:'Cheguem ao portão com folga e confirmem o horário de embarque no cartão.'},
+{t:'20h20 · Voo Munique → Lisboa'}
+],
+tips:[
+['Malas de porão','Elas devem seguir direto de Tbilisi para Lisboa. Confirmem no check-in se foram etiquetadas até Lisboa (código LIS). Se os voos forem bilhetes separados, é provável que não sigam sozinhas: perguntem na companhia aérea.'],
+['Líquidos e vinhos','Pelo que sei, líquidos comprados no free shop de Tbilisi podem ser retidos na segurança de Munique se vocês saírem do aeroporto e voltarem. O mais seguro é levar vinhos e queijos moles nas malas de porão.'],
+['Documentos e entrada','O voo de Tbilisi entra na área Schengen em Munique, então há controle de passaportes. Confiram se o ETIAS é exigido na data da viagem (não conferi o status atual).'],
+['Regra prática de tempo','A busca sugere ter de 4 a 5 horas livres para justificar ir ao centro e 6 h ou mais para ir com calma. Descontando imigração e volta, vocês teriam cerca de 6 h na cidade (estimativa minha). Se o voo atrasar ou a imigração demorar, troquem o centro por uma das opções abaixo.'],
+['Depois de Lisboa','Em Lisboa, Denise termina a viagem. Rachel, Cadu e Douglas seguem para o Rio: veja a etapa 7 na aba VIP.']
+],
+alt:[
+'Freising: cidade a cerca de 10 a 12 min de S-Bahn (S1) do aeroporto, segundo o Rome2rio. Tem um centro histórico pequeno e a colina da catedral (Domberg). Boa opção para quem quer menos deslocamento.',
+'Ficar no aeroporto: o parque de visitantes (Besucherpark), com aviões expostos, e a cervejaria Airbräu ficam no complexo. Confiram horários e distâncias no site do aeroporto.'
+],
+note:'Guarda-volumes, preços, bilhete e tempos de S-Bahn vêm de pesquisa na web (site do aeroporto, MVV e MVG). Os passeios do centro e os horários do Glockenspiel e do mercado vêm de conhecimento geral: confirmem antes.'
 };
-/* ===== SALAS VIP ===== */
+/* ===== SALAS VIP ===== /
 const CARDS=[
- {id:'u1',n:'Santander Unique nº 1 (Visa)',tot:2,m:'o uso no Galeão é opcional'},
- {id:'u2',n:'Santander Unique nº 2 (Visa)',tot:2},
- {id:'dc',n:'Bradesco Diners',tot:4,m:'entradas gratuitas em salas Bradesco e parceiras, como o Ambaar, não descontam'},
- {id:'c6',n:'C6 Carbon',tot:4,m:'o QR code vale para você e para sua mãe'}
+{id:'u1',n:'Santander Unique nº 1 (Visa)',tot:2,m:'o uso no Galeão é opcional'},
+{id:'u2',n:'Santander Unique nº 2 (Visa)',tot:2},
+{id:'dc',n:'Bradesco Diners (Priority Pass)',tot:4,m:'entradas gratuitas em salas Bradesco e parceiras, como o Ambaar, não descontam'},
+{id:'c6',n:'C6 Carbon',tot:4,m:'o QR code vale para todo o grupo e desconta dos 4 acessos'},
+{id:'dg',n:'Priority Pass do Douglas',tot:4,m:'cartão próprio dele'}
 ];
 const VIP={
- intro:'As 8 etapas de aeroporto da viagem, com a sala, o cartão e os acessos de cada uma. Vocês usam salas só nos embarques, com uma exceção: em Viracopos, onde a sala é usada depois de pousar, na conexão. Em Munique, nas duas passagens, não há sala. Marquem cada etapa depois de usar. A contagem de acessos por cartão atualiza sozinha.',
- alert:['Ponto em aberto: Ambaar na ida','A entrada gratuita no Ambaar Club com o Diners está confirmada. O que falta confirmar é se vocês conseguem entrar na ida (etapa 2): a sala fica no embarque doméstico e o Priority Pass a lista como “Terminal 1 Doméstico”, mas o seu voo seguinte é internacional. Perguntem ao Bradesco e à companhia aérea, ou tentem na porta. Se não entrarem, o plano B é um café e uma tomada no terminal.'],
- stages:[
-  {t:'1. Galeão (GIG), ida',s:'Embarque doméstico · 2 viajantes (você e seu esposo)',l:'Plaza Premium Lounge (Embarques nacionais, Terminal 2)',c:'Santander Unique nº 1 (Visa), pelo Visa Airport Companion (DragonPass)',u:'2 acessos (titular + 1 convidado), com QR code no app. Opcional: se não usarem, os 2 acessos ficam livres.',w:'Terminal 2, lado ar (depois da segurança). O site da Plaza Premium indica funcionamento 24 horas, todos os dias.',q:'Plaza Premium Lounge Galeão Terminal 2',card:'u1',use:2,o:1},
-  {t:'2. Viracopos (VCP), ida',s:'Chegada do voo doméstico e conexão para o internacional · 2 viajantes',l:'Ambaar Club (Terminal 1, área doméstica)',c:'Bradesco Diners (cartão físico)',u:'Sem cota gasta: entrada gratuita em salas Bradesco e parceiras, titular + 1 convidado.',w:'Terminal 1, 1º andar, perto da praça de alimentação. Aberta 24 h. Permanência máxima de 4 h; em horário de pico, o acesso pode valer só até 4 h antes do voo. Acesso sujeito à lotação.',n:'Única dúvida da ida: a sala fica no embarque doméstico, e o seu voo seguinte é internacional. Confirmem se a entrada é permitida e se sobra tempo para o check-in internacional.',q:'Ambaar Club Viracopos Terminal 1',card:'dc',use:0},
-  {t:'3. Lisboa (LIS), ida',s:'Espera de 6 h · 3 viajantes (sua mãe se junta a vocês em Lisboa)',l:'ANA Lounge (Terminal 1)',c:'Bradesco Diners, pelo Priority Pass',u:'3 acessos (titular + 2 convidados), dos 4 do cartão. Sobra 1.',w:'Terminal 1, lado ar, 6º andar, perto do portão 22, depois da segurança e antes do controle de passaportes. Aberta das 4h às 23h. Permanência máxima de 3 h.',n:'A espera é de 6 h e a sala permite 3 h: usem a sala na parte da espera que fizer mais sentido. Confirmem no app do Priority Pass se os 2 convidados entram sem custo extra. O Priority Pass limita a 3 as bebidas alcoólicas grátis.',q:'ANA Lounge Lisbon Airport Terminal 1',card:'dc',use:3},
-  {t:'4. Munique (MUC), ida',s:'Espera de 3 h · 3 viajantes',l:'Sem sala VIP: áreas de descanso gratuitas do aeroporto',c:'Nenhum',u:'0 acessos.',w:'Há controle de passaportes antes de chegar ao portão. Para esta espera, vale um café e uma volta pelo terminal.'},
-  {t:'5. Tbilisi (TBS), volta',s:'Embarque internacional, madrugada de 22/04 · 3 viajantes',l:'Primeclass Lounge',c:'C6 Carbon, pelo DragonPass',u:'3 acessos (você, seu esposo e sua mãe), dos 4 do cartão, com o mesmo QR code. Sobra 1.',w:'Terminal internacional, lado ar, depois da segurança e do controle de passaportes, no 2º andar, do lado direito, perto do portão 101. Aberta 24 h. Permanência máxima de 3 h. O voo é às 5h e a chegada ao aeroporto está prevista para cerca de 2h.',n:'Reservem tempo para segurança e passaporte antes da sala.',q:'Primeclass Lounge Tbilisi International Airport',card:'c6',use:3},
-  {t:'6. Munique (MUC), volta',s:'Escala de 13h05 · 3 viajantes',l:'Sem sala VIP: vocês saem do aeroporto (veja a seção Escala em Munique)',c:'Nenhum',u:'0 acessos.',w:'Pouso às 7h15 e voo às 20h20. O plano de passeio e o guarda-volumes estão na seção Munique.'},
-  {t:'7. Lisboa (LIS), volta',s:'Só você e seu esposo (sua mãe fica em Lisboa)',l:'ANA Lounge (Terminal 1)',c:'Santander Unique nº 2 (Visa), pelo Visa Airport Companion (DragonPass)',u:'2 acessos (titular + 1 convidado).',w:'Terminal 1, lado ar, 6º andar, perto do portão 22. Aberta das 4h às 23h. Permanência máxima de 3 h.',n:'O voo de Munique sai às 20h20. Com cerca de 3 h de voo (estimativa minha) e 1 h de fuso, o pouso seria por volta das 22h20, hora de Lisboa, e a sala fecha às 23h. Confirmem o horário do voo para o Rio: se for tarde da noite, a sala pode não valer a pena.',q:'ANA Lounge Lisbon Airport Terminal 1',card:'u2',use:2},
-  {t:'8. Viracopos (VCP), volta',s:'Chegada do voo internacional e conexão para o Galeão · 2 viajantes',l:'Ambaar Club (área doméstica)',c:'Bradesco Diners (cartão físico)',u:'Sem cota gasta (entrada gratuita em salas Bradesco e parceiras), titular + 1 convidado.',w:'Terminal 1, lado ar, 1º andar, perto da praça de alimentação. Aberta 24 h. Permanência máxima de 4 h.',n:'Chegando do exterior, há imigração, bagagem e alfândega antes do voo doméstico. A sala fica na área de embarque doméstico: como o seu voo seguinte é doméstico, a entrada deve ser normal. Confirmem como será a conexão.',q:'Ambaar Club Viracopos Terminal 1',card:'dc',use:0}
- ],
- tips:[
-  ['Quem entra onde','Você e seu esposo: etapas 1, 2, 7 e 8. Os três: etapa 3 (Lisboa, ida) e etapa 5 (Tbilisi). Na etapa 5, sua mãe entra com o QR code do C6, que consome um dos seus 4 acessos. Na etapa 3, ela entra como convidada do Diners.'],
-  ['Como entrar','Levem o cartão de embarque, um documento e o cartão que dá o acesso. Para o Diners, levem o cartão físico. Nos demais, salvem o QR code no app antes de sair de casa.'],
-  ['Lotação e plano B','A sala pode barrar a entrada quando está cheia (o Ambaar avisa isso). Tenham um plano B: um café e uma tomada no terminal.']
- ],
- note:'Horários, localização e permanência vêm de pesquisa na web (Priority Pass, TAV, Plaza Premium, aeroporto de Lisboa e Mastercard). Os cartões e as cotas vêm das informações de vocês: 2 cartões Visa Unique do Santander (2 acessos cada), 1 Bradesco Diners (4 acessos, mais entradas gratuitas em salas Bradesco e parceiras) e 1 C6 Carbon (4 acessos).'
+intro:'As 8 etapas de aeroporto da viagem, com a sala, o cartão e os acessos de cada uma. Considerei que Rachel, Cadu e Douglas viajam do Rio e que Denise se junta a eles em Lisboa. Vocês usam salas só nos embarques, com uma exceção: em Viracopos, onde a sala é usada depois de pousar, na conexão. Em Munique, nas duas passagens, não há sala. Marquem cada etapa depois de usar. A contagem de acessos por cartão atualiza sozinha.',
+alerts:[
+['Ponto em aberto: Ambaar na ida','A entrada gratuita no Ambaar Club com o Diners está confirmada para Rachel e Cadu, e o Douglas entra com o Priority Pass dele (a sala está listada no Priority Pass). O que falta confirmar é se os três conseguem entrar na ida (etapa 2): a sala fica no embarque doméstico e o Priority Pass a lista como “Terminal 1 Doméstico”, mas o voo seguinte é internacional. Perguntem ao Bradesco e à companhia aérea, ou tentem na porta. Se não entrarem, o plano B é um café e uma tomada no terminal.'],
+['Pouca folga com quatro pessoas','O Diners e o Priority Pass do Douglas ficam em 4 de 4, sem acesso de reserva. O C6 Carbon tem 1 acesso sobrando, e o Santander nº 1 tem 2 se vocês pularem o Galeão. Se alguém faltar ou um convidado for cobrado, a diferença é paga na porta. As regras de convidados de cada cartão e a lista de salas do Priority Pass do Douglas vêm dos apps: confirmem lá.']
+],
+stages:[
+{t:'1. Galeão (GIG), ida',s:'Embarque doméstico · 3 viajantes (Rachel, Cadu e Douglas)',l:'Plaza Premium Lounge (Embarques nacionais, Terminal 2)',c:'Santander Unique nº 1 (Visa), pelo Visa Airport Companion (DragonPass), para Rachel e Cadu',u:'2 acessos (titular + 1 convidado), com QR code no app. Opcional: se não usarem, os 2 acessos ficam livres. Douglas fica de fora, porque os 4 acessos do Priority Pass dele já estão planejados.',w:'Terminal 2, lado ar (depois da segurança). O site da Plaza Premium indica funcionamento 24 horas, todos os dias.',q:'Plaza Premium Lounge Galeão Terminal 2',use:{u1:2},o:1},
+{t:'2. Viracopos (VCP), ida',s:'Chegada do voo doméstico e conexão para o internacional · 3 viajantes (Rachel, Cadu e Douglas)',l:'Ambaar Club (Terminal 1, área doméstica)',c:'Rachel e Cadu: Bradesco Diners (cartão físico). Douglas: o próprio Priority Pass',u:'Rachel e Cadu: sem cota gasta (entrada gratuita em salas Bradesco e parceiras, titular + 1 convidado). Douglas: 1 acesso do Priority Pass dele.',w:'Terminal 1, 1º andar, perto da praça de alimentação. Aberta 24 h. Permanência máxima de 4 h; em horário de pico, o acesso pode valer só até 4 h antes do voo. Acesso sujeito à lotação.',n:'Única dúvida da ida: a sala fica no embarque doméstico, e o voo seguinte de vocês é internacional. Confirmem se a entrada é permitida para os três e se sobra tempo para o check-in internacional.',q:'Ambaar Club Viracopos Terminal 1',use:{dg:1}},
+{t:'3. Lisboa (LIS), ida',s:'Espera de 6 h · 4 viajantes (Denise se junta a Rachel, Cadu e Douglas em Lisboa)',l:'ANA Lounge (Terminal 1)',c:'Bradesco Diners, pelo Priority Pass (Rachel, Cadu e Denise), e Priority Pass do Douglas',u:'4 acessos: 3 do Diners (Rachel, Cadu e Denise como convidada) + 1 do Priority Pass do Douglas.',w:'Terminal 1, lado ar, 6º andar, perto do portão 22, depois da segurança e antes do controle de passaportes. Aberta das 4h às 23h. Permanência máxima de 3 h.',n:'A espera é de 6 h e a sala permite 3 h: usem a sala na parte da espera que fizer mais sentido. Confirmem no app do Priority Pass se os convidados entram sem custo extra. O Priority Pass limita a 3 as bebidas alcoólicas grátis.',q:'ANA Lounge Lisbon Airport Terminal 1',use:{dc:3,dg:1}},
+{t:'4. Munique (MUC), ida',s:'Espera de 3 h · 4 viajantes',l:'Sem sala VIP: áreas de descanso gratuitas do aeroporto',c:'Nenhum',u:'0 acessos.',w:'Há controle de passaportes antes de chegar ao portão. Para esta espera, vale um café e uma volta pelo terminal.'},
+{t:'5. Tbilisi (TBS), volta',s:'Embarque internacional, madrugada de 22/04 · 4 viajantes',l:'Primeclass Lounge',c:'C6 Carbon, pelo DragonPass (Rachel, Cadu e Denise), e Priority Pass do Douglas',u:'4 acessos: 3 do C6, com o mesmo QR code (sobra 1 dos 4), + 1 do Priority Pass do Douglas.',w:'Terminal internacional, lado ar, depois da segurança e do controle de passaportes, no 2º andar, do lado direito, perto do portão 101. Aberta 24 h. Permanência máxima de 3 h. O voo é às 5h e a chegada ao aeroporto está prevista para cerca de 2h.',n:'Reservem tempo para segurança e passaporte antes da sala. Se faltar acesso, a entrada avulsa foi vista a cerca de € 38 por pessoa num site de passes (valor que pode mudar). Os sites listam o Priority Pass e o DragonPass nessa sala.',q:'Primeclass Lounge Tbilisi International Airport',use:{c6:3,dg:1}},
+{t:'6. Munique (MUC), volta',s:'Escala de 13h05 · 4 viajantes',l:'Sem sala VIP: vocês saem do aeroporto (veja a seção Escala em Munique)',c:'Nenhum',u:'0 acessos.',w:'Pouso às 7h15 e voo às 20h20. O plano de passeio e o guarda-volumes estão na seção Munique.'},
+{t:'7. Lisboa (LIS), volta',s:'Rachel, Cadu e Douglas · 3 viajantes (Denise fica em Lisboa)',l:'ANA Lounge (Terminal 1)',c:'Santander Unique nº 2 (Rachel e Cadu), pelo Visa Airport Companion (DragonPass), e Diners pelo Priority Pass (Douglas)',u:'3 acessos: 2 do Santander nº 2 (titular + 1 convidado) + 1 do Diners, que é o último dos 4.',w:'Terminal 1, lado ar, 6º andar, perto do portão 22. Aberta das 4h às 23h. Permanência máxima de 3 h.',n:'O voo de Munique sai às 20h20. Com cerca de 3 h de voo (estimativa minha) e 1 h de fuso, o pouso seria por volta das 22h20, hora de Lisboa, e a sala fecha às 23h. Confirmem o horário do voo para o Rio: se for tarde da noite, a sala pode não valer a pena. Para o Douglas, o acesso que sobra do C6 (DragonPass) também serve, já que o site do aeroporto lista o DragonPass nessa sala.',q:'ANA Lounge Lisbon Airport Terminal 1',use:{u2:2,dc:1}},
+{t:'8. Viracopos (VCP), volta',s:'Chegada do voo internacional e conexão para o Galeão · 3 viajantes (Rachel, Cadu e Douglas)',l:'Ambaar Club (área doméstica)',c:'Rachel e Cadu: Bradesco Diners (cartão físico). Douglas: o próprio Priority Pass',u:'Rachel e Cadu: sem cota gasta (entrada gratuita em salas Bradesco e parceiras, titular + 1 convidado). Douglas: 1 acesso do Priority Pass dele, o último dos 4.',w:'Terminal 1, lado ar, 1º andar, perto da praça de alimentação. Aberta 24 h. Permanência máxima de 4 h.',n:'Chegando do exterior, há imigração, bagagem e alfândega antes do voo doméstico. A sala fica na área de embarque doméstico: como o voo seguinte é doméstico, a entrada deve ser normal. Confirmem como será a conexão.',q:'Ambaar Club Viracopos Terminal 1',use:{dg:1}}
+],
+tips:[
+['Quem entra onde','Rachel e Cadu: etapas 1, 2, 7 e 8. Rachel, Cadu e Douglas: também as etapas 3, 5 e, na volta, 7 e 8. Denise entra só nas etapas 3 (Lisboa, ida) e 5 (Tbilisi). Na etapa 3 ela entra como convidada do Diners; na etapa 5, com o QR code do C6, que desconta do cartão.'],
+['Como entrar','Levem o cartão de embarque, um documento e o cartão que dá o acesso. Para o Diners, levem o cartão físico. Nos demais, salvem o QR code no app antes de sair de casa. O Douglas usa o Priority Pass dele, no app ou no cartão.'],
+['Lotação e plano B','A sala pode barrar a entrada quando está cheia (o Ambaar avisa isso). Tenham um plano B: um café e uma tomada no terminal.']
+],
+note:'Horários, localização e permanência vêm de pesquisa na web (Priority Pass, TAV, Plaza Premium, aeroporto de Lisboa e Mastercard). Os cartões e as cotas vêm das informações de vocês: 2 cartões Visa Unique do Santander (2 acessos cada), 1 Bradesco Diners (4 acessos, mais entradas gratuitas em salas Bradesco e parceiras), 1 C6 Carbon (4 acessos) e o Priority Pass do Douglas (4 acessos).'
 };
-/* ===== ESTADO ===== */
+/* ===== ESTADO ===== /
 const LS='georgia-caderno-v1';
-let S={start:'2027-04-12',v:4,names:'Rachel, esposo e mamãe',title:'Nossa Geórgia',incl:false,done:{},pre:{},bingo:{},notes:{},mood:{}};
+let S={start:'2027-04-12',v:5,names:'Rachel, Cadu, Denise e Douglas',title:'Nossa Geórgia',incl:false,done:{},pre:{},bingo:{},notes:{},mood:{}};
 try{Object.assign(S,JSON.parse(localStorage.getItem(LS)||'{}'))}catch(e){}
 if(!S.v||S.v<3){S.start='2027-04-12'}
-if(!S.v||S.v<4){if(!S.names||S.names==='Rachel & mamãe')S.names='Rachel, esposo e mamãe'}
-S.v=4;
+if(!S.v||S.v<5){if(!S.names||S.names==='Rachel & mamãe'||S.names==='Rachel, esposo e mamãe')S.names='Rachel, Cadu, Denise e Douglas'}
+S.v=5;
 let PH={},idbOk=true,funIdx=0,saveT;
 const save=()=>{try{localStorage.setItem(LS,JSON.stringify(S))}catch(e){toast('Não consegui salvar neste modo do navegador')}};
 const idb={db:null,
- open(){return new Promise((ok,no)=>{const r=indexedDB.open('georgia-caderno',1);r.onupgradeneeded=()=>r.result.createObjectStore('p');r.onsuccess=()=>{this.db=r.result;ok()};r.onerror=()=>no(r.error)})},
- st(m){return this.db.transaction('p',m).objectStore('p')},
- req(r){return new Promise((ok,no)=>{r.onsuccess=()=>ok();r.onerror=()=>no(r.error)})},
- set(k,v){return this.req(this.st('readwrite').put(v,k))},
- del(k){return this.req(this.st('readwrite').delete(k))},
- clear(){return this.req(this.st('readwrite').clear())},
- all(){return new Promise(ok=>{const o={};const r=this.st('readonly').openCursor();r.onsuccess=()=>{const c=r.result;if(c){o[c.key]=c.value;c.continue()}else ok(o)};r.onerror=()=>ok(o)})}};
-/* ===== UTIL ===== */
+open(){return new Promise((ok,no)=>{const r=indexedDB.open('georgia-caderno',1);r.onupgradeneeded=()=>r.result.createObjectStore('p');r.onsuccess=()=>{this.db=r.result;ok()};r.onerror=()=>no(r.error)})},
+st(m){return this.db.transaction('p',m).objectStore('p')},
+req(r){return new Promise((ok,no)=>{r.onsuccess=()=>ok();r.onerror=()=>no(r.error)})},
+set(k,v){return this.req(this.st('readwrite').put(v,k))},
+del(k){return this.req(this.st('readwrite').delete(k))},
+clear(){return this.req(this.st('readwrite').clear())},
+all(){return new Promise(ok=>{const o={};const r=this.st('readonly').openCursor();r.onsuccess=()=>{const c=r.result;if(c){o[c.key]=c.value;c.continue()}else ok(o)};r.onerror=()=>ok(o)})}};
+/* ===== UTIL ===== /
 const $=(s,r=document)=>r.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
 const mapUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
 const parseStart=()=>{const[y,m,d]=S.start.split('-').map(Number);return new Date(y,m-1,d)};
-/* embarque: 14h55 em Lisboa (UTC+1 em abril), no dia anterior à chegada */
+/* embarque: 14h55 em Lisboa (UTC+1 em abril), no dia anterior à chegada /
 const dep=()=>{const[y,m,d]=S.start.split('-').map(Number);return new Date(Date.UTC(y,m-1,d-1,13,55))};
-/* chegada: 03h55 na Geórgia (UTC+4) */
+/* chegada: 03h55 na Geórgia (UTC+4) /
 const arrival=()=>{const[y,m,d]=S.start.split('-').map(Number);return new Date(Date.UTC(y,m-1,d,-1,55))};
 const dayDate=i=>{const s=parseStart();return new Date(s.getFullYear(),s.getMonth(),s.getDate()+i)};
 const fLong=d=>d.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
@@ -474,221 +478,221 @@ const pcText=d=>{const p=dayProg(d);return p.all?'Dia completo':p.n+' de '+p.tot
 const cnt=pre=>Object.keys(S.done).filter(k=>S.done[k]&&k.indexOf(pre+'-')===0).length;
 const todayIdx=()=>{const n=new Date(),s=parseStart();if(n<s||n>=dayDate(DAYS.length))return -1;return Math.floor((n-s)/864e5)};
 let tT;function toast(m){let t=$('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(tT);tT=setTimeout(()=>t.style.display='none',2600)}
-function burst(x,y,em=['🍇','🍷','🧀','🥟','⛰️','☀️','🥂']){for(let i=0;i<16;i++){const s=document.createElement('span');s.className='bit';s.textContent=em[i%em.length];const a=Math.random()*6.28,r=60+Math.random()*100;s.style.cssText=`left:${x}px;top:${y}px;--dx:${Math.cos(a)*r}px;--dy:${Math.sin(a)*r-70}px`;document.body.appendChild(s);setTimeout(()=>s.remove(),1200)}}
+function burst(x,y,em=['🍇','🍷','🧀','🥟','⛰️','☀️','🥂']){for(let i=0;i<16;i++){const s=document.createElement('span');s.className='bit';s.textContent=em[i%em.length];const a=Math.random()6.28,r=60+Math.random()100;s.style.cssText=`left:${x}px;top:${y}px;--dx:${Math.cos(a)r}px;--dy:${Math.sin(a)r-70}px`;document.body.appendChild(s);setTimeout(()=>s.remove(),1200)}}
 const bj=(cls='bj')=>`<svg class="${cls}"><use href="#bj"/></svg>`;
 const fix=s=>s.replace('{next}',fShort(dayDate(DAYS.length-1)));
 const sec=(k,t)=>`<div class="sec"><i class="dm"></i><small>${k}</small><h3>${t}</h3></div>`;
-function ring(id,txt,cls=''){const d=DAYS.find(x=>x.id===id),p=dayProg(d),pc=p.total?p.n/p.total:0;return `<svg class="ring ${cls} th-${d.c}" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" class="rb"/><circle cx="22" cy="22" r="18" class="rf" data-ring="${id}" transform="rotate(-90 22 22)" stroke-dasharray="${(pc*113.1).toFixed(1)} 113.1"/><text x="22" y="22" text-anchor="middle" dominant-baseline="central">${txt}</text></svg>`}
+function ring(id,txt,cls=''){const d=DAYS.find(x=>x.id===id),p=dayProg(d),pc=p.total?p.n/p.total:0;return `<svg class="ring ${cls} th-${d.c}" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="18" class="rb"/><circle cx="22" cy="22" r="18" class="rf" data-ring="${id}" transform="rotate(-90 22 22)" stroke-dasharray="${(pc113.1).toFixed(1)} 113.1"/><text x="22" y="22" text-anchor="middle" dominant-baseline="central">${txt}</text></svg>`}
 const placeLi=(pre,t,k)=>`<li><label><input type="checkbox" data-grp="done" data-k="${pre}-${k}" ${S.done[pre+'-'+k]?'checked':''}><span class="box"></span><span class="tx"><span class="tt">${esc(t.t)}${t.o?' <em class="opt">opcional</em>':''}</span>${t.d?`<span class="dsc">${esc(t.d)}</span>`:''}${t.a?`<span class="dsc"><b>Endereço:</b> ${esc(t.a)}</span>`:''}${t.h?`<span class="dsc"><b>Horário:</b> ${esc(t.h)}</span>`:''}${t.p?`<span class="dsc"><b>Telefone:</b> ${esc(t.p)}</span>`:''}</span></label>${t.q?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(t.q)}">Mapa ↗</a>`:''}</li>`;
 const vipLi=(t,k)=>`<li><label><input type="checkbox" data-grp="done" data-k="vip-${k}" ${S.done['vip-'+k]?'checked':''}><span class="box"></span><span class="tx"><span class="tt">${esc(t.t)}${t.o?' <em class="opt">opcional</em>':''}</span><span class="dsc">${esc(t.s)}</span><span class="dsc"><b>Sala:</b> ${esc(t.l)}</span><span class="dsc"><b>Cartão:</b> ${esc(t.c)}</span><span class="dsc"><b>Acessos:</b> ${esc(t.u)}</span><span class="dsc"><b>Onde e quando:</b> ${esc(t.w)}</span>${t.n?`<span class="dsc"><b>Atenção:</b> ${esc(t.n)}</span>`:''}</span></label>${t.q?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(t.q)}">Mapa ↗</a>`:''}</li>`;
-const vipPlan=id=>VIP.stages.reduce((a,s)=>a+(s.card===id?(s.use||0):0),0);
-const vipUsed=id=>VIP.stages.reduce((a,s,k)=>a+(s.card===id&&S.done['vip-'+k]?(s.use||0):0),0);
-/* ===== VIEWS ===== */
+const vipPlan=id=>VIP.stages.reduce((a,s)=>a+((s.use&&s.use[id])||0),0);
+const vipUsed=id=>VIP.stages.reduce((a,s,k)=>a+(S.done['vip-'+k]?((s.use&&s.use[id])||0):0),0);
+/* ===== VIEWS ===== /
 const preN=()=>PRE.filter((p,i)=>S.pre[i]).length;
 function vHome(){
- const t=totals(),s=parseStart(),e=dayDate(DAYS.length-1);let last='';
- const route=DAYS.map((d,i)=>{const dt=dayDate(i);let h='';if(d.base!==last){last=d.base;h=`<h4 class="chap th-${d.c}"><span>${d.base}</span><em>${BASES[d.base]}</em></h4>`}
-  return h+`<a class="rw th-${d.c}${i===todayIdx()?' today':''}" href="#${d.id}">${ring(d.id,i+1)}<div class="rt"><small>${esc(fWd(dt))} · ${fShort(dt)}</small><b>${d.title}</b><span>${d.sub}</span><i data-pc="${d.id}">${pcText(d)}</i></div>${PH[d.id]?`<img class="rth" src="${PH[d.id]}" alt="">`:''}</a>`}).join('');
- return `<section class="hero">${bj('bgbj')}<div class="in"><div class="kick">Caderno de viagem · ${esc(fMonthYear(s))}</div><h1>Geórgia</h1><div class="geo">საქართველო</div><p>Banhos termais, vinho de 8.000 anos, montanhas nevadas e muito khachapuri.</p>
- <div class="facts"><div><small>Quando</small><b>${fShort(s)} a ${fShort(e)}</b></div><div><small>Duração</small><b>${DAYS.length} dias</b></div><div><small>Viajantes</small><b>3</b></div></div></div></section><div class="band"></div>
- <div class="wrap"><section class="cd" id="cd"><div class="cdl" id="cdL"></div><div class="cdg" id="cdG" data-act="burst"><b id="cdD">0</b><em id="cdU">dias</em><div class="cdt"><span id="cdHw"><span id="cdH">00</span><i>h</i></span><span id="cdM">00</span><i>min</i><span id="cdS">00</span><i>s</i></div></div>
- <button class="fun" id="cdF" data-act="fun"></button>
- <div class="cdd">Voo: Lisboa ${fShort(dayDate(-1))} · 14h55 → Tbilisi ${fShort(dayDate(0))} · 03h55, com conexão em Munique (hora local de cada cidade)</div>
- <div class="cdd"><span>Dia da chegada em Tbilisi</span><input type="date" id="startIn" value="${S.start}"></div><div class="cdd" id="cdGo"></div></section>
- <div class="stats"><div class="stat"><b id="statD">–</b><span id="statDl">dias até o embarque</span></div><div class="stat"><b>${DAYS.length}</b><span>dias de roteiro</span></div><div class="stat"><b>3</b><span>Tbilisi, Sighnaghi e Kazbegi</span></div><div class="stat"><b id="ovrPct">${t.total?Math.round(t.n/t.total*100):0}%</b><span id="ovrTxt">${t.n} de ${t.total} atividades</span></div></div>
- ${sec('Dia a dia','A trilha')}<div class="tl">${route}</div>
- ${sec('Para consultar','Guias')}
- <a class="lk" href="#guia"><b>Guia de lugares</b><span>Livrarias, mangás, cartas Pokémon e lojas geek em Tbilisi</span></a>
- <a class="lk" href="#munique"><b>Escala em Munique</b><span>Das 07h15 às 20h20: bagagem de mão, S-Bahn e passeios fáceis</span></a>
- <a class="lk" href="#vip"><b>Salas VIP</b><span>8 etapas de aeroporto, 4 cartões e quem entra onde</span></a>
- ${sec('Checklist','Antes de partir')}
- <div class="panel"><div class="prog" id="preTxt">${preN()} de ${PRE.length}</div><ul class="chk">${PRE.map((p,i)=>`<li><label><input type="checkbox" data-grp="pre" data-k="${i}" ${S.pre[i]?'checked':''}><span class="box"></span><span class="tx">${esc(p)}</span></label></li>`).join('')}</ul></div>
- ${sec('Para colecionar','Sabores e momentos')}
- <span class="muted">Marquem conforme for acontecendo. Vale tudo!</span><div class="tags">${BINGO.map((b,i)=>`<label><input type="checkbox" data-grp="bingo" data-k="${i}" ${S.bingo[i]?'checked':''}><span>${b}</span></label>`).join('')}</div>
- ${sec('Glossário','Palavras em georgiano')}
- <div class="gl">${DAYS.map(d=>`<div><b>${d.w[0]}</b><em>${d.w[1]}</em><span>${d.w[2]}</span></div>`).join('')}</div>
- ${sec('Sem pressa','Plano B')}
- <div class="plan"><details><summary>Se chover</summary><ul><li>Museu Nacional da Geórgia, na Avenida Rustaveli</li><li>Banho termal extra em Abanotubani</li><li>Café na Avenida Rustaveli</li></ul></details><details><summary>Se cansar</summary><ul><li>Café com vista na Cidade Antiga</li><li>Passeio no Rike Park, o parque à beira do rio, ao lado da Ponte da Paz</li><li>Tarde livre no hotel</li></ul></details><details><summary>Se sobrar tempo</summary><ul><li>Taça de vinho num bar de Tbilisi</li><li>Mais uma volta no Dry Bridge Market</li><li>Sobremesa georgiana</li></ul></details></div>
- <p class="muted" style="margin-top:14px">As sugestões são opcionais. Confirmem horários, aberturas, reservas e valores antes de ir.</p></div>
- <footer>${bj()}<b>გაუმარჯოს! Gaumarjos!</b></footer>`}
+const t=totals(),s=parseStart(),e=dayDate(DAYS.length-1);let last='';
+const route=DAYS.map((d,i)=>{const dt=dayDate(i);let h='';if(d.base!==last){last=d.base;h=`<h4 class="chap th-${d.c}"><span>${d.base}</span><em>${BASES[d.base]}</em></h4>`}
+return h+`<a class="rw th-${d.c}${i===todayIdx()?' today':''}" href="#${d.id}">${ring(d.id,i+1)}<div class="rt"><small>${esc(fWd(dt))} · ${fShort(dt)}</small><b>${d.title}</b><span>${d.sub}</span><i data-pc="${d.id}">${pcText(d)}</i></div>${PH[d.id]?`<img class="rth" src="${PH[d.id]}" alt="">`:''}</a>`}).join('');
+return `<section class="hero">${bj('bgbj')}<div class="in"><div class="kick">Caderno de viagem · ${esc(fMonthYear(s))}</div><h1>Geórgia</h1><div class="geo">საქართველო</div><p>Banhos termais, vinho de 8.000 anos, montanhas nevadas e muito khachapuri.</p>
+<div class="facts"><div><small>Quando</small><b>${fShort(s)} a ${fShort(e)}</b></div><div><small>Duração</small><b>${DAYS.length} dias</b></div><div><small>Viajantes</small><b>4</b></div></div></div></section><div class="band"></div>
+<div class="wrap"><section class="cd" id="cd"><div class="cdl" id="cdL"></div><div class="cdg" id="cdG" data-act="burst"><b id="cdD">0</b><em id="cdU">dias</em><div class="cdt"><span id="cdHw"><span id="cdH">00</span><i>h</i></span><span id="cdM">00</span><i>min</i><span id="cdS">00</span><i>s</i></div></div>
+<button class="fun" id="cdF" data-act="fun"></button>
+<div class="cdd">Voo: Lisboa ${fShort(dayDate(-1))} · 14h55 → Tbilisi ${fShort(dayDate(0))} · 03h55, com conexão em Munique (hora local de cada cidade)</div>
+<div class="cdd"><span>Dia da chegada em Tbilisi</span><input type="date" id="startIn" value="${S.start}"></div><div class="cdd" id="cdGo"></div></section>
+<div class="stats"><div class="stat"><b id="statD">–</b><span id="statDl">dias até o embarque</span></div><div class="stat"><b>${DAYS.length}</b><span>dias de roteiro</span></div><div class="stat"><b>3</b><span>Tbilisi, Sighnaghi e Kazbegi</span></div><div class="stat"><b id="ovrPct">${t.total?Math.round(t.n/t.total100):0}%</b><span id="ovrTxt">${t.n} de ${t.total} atividades</span></div></div>
+${sec('Dia a dia','A trilha')}<div class="tl">${route}</div>
+${sec('Para consultar','Guias')}
+<a class="lk" href="#guia"><b>Guia de lugares</b><span>Livrarias, mangás, cartas Pokémon e lojas geek em Tbilisi</span></a>
+<a class="lk" href="#munique"><b>Escala em Munique</b><span>Das 07h15 às 20h20: bagagem de mão, S-Bahn e passeios fáceis</span></a>
+<a class="lk" href="#vip"><b>Salas VIP</b><span>8 etapas de aeroporto, 5 fontes de acesso e quem entra onde</span></a>
+${sec('Checklist','Antes de partir')}
+<div class="panel"><div class="prog" id="preTxt">${preN()} de ${PRE.length}</div><ul class="chk">${PRE.map((p,i)=>`<li><label><input type="checkbox" data-grp="pre" data-k="${i}" ${S.pre[i]?'checked':''}><span class="box"></span><span class="tx">${esc(p)}</span></label></li>`).join('')}</ul></div>
+${sec('Para colecionar','Sabores e momentos')}
+<span class="muted">Marquem conforme for acontecendo. Vale tudo!</span><div class="tags">${BINGO.map((b,i)=>`<label><input type="checkbox" data-grp="bingo" data-k="${i}" ${S.bingo[i]?'checked':''}><span>${b}</span></label>`).join('')}</div>
+${sec('Glossário','Palavras em georgiano')}
+<div class="gl">${DAYS.map(d=>`<div><b>${d.w[0]}</b><em>${d.w[1]}</em><span>${d.w[2]}</span></div>`).join('')}</div>
+${sec('Sem pressa','Plano B')}
+<div class="plan"><details><summary>Se chover</summary><ul><li>Museu Nacional da Geórgia, na Avenida Rustaveli</li><li>Banho termal extra em Abanotubani</li><li>Café na Avenida Rustaveli</li></ul></details><details><summary>Se cansar</summary><ul><li>Café com vista na Cidade Antiga</li><li>Passeio no Rike Park, o parque à beira do rio, ao lado da Ponte da Paz</li><li>Tarde livre no hotel</li></ul></details><details><summary>Se sobrar tempo</summary><ul><li>Taça de vinho num bar de Tbilisi</li><li>Mais uma volta no Dry Bridge Market</li><li>Sobremesa georgiana</li></ul></details></div>
+<p class="muted" style="margin-top:14px">As sugestões são opcionais. Confirmem horários, aberturas, reservas e valores antes de ir.</p></div>
+<footer>${bj()}<b>გაუმარჯოს! Gaumarjos!</b></footer>`}
 function diaryCard(d){
- const n=S.notes[d.id]||'';
- return `<div class="panel diary" id="dcard"><h3>Diário do dia</h3><div class="arch">${PH[d.id]?`<img src="${PH[d.id]}" alt="Foto do dia">`:'<div class="ph-empty">Ainda sem foto.<br>Toque em “Foto do dia”.</div>'}</div><p class="cap" id="cap">${esc(n)||'…'}</p>
- <div style="text-align:center"><button class="btn" data-act="pick">${PH[d.id]?'Trocar foto':'Foto do dia'}</button>${PH[d.id]?'<button class="btn ghost" data-act="rmphoto">Remover</button>':''}</div>
- <input type="file" id="file" accept="image/*" hidden data-day="${d.id}">
- <p class="muted" style="margin:12px 0 2px">Como foi o dia?</p><div class="moods">${MOODS.map(m=>`<button class="mood ${S.mood[d.id]===m?'on':''}" data-act="mood" data-v="${m}" data-day="${d.id}">${m}</button>`).join('')}</div>
- <textarea id="note" data-day="${d.id}" maxlength="220" placeholder="Uma frase para lembrar deste dia…">${esc(n)}</textarea><div class="cnt"><span id="cnt">${n.length}/220</span><span id="saved"></span></div></div>`}
+const n=S.notes[d.id]||'';
+return `<div class="panel diary" id="dcard"><h3>Diário do dia</h3><div class="arch">${PH[d.id]?`<img src="${PH[d.id]}" alt="Foto do dia">`:'<div class="ph-empty">Ainda sem foto.<br>Toque em “Foto do dia”.</div>'}</div><p class="cap" id="cap">${esc(n)||'…'}</p>
+<div style="text-align:center"><button class="btn" data-act="pick">${PH[d.id]?'Trocar foto':'Foto do dia'}</button>${PH[d.id]?'<button class="btn ghost" data-act="rmphoto">Remover</button>':''}</div>
+<input type="file" id="file" accept="image/" hidden data-day="${d.id}">
+<p class="muted" style="margin:12px 0 2px">Como foi o dia?</p><div class="moods">${MOODS.map(m=>`<button class="mood ${S.mood[d.id]===m?'on':''}" data-act="mood" data-v="${m}" data-day="${d.id}">${m}</button>`).join('')}</div>
+<textarea id="note" data-day="${d.id}" maxlength="220" placeholder="Uma frase para lembrar deste dia…">${esc(n)}</textarea><div class="cnt"><span id="cnt">${n.length}/220</span><span id="saved"></span></div></div>`}
 function vDay(d){
- const i=DAYS.indexOf(d),dt=dayDate(i),p=dayProg(d),pr=DAYS[i-1],nx=DAYS[i+1];
- return `<div class="wrap th-${d.c}">
- <header class="dhead">${ring(d.id,i+1,'big')}<div><div class="kicker">Dia ${i+1} de ${DAYS.length} · ${esc(cap(fLong(dt)))}</div><h2>${d.title}</h2><p class="sub">${d.sub} · <b>${d.base}</b> <span class="geo">${BASES[d.base]}</span></p></div></header>
- <div class="hotel"><b>Hospedagem</b>${esc(d.hotel)}${d.hq?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(HN+', Tbilisi, Georgia')}">Mapa ↗</a>`:''}</div>
- ${d.hl?`<div class="hl"><b>Você vai ver</b>${d.hl.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`:''}
- <div class="prog" id="dtxt">${p.n} de ${p.total} feitos</div><p class="intro">${esc(fix(d.intro))}</p>
- <div class="panel" style="border-color:var(--c)"><h3>O que fazer hoje</h3><ul class="chk">${d.tasks.map((t,k)=>`<li><label><input type="checkbox" data-grp="done" data-k="${d.id}-${k}" ${S.done[d.id+'-'+k]?'checked':''}><span class="box"></span><span class="tx"><span class="tt">${esc(t.t)}${t.o?' <em class="opt">opcional</em>':''}</span>${t.d?`<span class="dsc">${esc(t.d)}</span>`:''}</span></label>${t.q?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(t.q)}">Mapa ↗</a>`:''}</li>`).join('')}</ul></div>
- <div class="tip"><b>Dica</b>${esc(d.tip)}</div>
- <div class="word">${bj()}<small>Palavra do dia</small><div class="g">${d.w[0]}</div><span><b>${d.w[1]}</b> · ${d.w[2]}</span></div>${diaryCard(d)}
- <div class="pn">${pr?`<a class="btn ghost" href="#${pr.id}">← Dia ${i}</a>`:'<a class="btn ghost" href="#home">← Início</a>'}${nx?`<a class="btn" href="#${nx.id}">Dia ${i+2} →</a>`:'<a class="btn" href="#munique">Escala em Munique →</a><a class="btn amber" href="#diary">Ver o livro →</a>'}</div></div>`}
+const i=DAYS.indexOf(d),dt=dayDate(i),p=dayProg(d),pr=DAYS[i-1],nx=DAYS[i+1];
+return `<div class="wrap th-${d.c}">
+<header class="dhead">${ring(d.id,i+1,'big')}<div><div class="kicker">Dia ${i+1} de ${DAYS.length} · ${esc(cap(fLong(dt)))}</div><h2>${d.title}</h2><p class="sub">${d.sub} · <b>${d.base}</b> <span class="geo">${BASES[d.base]}</span></p></div></header>
+<div class="hotel"><b>Hospedagem</b>${esc(d.hotel)}${d.hq?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(HQ)}">Mapa ↗</a>`:''}</div>
+${d.hl?`<div class="hl"><b>Você vai ver</b>${d.hl.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`:''}
+<div class="prog" id="dtxt">${p.n} de ${p.total} feitos</div><p class="intro">${esc(fix(d.intro))}</p>
+<div class="panel" style="border-color:var(--c)"><h3>O que fazer hoje</h3><ul class="chk">${d.tasks.map((t,k)=>`<li><label><input type="checkbox" data-grp="done" data-k="${d.id}-${k}" ${S.done[d.id+'-'+k]?'checked':''}><span class="box"></span><span class="tx"><span class="tt">${esc(t.t)}${t.o?' <em class="opt">opcional</em>':''}</span>${t.d?`<span class="dsc">${esc(t.d)}</span>`:''}</span></label>${t.q?`<a class="map" target="_blank" rel="noopener" href="${mapUrl(t.q)}">Mapa ↗</a>`:''}</li>`).join('')}</ul></div>
+<div class="tip"><b>Dica</b>${esc(d.tip)}</div>
+<div class="word">${bj()}<small>Palavra do dia</small><div class="g">${d.w[0]}</div><span><b>${d.w[1]}</b> · ${d.w[2]}</span></div>${diaryCard(d)}
+<div class="pn">${pr?`<a class="btn ghost" href="#${pr.id}">← Dia ${i}</a>`:'<a class="btn ghost" href="#home">← Início</a>'}${nx?`<a class="btn" href="#${nx.id}">Dia ${i+2} →</a>`:'<a class="btn" href="#munique">Escala em Munique →</a><a class="btn amber" href="#diary">Ver o livro →</a>'}</div></div>`}
 function vGuia(){
- let n=0;const total=GUIA.reduce((a,c)=>a+c.items.length,0);
- return `<div class="wrap th-w">
- <header class="dhead"><div><div class="kicker">Para consultar</div><h2>Guia de lugares</h2><p class="sub">Livrarias, mangás, cartas Pokémon e lojas geek em Tbilisi</p></div></header>
- <div class="prog" id="xprog" data-p="gui" data-n="${total}" data-s="lugares visitados">${cnt('gui')} de ${total} lugares visitados</div>
- <p class="intro">Lugares para achar livros em georgiano, mangás e cartas Pokémon. Marquem os que visitarem. As livrarias da Rustaveli cabem no dia 21/04.</p>
- ${GUIA.map(c=>`<div class="panel"><h3>${esc(c.t)}</h3><p class="muted">${esc(c.s)}</p><ul class="chk">${c.items.map(x=>placeLi('gui',x,n++)).join('')}</ul></div>`).join('')}
- <div class="tip"><b>Antes de ir</b>${esc(GUIA_TIP)}</div>
- <p class="muted">Endereços e horários vêm de pesquisa na web e podem ter mudado. Confirmem antes de ir.</p>
- <div class="pn"><a class="btn ghost" href="#home">← Início</a><a class="btn" href="#munique">Escala em Munique →</a></div></div>`}
+let n=0;const total=GUIA.reduce((a,c)=>a+c.items.length,0);
+return `<div class="wrap th-w">
+<header class="dhead"><div><div class="kicker">Para consultar</div><h2>Guia de lugares</h2><p class="sub">Livrarias, mangás, cartas Pokémon e lojas geek em Tbilisi</p></div></header>
+<div class="prog" id="xprog" data-p="gui" data-n="${total}" data-s="lugares visitados">${cnt('gui')} de ${total} lugares visitados</div>
+<p class="intro">Lugares para achar livros em georgiano, mangás e cartas Pokémon. Marquem os que visitarem. As livrarias da Rustaveli cabem no dia 21/04.</p>
+${GUIA.map(c=>`<div class="panel"><h3>${esc(c.t)}</h3><p class="muted">${esc(c.s)}</p><ul class="chk">${c.items.map(x=>placeLi('gui',x,n++)).join('')}</ul></div>`).join('')}
+<div class="tip"><b>Antes de ir</b>${esc(GUIA_TIP)}</div>
+<p class="muted">Endereços e horários vêm de pesquisa na web e podem ter mudado. Confirmem antes de ir.</p>
+<div class="pn"><a class="btn ghost" href="#home">← Início</a><a class="btn" href="#munique">Escala em Munique →</a></div></div>`}
 function vMunique(){
- const total=MUN.tasks.length;
- return `<div class="wrap th-b">
- <header class="dhead"><div><div class="kicker">Quinta-feira, 22/04 · Escala</div><h2>Escala em Munique</h2><p class="sub">Pouso às 07h15 · voo para Lisboa às 20h20</p></div></header>
- <div class="stats">${MUN.stats.map(s=>`<div class="stat"><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join('')}</div>
- <p class="intro">${esc(MUN.intro)}</p>
- <div class="prog" id="xprog" data-p="mun" data-n="${total}" data-s="feitos">${cnt('mun')} de ${total} feitos</div>
- <div class="panel" style="border-color:var(--c)"><h3>Plano sugerido</h3><ul class="chk">${MUN.tasks.map((t,k)=>placeLi('mun',t,k)).join('')}</ul></div>
- ${MUN.tips.map(x=>`<div class="tip"><b>${esc(x[0])}</b>${esc(x[1])}</div>`).join('')}
- <div class="panel"><h3>Se preferirem algo mais curto</h3><ul class="alt">${MUN.alt.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
- <p class="muted">${esc(MUN.note)}</p>
- <div class="pn"><a class="btn ghost" href="#d11">← Dia 11</a><a class="btn" href="#vip">Salas VIP →</a><a class="btn amber" href="#diary">Ver o livro →</a></div></div>`}
+const total=MUN.tasks.length;
+return `<div class="wrap th-b">
+<header class="dhead"><div><div class="kicker">Quinta-feira, 22/04 · Escala</div><h2>Escala em Munique</h2><p class="sub">Pouso às 07h15 · voo para Lisboa às 20h20</p></div></header>
+<div class="stats">${MUN.stats.map(s=>`<div class="stat"><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join('')}</div>
+<p class="intro">${esc(MUN.intro)}</p>
+<div class="prog" id="xprog" data-p="mun" data-n="${total}" data-s="feitos">${cnt('mun')} de ${total} feitos</div>
+<div class="panel" style="border-color:var(--c)"><h3>Plano sugerido</h3><ul class="chk">${MUN.tasks.map((t,k)=>placeLi('mun',t,k)).join('')}</ul></div>
+${MUN.tips.map(x=>`<div class="tip"><b>${esc(x[0])}</b>${esc(x[1])}</div>`).join('')}
+<div class="panel"><h3>Se preferirem algo mais curto</h3><ul class="alt">${MUN.alt.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>
+<p class="muted">${esc(MUN.note)}</p>
+<div class="pn"><a class="btn ghost" href="#d11">← Dia 11</a><a class="btn" href="#vip">Salas VIP →</a><a class="btn amber" href="#diary">Ver o livro →</a></div></div>`}
 function vVip(){
- const total=VIP.stages.length;
- return `<div class="wrap th-b">
- <header class="dhead"><div><div class="kicker">Para consultar · Aeroportos</div><h2>Salas VIP</h2><p class="sub">Oito etapas, quatro cartões e quem entra onde</p></div></header>
- <p class="intro">${esc(VIP.intro)}</p>
- <div class="panel"><h3>Controle de acessos</h3><ul class="alt">${CARDS.map(c=>`<li><b>${esc(c.n)}</b>: planejado ${vipPlan(c.id)} de ${c.tot} (sobram ${c.tot-vipPlan(c.id)}) · usados <span data-vu="${c.id}">${vipUsed(c.id)}</span>${c.m?' · '+esc(c.m):''}</li>`).join('')}</ul></div>
- ${VIP.alert?`<div class="tip"><b>${esc(VIP.alert[0])}</b>${esc(VIP.alert[1])}</div>`:''}
- <div class="prog" id="xprog" data-p="vip" data-n="${total}" data-s="etapas feitas">${cnt('vip')} de ${total} etapas feitas</div>
- <div class="panel" style="border-color:var(--c)"><h3>Etapa por etapa</h3><ul class="chk">${VIP.stages.map((t,k)=>vipLi(t,k)).join('')}</ul></div>
- ${VIP.tips.map(x=>`<div class="tip"><b>${esc(x[0])}</b>${esc(x[1])}</div>`).join('')}
- <p class="muted">${esc(VIP.note)}</p>
- <div class="pn"><a class="btn ghost" href="#munique">← Escala em Munique</a><a class="btn amber" href="#diary">Ver o livro →</a></div></div>`}
+const total=VIP.stages.length;
+return `<div class="wrap th-b">
+<header class="dhead"><div><div class="kicker">Para consultar · Aeroportos</div><h2>Salas VIP</h2><p class="sub">Oito etapas, cinco fontes de acesso e quem entra onde</p></div></header>
+<p class="intro">${esc(VIP.intro)}</p>
+<div class="panel"><h3>Controle de acessos</h3><ul class="alt">${CARDS.map(c=>`<li><b>${esc(c.n)}</b>: planejado ${vipPlan(c.id)} de ${c.tot} (sobram ${c.tot-vipPlan(c.id)}) · usados <span data-vu="${c.id}">${vipUsed(c.id)}</span>${c.m?' · '+esc(c.m):''}</li>`).join('')}</ul></div>
+${VIP.alerts.map(a=>`<div class="tip"><b>${esc(a[0])}</b>${esc(a[1])}</div>`).join('')}
+<div class="prog" id="xprog" data-p="vip" data-n="${total}" data-s="etapas feitas">${cnt('vip')} de ${total} etapas feitas</div>
+<div class="panel" style="border-color:var(--c)"><h3>Etapa por etapa</h3><ul class="chk">${VIP.stages.map((t,k)=>vipLi(t,k)).join('')}</ul></div>
+${VIP.tips.map(x=>`<div class="tip"><b>${esc(x[0])}</b>${esc(x[1])}</div>`).join('')}
+<p class="muted">${esc(VIP.note)}</p>
+<div class="pn"><a class="btn ghost" href="#munique">← Escala em Munique</a><a class="btn amber" href="#diary">Ver o livro →</a></div></div>`}
 function vDiary(){
- const pics=DAYS.filter(d=>PH[d.id]).slice(0,3);
- const nPh=Object.keys(PH).filter(k=>DAYS.some(d=>d.id===k)).length;
- const nDone=DAYS.reduce((a,d)=>a+d.tasks.filter((t,k)=>S.done[d.id+'-'+k]).length,0);
- return `<div class="wrap"><div class="panel no-print"><h3>Livro da viagem</h3><p class="muted">Fotos e frases viram um livrinho: capa, uma página por dia e página final. Ajuste e toque em imprimir (ou salve em PDF, em A4).</p>
- <label class="muted">Título do livro</label><input class="in-t" id="titleIn" value="${esc(S.title)}" maxlength="40"><label class="muted" style="display:block;margin-top:8px">Nomes na capa</label><input class="in-t" id="namesIn" value="${esc(S.names)}" maxlength="50">
- <label style="display:flex;gap:8px;margin:12px 0;align-items:center;cursor:pointer"><input type="checkbox" id="inclIn" ${S.incl?'checked':''}> Incluir dias sem foto/frase (para completar à mão)</label>
- <button class="btn" data-act="print">Imprimir / PDF</button><button class="btn ghost" data-act="export">Backup</button><button class="btn ghost" data-act="import">Restaurar</button>
- <p class="muted" style="margin-top:8px">Cada celular guarda o próprio diário. Use Backup e Restaurar para juntar tudo num aparelho só (a restauração completa o que estiver vazio).</p>
- <p style="margin:6px 0 0"><button class="btn ghost" style="font-size:11px;padding:6px 12px" data-act="wipe">Apagar dados deste aparelho</button></p></div>
- <div class="book${S.incl?' incl':''}" id="book">
- <section class="page cover"><div class="kick" style="color:var(--terra)">Caderno de viagem · ${esc(fMonthYear(parseStart()))}</div>${bj('bj bjl')}<h1 class="bk-title">${esc(S.title)}</h1><div class="geo" style="color:var(--pom);font-size:22px;letter-spacing:.1em">საქართველო</div><div class="band" style="margin:16px 0;background-color:transparent"></div><div class="pols">${pics.map(d=>`<div class="arch"><img src="${PH[d.id]}" alt=""></div>`).join('')}</div><div class="names bk-names">${esc(S.names)}</div><div class="muted">${fShort(dayDate(0))} a ${fShort(dayDate(DAYS.length-1))} · ${dayDate(0).getFullYear()}</div></section>
- ${DAYS.map((d,i)=>{const n=(S.notes[d.id]||'').trim(),has=PH[d.id]||n,did=d.tasks.filter((t,k)=>S.done[d.id+'-'+k]).map(t=>t.t.split(/[:,(·]/)[0].trim());
-  return `<section class="page th-${d.c}${has?'':' empty'}"><div class="pg-top" style="width:100%"><span>Dia ${i+1} · ${d.base}</span><span>${fShort(dayDate(i))}</span><span class="pm">${S.mood[d.id]||''}</span></div><div class="pg-num">${String(i+1).padStart(2,'0')}</div><h3>${d.title}</h3><div class="arch">${PH[d.id]?`<img src="${PH[d.id]}" alt="">`:'<div class="ph-empty">cole uma foto aqui</div>'}</div><p class="cap">${esc(n)||'&nbsp;'}</p>${did.length?`<p class="did">Fizemos: ${esc(did.join(' · '))}</p>`:''}<a class="edit no-print" href="#${d.id}">editar este dia</a></section>`}).join('')}
- <section class="page cover">${bj('bj bjl')}<h3 class="bk-title" style="margin-top:10px">${esc(S.title)}</h3><p class="serif" style="font-size:20px;color:var(--pom);margin:4px 0">გაუმარჯოს! Gaumarjos!</p><p class="muted">${nPh} fotos · ${nDone} atividades vividas · ${DAYS.length} dias</p><p class="bk-names serif" style="font-size:18px">${esc(S.names)}</p></section>
- </div></div>`}
-/* ===== RENDER / NAV ===== */
+const pics=DAYS.filter(d=>PH[d.id]).slice(0,3);
+const nPh=Object.keys(PH).filter(k=>DAYS.some(d=>d.id===k)).length;
+const nDone=DAYS.reduce((a,d)=>a+d.tasks.filter((t,k)=>S.done[d.id+'-'+k]).length,0);
+return `<div class="wrap"><div class="panel no-print"><h3>Livro da viagem</h3><p class="muted">Fotos e frases viram um livrinho: capa, uma página por dia e página final. Ajuste e toque em imprimir (ou salve em PDF, em A4).</p>
+<label class="muted">Título do livro</label><input class="in-t" id="titleIn" value="${esc(S.title)}" maxlength="40"><label class="muted" style="display:block;margin-top:8px">Nomes na capa</label><input class="in-t" id="namesIn" value="${esc(S.names)}" maxlength="50">
+<label style="display:flex;gap:8px;margin:12px 0;align-items:center;cursor:pointer"><input type="checkbox" id="inclIn" ${S.incl?'checked':''}> Incluir dias sem foto/frase (para completar à mão)</label>
+<button class="btn" data-act="print">Imprimir / PDF</button><button class="btn ghost" data-act="export">Backup</button><button class="btn ghost" data-act="import">Restaurar</button>
+<p class="muted" style="margin-top:8px">Cada celular guarda o próprio diário. Use Backup e Restaurar para juntar tudo num aparelho só (a restauração completa o que estiver vazio).</p>
+<p style="margin:6px 0 0"><button class="btn ghost" style="font-size:11px;padding:6px 12px" data-act="wipe">Apagar dados deste aparelho</button></p></div>
+<div class="book${S.incl?' incl':''}" id="book">
+<section class="page cover"><div class="kick" style="color:var(--terra)">Caderno de viagem · ${esc(fMonthYear(parseStart()))}</div>${bj('bj bjl')}<h1 class="bk-title">${esc(S.title)}</h1><div class="geo" style="color:var(--pom);font-size:22px;letter-spacing:.1em">საქართველო</div><div class="band" style="margin:16px 0;background-color:transparent"></div><div class="pols">${pics.map(d=>`<div class="arch"><img src="${PH[d.id]}" alt=""></div>`).join('')}</div><div class="names bk-names">${esc(S.names)}</div><div class="muted">${fShort(dayDate(0))} a ${fShort(dayDate(DAYS.length-1))} · ${dayDate(0).getFullYear()}</div></section>
+${DAYS.map((d,i)=>{const n=(S.notes[d.id]||'').trim(),has=PH[d.id]||n,did=d.tasks.filter((t,k)=>S.done[d.id+'-'+k]).map(t=>t.t.split(/[:,(·]/)[0].trim());
+return `<section class="page th-${d.c}${has?'':' empty'}"><div class="pg-top" style="width:100%"><span>Dia ${i+1} · ${d.base}</span><span>${fShort(dayDate(i))}</span><span class="pm">${S.mood[d.id]||''}</span></div><div class="pg-num">${String(i+1).padStart(2,'0')}</div><h3>${d.title}</h3><div class="arch">${PH[d.id]?`<img src="${PH[d.id]}" alt="">`:'<div class="ph-empty">cole uma foto aqui</div>'}</div><p class="cap">${esc(n)||'&nbsp;'}</p>${did.length?`<p class="did">Fizemos: ${esc(did.join(' · '))}</p>`:''}<a class="edit no-print" href="#${d.id}">editar este dia</a></section>`}).join('')}
+<section class="page cover">${bj('bj bjl')}<h3 class="bk-title" style="margin-top:10px">${esc(S.title)}</h3><p class="serif" style="font-size:20px;color:var(--pom);margin:4px 0">გაუმარჯოს! Gaumarjos!</p><p class="muted">${nPh} fotos · ${nDone} atividades vividas · ${DAYS.length} dias</p><p class="bk-names serif" style="font-size:18px">${esc(S.names)}</p></section>
+</div></div>`}
+/* ===== RENDER / NAV ===== /
 const app=$('#app');
 const EXTRA=['diary','guia','munique','vip'];
 function buildNav(){
- const h=(location.hash||'#home').slice(1),ti=todayIdx();
- $('#nav').innerHTML=`<a href="#home" data-d="home" class="nt">Início</a>`+DAYS.map((d,i)=>`<a href="#${d.id}" data-d="${d.id}" title="${esc(fLong(dayDate(i)))}" class="${dayProg(d).all?'ok ':''}${i===ti?'today':''}">${i+1}</a>`).join('')+`<a href="#guia" data-d="guia" class="nt">Guia</a><a href="#munique" data-d="munique" class="nt">Munique</a><a href="#vip" data-d="vip" class="nt">VIP</a><a href="#diary" data-d="diary" class="nt">Livro</a>`;
- markNav(h)}
+const h=(location.hash||'#home').slice(1),ti=todayIdx();
+$('#nav').innerHTML=`<a href="#home" data-d="home" class="nt">Início</a>`+DAYS.map((d,i)=>`<a href="#${d.id}" data-d="${d.id}" title="${esc(fLong(dayDate(i)))}" class="${dayProg(d).all?'ok ':''}${i===ti?'today':''}">${i+1}</a>`).join('')+`<a href="#guia" data-d="guia" class="nt">Guia</a><a href="#munique" data-d="munique" class="nt">Munique</a><a href="#vip" data-d="vip" class="nt">VIP</a><a href="#diary" data-d="diary" class="nt">Livro</a>`;
+markNav(h)}
 function markNav(h){document.querySelectorAll('#nav a').forEach(a=>{const on=a.dataset.d===h;a.classList.toggle('on',on);if(on)a.scrollIntoView({inline:'center',block:'nearest'})})}
 function render(){
- const h=(location.hash||'#home').slice(1),d=DAYS.find(x=>x.id===h);
- app.innerHTML=h==='diary'?vDiary():h==='guia'?vGuia():h==='munique'?vMunique():h==='vip'?vVip():d?vDay(d):vHome();
- window.scrollTo(0,0);markNav(DAYS.some(x=>x.id===h)||EXTRA.indexOf(h)>-1?h:'home');updateCountdown()}
+const h=(location.hash||'#home').slice(1),d=DAYS.find(x=>x.id===h);
+app.innerHTML=h==='diary'?vDiary():h==='guia'?vGuia():h==='munique'?vMunique():h==='vip'?vVip():d?vDay(d):vHome();
+window.scrollTo(0,0);markNav(DAYS.some(x=>x.id===h)||EXTRA.indexOf(h)>-1?h:'home');updateCountdown()}
 window.addEventListener('hashchange',render);
 function refreshBits(){
- DAYS.forEach(d=>{const a=$('#nav [data-d="'+d.id+'"]');if(a)a.classList.toggle('ok',dayProg(d).all);const e=$('[data-pc="'+d.id+'"]');if(e)e.textContent=pcText(d)});
- document.querySelectorAll('[data-ring]').forEach(c=>{const d=DAYS.find(x=>x.id===c.dataset.ring),p=dayProg(d);c.setAttribute('stroke-dasharray',(p.total?p.n/p.total*113.1:0).toFixed(1)+' 113.1')});
- const t=totals(),o=$('#ovrTxt');if(o){o.textContent=t.n+' de '+t.total+' atividades';$('#ovrPct').textContent=(t.total?Math.round(t.n/t.total*100):0)+'%'}
- const cur=DAYS.find(d=>location.hash==='#'+d.id);if(cur){const p=dayProg(cur);$('#dtxt').textContent=p.n+' de '+p.total+' feitos'}
- const xp=$('#xprog');if(xp)xp.textContent=cnt(xp.dataset.p)+' de '+xp.dataset.n+' '+xp.dataset.s;
- document.querySelectorAll('[data-vu]').forEach(e=>{e.textContent=vipUsed(e.dataset.vu)});
- const pb=$('#preTxt');if(pb)pb.textContent=preN()+' de '+PRE.length}
-/* ===== CONTAGEM REGRESSIVA ===== */
+DAYS.forEach(d=>{const a=$('#nav [data-d="'+d.id+'"]');if(a)a.classList.toggle('ok',dayProg(d).all);const e=$('[data-pc="'+d.id+'"]');if(e)e.textContent=pcText(d)});
+document.querySelectorAll('[data-ring]').forEach(c=>{const d=DAYS.find(x=>x.id===c.dataset.ring),p=dayProg(d);c.setAttribute('stroke-dasharray',(p.total?p.n/p.total113.1:0).toFixed(1)+' 113.1')});
+const t=totals(),o=$('#ovrTxt');if(o){o.textContent=t.n+' de '+t.total+' atividades';$('#ovrPct').textContent=(t.total?Math.round(t.n/t.total100):0)+'%'}
+const cur=DAYS.find(d=>location.hash==='#'+d.id);if(cur){const p=dayProg(cur);$('#dtxt').textContent=p.n+' de '+p.total+' feitos'}
+const xp=$('#xprog');if(xp)xp.textContent=cnt(xp.dataset.p)+' de '+xp.dataset.n+' '+xp.dataset.s;
+document.querySelectorAll('[data-vu]').forEach(e=>{e.textContent=vipUsed(e.dataset.vu)});
+const pb=$('#preTxt');if(pb)pb.textContent=preN()+' de '+PRE.length}
+/* ===== CONTAGEM REGRESSIVA ===== /
 function updateCountdown(){
- const L=$('#cdL');if(!L)return;
- const now=new Date(),s=parseStart(),end=dayDate(DAYS.length),dp=dep(),ar=arrival();
- const G=$('#cdG'),F=$('#cdF'),GO=$('#cdGo'),U=$('#cdU'),HW=$('#cdHw'),sd=$('#statD'),sl=$('#statDl');
- const p2=n=>String(n).padStart(2,'0');
- const pl=(n,a,b)=>n+' '+(n===1?a:b);
- if(now<ar){
-  const fly=now>=dp,diff=(fly?ar:dp)-now;
-  const days=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),sec=Math.floor(diff%6e4/1e3);
-  G.style.display='';F.style.display='';
-  $('#cdM').textContent=p2(m);$('#cdS').textContent=p2(sec);
-  if(fly){
-   const hh=Math.floor(diff/36e5);
-   L.textContent='A caminho da Geórgia! Pouso em Tbilisi em';
-   $('#cdD').textContent=hh;U.textContent=hh===1?'hora':'horas';HW.style.display='none';
-   F.textContent='Bom voo! Água, soneca e um filme bom.';
-   GO.innerHTML='';
-   if(sd){sd.textContent=hh;sl.textContent='horas até pousar'}
-  }else{
-   const n=days||1;
-   L.textContent='Faltam para o embarque em Lisboa';
-   $('#cdD').textContent=days;U.textContent=days===1?'dia':'dias';HW.style.display='';$('#cdH').textContent=p2(h);
-   const fun=[`≈ ${pl(n,'café da manhã','cafés da manhã')} até o embarque`,`${pl(n,'noite','noites')} de sono até o embarque`,`≈ ${(days/7).toFixed(1).replace('.',',')} semanas de espera`,`${pl(n,'taça','taças')} de Saperavi, se for uma por dia. Lá vai ter mais!`,`≈ ${pl(n+1,'dia','dias')} até o primeiro khachapuri`,`${pl(n,'dia','dias')} para decidir o que levar (e o que NÃO levar)`];
-   F.textContent=fun[funIdx%fun.length]+'  · toque para mudar';
-   GO.innerHTML='';
-   if(sd){sd.textContent=days;sl.textContent='dias até o embarque'}
-  }
- }else if(now<end){
-  const i=Math.max(0,Math.min(DAYS.length-1,Math.floor((now-s)/864e5))),d=DAYS[i];
-  L.textContent=`Estamos na Geórgia! Hoje é o dia ${i+1} de ${DAYS.length}`;G.style.display='none';F.style.display='';F.textContent=`Hoje: ${d.title}`;
-  GO.innerHTML=`<a class="btn amber" href="#${d.id}">Abrir o dia de hoje →</a>`;
-  if(sd){sd.textContent=i+1;sl.textContent='dia da viagem'}
- }else{
-  L.textContent='Viagem concluída! Que memórias lindas';G.style.display='none';F.style.display='none';
-  GO.innerHTML='<a class="btn amber" href="#diary">Montar o livro da viagem →</a>';
-  if(sd){sd.textContent='✓';sl.textContent='viagem realizada'}
- }}
+const L=$('#cdL');if(!L)return;
+const now=new Date(),s=parseStart(),end=dayDate(DAYS.length),dp=dep(),ar=arrival();
+const G=$('#cdG'),F=$('#cdF'),GO=$('#cdGo'),U=$('#cdU'),HW=$('#cdHw'),sd=$('#statD'),sl=$('#statDl');
+const p2=n=>String(n).padStart(2,'0');
+const pl=(n,a,b)=>n+' '+(n===1?a:b);
+if(now<ar){
+const fly=now>=dp,diff=(fly?ar:dp)-now;
+const days=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),sec=Math.floor(diff%6e4/1e3);
+G.style.display='';F.style.display='';
+$('#cdM').textContent=p2(m);$('#cdS').textContent=p2(sec);
+if(fly){
+const hh=Math.floor(diff/36e5);
+L.textContent='A caminho da Geórgia! Pouso em Tbilisi em';
+$('#cdD').textContent=hh;U.textContent=hh===1?'hora':'horas';HW.style.display='none';
+F.textContent='Bom voo! Água, soneca e um filme bom.';
+GO.innerHTML='';
+if(sd){sd.textContent=hh;sl.textContent='horas até pousar'}
+}else{
+const n=days||1;
+L.textContent='Faltam para o embarque em Lisboa';
+$('#cdD').textContent=days;U.textContent=days===1?'dia':'dias';HW.style.display='';$('#cdH').textContent=p2(h);
+const fun=[`≈ ${pl(n,'café da manhã','cafés da manhã')} até o embarque`,`${pl(n,'noite','noites')} de sono até o embarque`,`≈ ${(days/7).toFixed(1).replace('.',',')} semanas de espera`,`${pl(n,'taça','taças')} de Saperavi, se for uma por dia. Lá vai ter mais!`,`≈ ${pl(n+1,'dia','dias')} até o primeiro khachapuri`,`${pl(n,'dia','dias')} para decidir o que levar (e o que NÃO levar)`];
+F.textContent=fun[funIdx%fun.length]+' · toque para mudar';
+GO.innerHTML='';
+if(sd){sd.textContent=days;sl.textContent='dias até o embarque'}
+}
+}else if(now<end){
+const i=Math.max(0,Math.min(DAYS.length-1,Math.floor((now-s)/864e5))),d=DAYS[i];
+L.textContent=`Estamos na Geórgia! Hoje é o dia ${i+1} de ${DAYS.length}`;G.style.display='none';F.style.display='';F.textContent=`Hoje: ${d.title}`;
+GO.innerHTML=`<a class="btn amber" href="#${d.id}">Abrir o dia de hoje →</a>`;
+if(sd){sd.textContent=i+1;sl.textContent='dia da viagem'}
+}else{
+L.textContent='Viagem concluída! Que memórias lindas';G.style.display='none';F.style.display='none';
+GO.innerHTML='<a class="btn amber" href="#diary">Montar o livro da viagem →</a>';
+if(sd){sd.textContent='✓';sl.textContent='viagem realizada'}
+}}
 setInterval(updateCountdown,1000);
-/* ===== FOTO ===== */
-function resize(file,max=1200,q=.78){return new Promise((ok,no)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{let w=im.naturalWidth,h=im.naturalHeight;const k=Math.min(1,max/Math.max(w,h));w=Math.round(w*k);h=Math.round(h*k);const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,0,0,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/jpeg',q))};im.onerror=()=>no(new Error('img'));im.src=u})}
+/* ===== FOTO ===== /
+function resize(file,max=1200,q=.78){return new Promise((ok,no)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{let w=im.naturalWidth,h=im.naturalHeight;const k=Math.min(1,max/Math.max(w,h));w=Math.round(wk);h=Math.round(hk);const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(im,0,0,w,h);URL.revokeObjectURL(u);ok(c.toDataURL('image/jpeg',q))};im.onerror=()=>no(new Error('img'));im.src=u})}
 async function onFile(inp){
- const f=inp.files[0];if(!f)return;const id=inp.dataset.day,d=DAYS.find(x=>x.id===id);
- try{toast('Processando a foto…');PH[id]=await resize(f);
-  if(idbOk){try{await idb.set(id,PH[id])}catch(e){idbOk=false}}
-  if(!idbOk)toast('Foto na tela, mas este modo do navegador não guarda fotos. Abra o caderno por um link.');else toast('Foto salva');
-  $('#dcard').outerHTML=diaryCard(d)}catch(e){toast('Não consegui ler essa foto')}}
-/* ===== BACKUP ===== */
+const f=inp.files[0];if(!f)return;const id=inp.dataset.day,d=DAYS.find(x=>x.id===id);
+try{toast('Processando a foto…');PH[id]=await resize(f);
+if(idbOk){try{await idb.set(id,PH[id])}catch(e){idbOk=false}}
+if(!idbOk)toast('Foto na tela, mas este modo do navegador não guarda fotos. Abra o caderno por um link.');else toast('Foto salva');
+$('#dcard').outerHTML=diaryCard(d)}catch(e){toast('Não consegui ler essa foto')}}
+/* ===== BACKUP ===== /
 function exportBackup(){const b=new Blob([JSON.stringify({v:1,S,PH})],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='georgia-diario-'+new Date().toISOString().slice(0,10)+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),3000);toast('Backup gerado')}
 async function importBackup(file){try{const j=JSON.parse(await file.text()),o=j.S||{};
-  ['done','pre','bingo'].forEach(g=>{for(const k in(o[g]||{}))if(o[g][k])S[g][k]=true});
-  for(const k in(o.notes||{}))if(!(S.notes[k]||'').trim())S.notes[k]=o.notes[k];
-  for(const k in(o.mood||{}))if(!S.mood[k])S.mood[k]=o.mood[k];
-  for(const k in(j.PH||{}))if(!PH[k]){PH[k]=j.PH[k];if(idbOk)try{await idb.set(k,PH[k])}catch(e){}}
-  save();buildNav();render();toast('Backup restaurado')}catch(e){toast('Arquivo de backup inválido')}}
-/* ===== EVENTOS ===== */
+['done','pre','bingo'].forEach(g=>{for(const k in(o[g]||{}))if(o[g][k])S[g][k]=true});
+for(const k in(o.notes||{}))if(!(S.notes[k]||'').trim())S.notes[k]=o.notes[k];
+for(const k in(o.mood||{}))if(!S.mood[k])S.mood[k]=o.mood[k];
+for(const k in(j.PH||{}))if(!PH[k]){PH[k]=j.PH[k];if(idbOk)try{await idb.set(k,PH[k])}catch(e){}}
+save();buildNav();render();toast('Backup restaurado')}catch(e){toast('Arquivo de backup inválido')}}
+/* ===== EVENTOS ===== /
 app.addEventListener('click',async e=>{
- const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act;
- if(a==='fun'){funIdx++;updateCountdown();burst(e.clientX,e.clientY)}
- else if(a==='burst'){burst(e.clientX,e.clientY);funIdx++;updateCountdown()}
- else if(a==='pick')$('#file').click();
- else if(a==='rmphoto'){const id=$('#file').dataset.day,d=DAYS.find(x=>x.id===id);delete PH[id];if(idbOk)try{await idb.del(id)}catch(_){}$('#dcard').outerHTML=diaryCard(d);toast('Foto removida')}
- else if(a==='mood'){const id=b.dataset.day,v=b.dataset.v;S.mood[id]=S.mood[id]===v?'':v;save();b.parentNode.querySelectorAll('.mood').forEach(x=>x.classList.toggle('on',x.dataset.v===S.mood[id]))}
- else if(a==='print')window.print();
- else if(a==='export')exportBackup();
- else if(a==='import')$('#imp').click();
- else if(a==='wipe'){if(confirm('Apagar TODAS as marcações, frases e fotos deste aparelho? Isso não pode ser desfeito.')){localStorage.removeItem(LS);if(idbOk)try{await idb.clear()}catch(_){}location.hash='home';location.reload()}}
+const b=e.target.closest('[data-act]');if(!b)return;const a=b.dataset.act;
+if(a==='fun'){funIdx++;updateCountdown();burst(e.clientX,e.clientY)}
+else if(a==='burst'){burst(e.clientX,e.clientY);funIdx++;updateCountdown()}
+else if(a==='pick')$('#file').click();
+else if(a==='rmphoto'){const id=$('#file').dataset.day,d=DAYS.find(x=>x.id===id);delete PH[id];if(idbOk)try{await idb.del(id)}catch(_){}$('#dcard').outerHTML=diaryCard(d);toast('Foto removida')}
+else if(a==='mood'){const id=b.dataset.day,v=b.dataset.v;S.mood[id]=S.mood[id]===v?'':v;save();b.parentNode.querySelectorAll('.mood').forEach(x=>x.classList.toggle('on',x.dataset.v===S.mood[id]))}
+else if(a==='print')window.print();
+else if(a==='export')exportBackup();
+else if(a==='import')$('#imp').click();
+else if(a==='wipe'){if(confirm('Apagar TODAS as marcações, frases e fotos deste aparelho? Isso não pode ser desfeito.')){localStorage.removeItem(LS);if(idbOk)try{await idb.clear()}catch(_){}location.hash='home';location.reload()}}
 });
 app.addEventListener('change',e=>{
- const t=e.target;
- if(t.id==='file')return onFile(t);
- if(t.id==='startIn'){if(t.value){S.start=t.value;save();buildNav();render()}return}
- if(t.id==='inclIn'){S.incl=t.checked;save();$('#book').classList.toggle('incl',S.incl);return}
- if(t.dataset.grp){
-  const g=t.dataset.grp,k=t.dataset.k,day=g==='done'?DAYS.find(d=>d.id===k.split('-')[0]):null,was=day&&dayProg(day).all;
-  if(t.checked)S[g][k]=true;else delete S[g][k];save();refreshBits();
-  if(day&&!was&&dayProg(day).all){const r=t.getBoundingClientRect();burst(r.left+13,r.top+13);toast('Dia completo! Gaumarjos!')}
- }});
+const t=e.target;
+if(t.id==='file')return onFile(t);
+if(t.id==='startIn'){if(t.value){S.start=t.value;save();buildNav();render()}return}
+if(t.id==='inclIn'){S.incl=t.checked;save();$('#book').classList.toggle('incl',S.incl);return}
+if(t.dataset.grp){
+const g=t.dataset.grp,k=t.dataset.k,day=g==='done'?DAYS.find(d=>d.id===k.split('-')[0]):null,was=day&&dayProg(day).all;
+if(t.checked)S[g][k]=true;else delete S[g][k];save();refreshBits();
+if(day&&!was&&dayProg(day).all){const r=t.getBoundingClientRect();burst(r.left+13,r.top+13);toast('Dia completo! Gaumarjos!')}
+}});
 app.addEventListener('input',e=>{
- const t=e.target;
- if(t.id==='note'){const id=t.dataset.day;S.notes[id]=t.value;$('#cnt').textContent=t.value.length+'/220';$('#cap').textContent=t.value||'…';$('#saved').textContent='salvando…';clearTimeout(saveT);saveT=setTimeout(()=>{save();$('#saved').textContent='salvo ✓'},400)}
- else if(t.id==='titleIn'){S.title=t.value;save();document.querySelectorAll('.bk-title').forEach(x=>x.textContent=S.title)}
- else if(t.id==='namesIn'){S.names=t.value;save();document.querySelectorAll('.bk-names').forEach(x=>x.textContent=S.names)}});
+const t=e.target;
+if(t.id==='note'){const id=t.dataset.day;S.notes[id]=t.value;$('#cnt').textContent=t.value.length+'/220';$('#cap').textContent=t.value||'…';$('#saved').textContent='salvando…';clearTimeout(saveT);saveT=setTimeout(()=>{save();$('#saved').textContent='salvo ✓'},400)}
+else if(t.id==='titleIn'){S.title=t.value;save();document.querySelectorAll('.bk-title').forEach(x=>x.textContent=S.title)}
+else if(t.id==='namesIn'){S.names=t.value;save();document.querySelectorAll('.bk-names').forEach(x=>x.textContent=S.names)}});
 $('#imp').addEventListener('change',e=>{if(e.target.files[0])importBackup(e.target.files[0]);e.target.value=''});
-/* ===== INÍCIO ===== */
+/* ===== INÍCIO ===== /
 (async()=>{try{await idb.open();PH=await idb.all()}catch(e){idbOk=false}
- buildNav();
- if(!location.hash){const i=todayIdx();if(i>=0){location.hash=DAYS[i].id;return}}
- render()})();
+buildNav();
+if(!location.hash){const i=todayIdx();if(i>=0){location.hash=DAYS[i].id;return}}
+render()})();
 </script>
 </body>
 </html>
